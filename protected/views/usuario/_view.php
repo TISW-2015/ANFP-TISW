@@ -5,43 +5,29 @@
 
 <div class="view">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('usu_correl')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->usu_correl),array('view','id'=>$data->usu_correl)); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('USU_correl')); ?>:</b>
+	<?php echo CHtml::link(CHtml::encode($data->USU_correl), array('view', 'id'=>$data->USU_correl)); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('usu_nombre')); ?>:</b>
-	<?php echo CHtml::encode($data->usu_nombre); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('USU_role')); ?>:</b>
+	<?php echo CHtml::encode($data->USU_role); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('usu_aPaterno')); ?>:</b>
-	<?php echo CHtml::encode($data->usu_aPaterno); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('USU_nombre')); ?>:</b>
+	<?php echo CHtml::encode($data->USU_nombre); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('usu_aMaterno')); ?>:</b>
-	<?php echo CHtml::encode($data->usu_aMaterno); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('USU_clave')); ?>:</b>
+	<?php echo CHtml::encode($data->USU_clave); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('usu_usuario')); ?>:</b>
-	<?php echo CHtml::encode($data->usu_usuario); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('USU_email')); ?>:</b>
+	<?php echo CHtml::encode($data->USU_email); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('usu_clave')); ?>:</b>
-	<?php echo CHtml::encode($data->usu_clave); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('USU_telefono')); ?>:</b>
+	<?php echo CHtml::encode($data->USU_telefono); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('usu_rut')); ?>:</b>
-	<?php echo CHtml::encode($data->usu_rut); ?>
-	<br />
-
-	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('usu_esp_correl')); ?>:</b>
-	<?php echo CHtml::encode($data->usu_esp_correl); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('usu_mail')); ?>:</b>
-	<?php echo CHtml::encode($data->usu_mail); ?>
-	<br />
-
-	*/ ?>
 
 </div>

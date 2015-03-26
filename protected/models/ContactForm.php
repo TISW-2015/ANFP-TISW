@@ -21,9 +21,9 @@ class ContactForm extends CFormModel
 		return array(
 			// name, email, subject and body are required
 			array('name, email, subject, body', 'required'),
-			// el email ingresado debe ser un email válido
+			// email has to be a valid email address
 			array('email', 'email'),
-			// el código verificador debe estar ingresado correctamente
+			// verifyCode needs to be entered correctly
 			array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
 		);
 	}

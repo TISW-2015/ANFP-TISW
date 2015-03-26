@@ -1,19 +1,21 @@
 <?php
 /* @var $this UsuarioController */
 /* @var $model Usuario */
-?>
 
-<?php
 $this->breadcrumbs=array(
-	'Usuarios'=>array('admin'),
-	$model->usu_usuario=>array('view','id'=>$model->usu_correl),
-	'Editar',
+	'Usuarios'=>array('index'),
+	$model->USU_correl=>array('view','id'=>$model->USU_correl),
+	'Update',
 );
 
 $this->menu=array(
-    array('icon' => 'glyphicon glyphicon-tasks','label'=>'Cancelar', 'url'=>array('admin')),
+	array('label'=>'List Usuario', 'url'=>array('index')),
+	array('label'=>'Create Usuario', 'url'=>array('create')),
+	array('label'=>'View Usuario', 'url'=>array('view', 'id'=>$model->USU_correl)),
+	array('label'=>'Manage Usuario', 'url'=>array('admin')),
 );
 ?>
 
-<?php echo BsHtml::pageHeader('Editar','Usuario '.$model->usu_usuario) ?>
+<h1>Update Usuario <?php echo $model->USU_correl; ?></h1>
+
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

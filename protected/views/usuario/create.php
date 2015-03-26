@@ -1,19 +1,18 @@
 <?php
 /* @var $this UsuarioController */
 /* @var $model Usuario */
-?>
 
-<?php
 $this->breadcrumbs=array(
-	'Usuarios'=>array('admin'),
-	'Agregar',
+	'Usuarios'=>array('index'),
+	'Create',
 );
 
 $this->menu=array(
-	array('icon' => 'glyphicon glyphicon-tasks','label'=>'Cancelar', 'url'=>array('admin')),
+	array('label'=>'List Usuario', 'url'=>array('index')),
+	array('label'=>'Manage Usuario', 'url'=>array('admin')),
 );
 ?>
 
-<?php echo BsHtml::pageHeader('Agregar','Usuario') ?>
+<h1>Create Usuario</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

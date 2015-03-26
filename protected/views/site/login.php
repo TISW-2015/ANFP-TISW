@@ -5,13 +5,13 @@
 
 $this->pageTitle=Yii::app()->name . ' - Login';
 $this->breadcrumbs=array(
-	'Ingreso',
+	'Login',
 );
 ?>
 
-<h1>Ingreso</h1>
+<h1>Login</h1>
 
-<p>Por favor llene los siguientes campos con sus credenciales:</p>
+<p>Please fill out the following form with your login credentials:</p>
 
 <div class="form">
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -22,21 +22,21 @@ $this->breadcrumbs=array(
 	),
 )); ?>
 
-	<p class="note">Campos con <span class="required">*</span> son obligatorios.</p>
+	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Nombre de Usuario'); ?>
+		<?php echo $form->labelEx($model,'username'); ?>
 		<?php echo $form->textField($model,'username'); ?>
 		<?php echo $form->error($model,'username'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Password'); ?>
+		<?php echo $form->labelEx($model,'password'); ?>
 		<?php echo $form->passwordField($model,'password'); ?>
 		<?php echo $form->error($model,'password'); ?>
-		<!--<p class="hint">
+		<p class="hint">
 			Hint: You may login with <kbd>demo</kbd>/<kbd>demo</kbd> or <kbd>admin</kbd>/<kbd>admin</kbd>.
-		</p>-->
+		</p>
 	</div>
 
 	<div class="row rememberMe">
@@ -46,7 +46,7 @@ $this->breadcrumbs=array(
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Ingresar'); ?>
+		<?php echo CHtml::submitButton('Login'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
