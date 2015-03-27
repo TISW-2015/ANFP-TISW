@@ -71,15 +71,15 @@ class Salario extends CActiveRecord
 	{
 		return array(
 			'SAL_correl' => 'Sal Correl',
-			'SAL_afpCorrel' => 'Sal Afp Correl',
-			'SAL_JUG_correl' => 'Sal Jug Correl',
-			'SAL_TEC_correl' => 'Sal Tec Correl',
-			'SAL_saluCorrel' => 'Sal Salu Correl',
-			'SAL_fechaPaga' => 'Sal Fecha Paga',
-			'SAL_monto' => 'Sal Monto',
-			'SAL_salud' => 'Sal Salud',
-			'SAL_prevision' => 'Sal Prevision',
-			'SAL_sueldoLiquido' => 'Sal Sueldo Liquido',
+			'SAL_afpCorrel' => 'Precisión social',
+			'SAL_JUG_correl' => 'Jugador',
+			'SAL_TEC_correl' => 'Tecnico',
+			'SAL_saluCorrel' => 'Salud',
+			'SAL_fechaPaga' => 'Fecha pago',
+			'SAL_monto' => 'Bruto',
+			'SAL_salud' => 'Descuento salud',
+			'SAL_prevision' => 'Descuento AFP',
+			'SAL_sueldoLiquido' => 'Liquido',
 		);
 	}
 

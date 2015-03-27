@@ -68,17 +68,17 @@ class Integra extends CActiveRecord
 	{
 		return array(
 			'INT_correl' => 'Int Correl',
-			'INT_torCorrel' => 'Int Tor Correl',
-			'INT_equCorrel' => 'Int Equ Correl',
-			'INT_puntaje' => 'Int Puntaje',
-			'INT_golesFavor' => 'Int Goles Favor',
-			'INT_golesContra' => 'Int Goles Contra',
-			'INT_golesDif' => 'Int Goles Dif',
-			'INT_partidoGanado' => 'Int Partido Ganado',
-			'INT_partidoPerdido' => 'Int Partido Perdido',
-			'INT_partidoEmpatado' => 'Int Partido Empatado',
-			'INT_tarjetaRojas' => 'Int Tarjeta Rojas',
-			'INT_tarjetaAmarilla' => 'Int Tarjeta Amarilla',
+			'INT_torCorrel' => 'Torneo',
+			'INT_equCorrel' => 'Equipo',
+			'INT_puntaje' => 'Pts',
+			'INT_golesFavor' => 'GF',
+			'INT_golesContra' => 'GC',
+			'INT_golesDif' => 'DG',
+			'INT_partidoGanado' => 'PG',
+			'INT_partidoPerdido' => 'PP',
+			'INT_partidoEmpatado' => 'PE',
+			'INT_tarjetaAmarilla' => 'TA',
+			'INT_tarjetaRojas' => 'TR',
 		);
 	}
 

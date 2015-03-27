@@ -63,15 +63,23 @@ class TorneoController extends Controller
 	public function actionCreate()
 	{
 		$model=new Torneo;
-
+		$team=new Equipo;
+		$var=new Pertenece;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
 		if(isset($_POST['Torneo']))
 		{
 			$model->attributes=$_POST['Torneo'];
-			if($model->save())
+			$var=(Pertenece::model()->findAllByAttributes(array('PER_divCorrel'=>$model->TOR_division)));
+			if($model->save()){
+				foreach ($var as $key) {
+					$aux = new Integra;
+					$aux->INT_torCorrel=$model->TOR_correl;
+					$aux->INT_equCorrel=$key->PER_equCorrel;
+					$aux->save();
+				}
 				$this->redirect(array('view','id'=>$model->TOR_correl));
+			}
 		}
 
 		$this->render('create',array(

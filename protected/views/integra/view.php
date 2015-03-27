@@ -3,20 +3,18 @@
 /* @var $model Integra */
 
 $this->breadcrumbs=array(
-	'Integras'=>array('index'),
-	$model->INT_correl,
+	'Torneos'=>array('//torneo/admin','id'=>$model->INT_torCorrel),
+	Torneo::model()->findByPk($model->INT_torCorrel)->TOR_nombre." ".Torneo::model()->findByPk($model->INT_torCorrel)->TOR_agno=>array('//torneo/view','id'=>$model->INT_torCorrel),
+	'Tabla equipos'=>array('admin','id'=>$model->INT_torCorrel),
+	Equipo::model()->findByPk($model->INT_equCorrel)->EQU_nombre,
 );
 
 $this->menu=array(
-	array('label'=>'List Integra', 'url'=>array('index')),
-	array('label'=>'Create Integra', 'url'=>array('create')),
-	array('label'=>'Update Integra', 'url'=>array('update', 'id'=>$model->INT_correl)),
-	array('label'=>'Delete Integra', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->INT_correl),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Integra', 'url'=>array('admin')),
+	array('label'=>'Actualizar tabla', 'url'=>array('update', 'id'=>$model->INT_correl)),
+	array('label'=>'Volver', 'url'=>array('admin','id'=>$model->INT_torCorrel)),
 );
 ?>
-
-<h1>View Integra #<?php echo $model->INT_correl; ?></h1>
+<?php echo BsHtml::pageHeader('Detalle','Tabla Equipo '." ".Equipo::model()->findByPk($model->INT_equCorrel)->EQU_nombre) ?>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

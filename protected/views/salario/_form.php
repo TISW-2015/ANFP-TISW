@@ -19,11 +19,12 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
+	<!--<div class="row">
 		<?php echo $form->labelEx($model,'SAL_correl'); ?>
 		<?php echo $form->textField($model,'SAL_correl'); ?>
 		<?php echo $form->error($model,'SAL_correl'); ?>
 	</div>
+-->
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'SAL_afpCorrel'); ?>
@@ -41,6 +42,9 @@
 		<?php echo $form->labelEx($model,'SAL_TEC_correl'); ?>
 		<?php echo $form->textField($model,'SAL_TEC_correl',array('size'=>10,'maxlength'=>10)); ?>
 		<?php echo $form->error($model,'SAL_TEC_correl'); ?>
+	</div>
+	<div>
+		<?php echo " "/*$form->textFieldControlGroup($model,'SAL_TEC_correl',array('disabled' => true))*/; ?>
 	</div>
 
 	<div class="row">

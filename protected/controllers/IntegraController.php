@@ -131,10 +131,11 @@ class IntegraController extends Controller
 	/**
 	 * Manages all models.
 	 */
-	public function actionAdmin()
+	public function actionAdmin($id=null)
 	{
 		$model=new Integra('search');
 		$model->unsetAttributes();  // clear any default values
+		$model->INT_torCorrel=$id;
 		if(isset($_GET['Integra']))
 			$model->attributes=$_GET['Integra'];
 

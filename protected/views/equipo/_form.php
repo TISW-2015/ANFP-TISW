@@ -2,11 +2,11 @@
 /* @var $this EquipoController */
 /* @var $model Equipo */
 /* @var $form CActiveForm */
+$aux= new Pertenece;
 ?>
-
 <div class="form">
 
-<?php $form=$this->beginWidget('CActiveForm', array(
+<?php $form=$this->beginWidget('bootstrap.widgets.BsActiveForm', array(
 	'id'=>'equipo-form',
 	// Please note: When you enable ajax validation, make sure the corresponding
 	// controller action is handling ajax validation correctly.
@@ -15,7 +15,7 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="help-block">Campos con <span class="required">*</span> son obligatorios.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -54,9 +54,18 @@
 		<?php echo $form->textField($model,'EQU_logo',array('size'=>60,'maxlength'=>400)); ?>
 		<?php echo $form->error($model,'EQU_logo'); ?>
 	</div>
+	<div class="row">
+		<?php echo $form->dropDownListControlGroup($aux,'PER_divCorrel', array(
+        CHtml::listData(Division::model()->findAll(),'DIV_correl','DIV_nombre'),
+        ), array('empty' => 'Seleccione División',
+        ));?>
+	</div>
+	<div class="row">
+		<?php echo $form->dateFieldControlGroup($aux,'PER_fecha'); ?>
+	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo BsHtml::submitButton('Aceptar', array('color' => BsHtml::BUTTON_COLOR_PRIMARY)); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

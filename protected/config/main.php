@@ -7,15 +7,27 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application',
+	'name'=>'ANFP System',
+	'language'=>'es',
+	'sourceLanguage' => 'es',
+    'charset'=>'utf-8',
+	//'theme'=>'classic',
 
 	// preloading 'log' component
-	'preload'=>array('log'),
+	'preload'=>array(
+        'log'), 
 
+	// path aliases
+    'aliases' => array(
+    	'bootstrap' => 'ext.bootstrap',
+	),
 	// autoloading model and component classes
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'bootstrap.behaviors.*',
+	    'bootstrap.helpers.*',
+	    'bootstrap.widgets.*'
 	),
 
 	'modules'=>array(
@@ -32,6 +44,9 @@ return array(
 
 	// application components
 	'components'=>array(
+		 'bootstrap' => array(
+            'class' => 'bootstrap.components.TbApi',   
+        ),
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,

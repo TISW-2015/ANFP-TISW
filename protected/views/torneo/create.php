@@ -3,16 +3,15 @@
 /* @var $model Torneo */
 
 $this->breadcrumbs=array(
-	'Torneos'=>array('index'),
-	'Create',
+	'Torneos'=>array('Admin'),
+	'Registrar',
 );
 
 $this->menu=array(
-	array('label'=>'List Torneo', 'url'=>array('index')),
-	array('label'=>'Manage Torneo', 'url'=>array('admin')),
+	array('label'=>'Cancelar', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Torneo</h1>
+<?php echo BsHtml::pageHeader('Registrar','Torneo') ?>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

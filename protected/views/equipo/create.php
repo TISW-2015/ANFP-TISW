@@ -3,16 +3,15 @@
 /* @var $model Equipo */
 
 $this->breadcrumbs=array(
-	'Equipos'=>array('index'),
-	'Create',
+	'Equipos'=>array('admin'),
+	'Registrar',
 );
 
 $this->menu=array(
-	array('label'=>'List Equipo', 'url'=>array('index')),
-	array('label'=>'Manage Equipo', 'url'=>array('admin')),
+	array('label'=>'Cancelar', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Equipo</h1>
+<?php echo BsHtml::pageHeader('Registrar','Equipo') ?>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

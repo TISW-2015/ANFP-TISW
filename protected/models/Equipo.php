@@ -73,13 +73,13 @@ class Equipo extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'EQU_correl' => 'Equ Correl',
-			'EQU_nombre' => 'Equ Nombre',
-			'EQU_presidente' => 'Equ Presidente',
-			'EQU_direccionClub' => 'Equ Direccion Club',
-			'EQU_sitio' => 'Equ Sitio',
-			'EQU_telefono' => 'Equ Telefono',
-			'EQU_logo' => 'Equ Logo',
+			'EQU_correl' => 'Equipo id',
+			'EQU_nombre' => 'Nombre',
+			'EQU_presidente' => 'Presidente',
+			'EQU_direccionClub' => 'Dirección Club',
+			'EQU_sitio' => 'Sitio web',
+			'EQU_telefono' => 'Telefono',
+			'EQU_logo' => 'Logo',
 		);
 	}
 

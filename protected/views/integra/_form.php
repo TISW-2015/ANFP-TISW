@@ -15,19 +15,18 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'INT_torCorrel'); ?>
-		<?php echo $form->textField($model,'INT_torCorrel',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->textField($model,'INT_torCorrel',array('disabled' => true)); ?>
 		<?php echo $form->error($model,'INT_torCorrel'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'INT_equCorrel'); ?>
-		<?php echo $form->textField($model,'INT_equCorrel',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->textField($model,'INT_equCorrel',array('disabled' => true)); ?>
 		<?php echo $form->error($model,'INT_equCorrel'); ?>
 	</div>
 
@@ -75,18 +74,18 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'INT_tarjetaRojas'); ?>
-		<?php echo $form->textField($model,'INT_tarjetaRojas'); ?>
+		<?php echo $form->textField($model,'INT_tarjetaRojas',array('disabled' => true)); ?>
 		<?php echo $form->error($model,'INT_tarjetaRojas'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'INT_tarjetaAmarilla'); ?>
-		<?php echo $form->textField($model,'INT_tarjetaAmarilla'); ?>
+		<?php echo $form->textField($model,'INT_tarjetaAmarilla',array('disabled' => true)); ?>
 		<?php echo $form->error($model,'INT_tarjetaAmarilla'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo BsHtml::submitButton('Aceptar', array('color' => BsHtml::BUTTON_COLOR_PRIMARY)); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

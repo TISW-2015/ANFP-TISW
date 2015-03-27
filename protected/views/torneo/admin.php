@@ -3,57 +3,29 @@
 /* @var $model Torneo */
 
 $this->breadcrumbs=array(
-	'Torneos'=>array('index'),
-	'Manage',
+	'Torneos'
 );
 
 $this->menu=array(
-	array('label'=>'List Torneo', 'url'=>array('index')),
-	array('label'=>'Create Torneo', 'url'=>array('create')),
+	array('label'=>'Registrar Torneo', 'url'=>array('create')),
 );
-
-Yii::app()->clientScript->registerScript('search', "
-$('.search-button').click(function(){
-	$('.search-form').toggle();
-	return false;
-});
-$('.search-form form').submit(function(){
-	$('#torneo-grid').yiiGridView('update', {
-		data: $(this).serialize()
-	});
-	return false;
-});
-");
 ?>
 
-<h1>Manage Torneos</h1>
+<?php echo BsHtml::pageHeader('Administrar','Torneos') ?>
 
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
-
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
-<div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
-
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php $this->widget('bootstrap.widgets.BsGridView', array(
 	'id'=>'torneo-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
+	'type'=>BsHtml::GRID_TYPE_BORDERED,
 	'columns'=>array(
-		'TOR_correl',
-		'TOR_division',
+		//'TOR_correl',
 		'TOR_nombre',
+		'TOR_division',
 		'TOR_agno',
 		'TOR_periodo',
 		'TOR_premio',
-		/*
 		'TOR_ganador',
-		*/
 		array(
 			'class'=>'CButtonColumn',
 		),

@@ -63,6 +63,7 @@ class EquipoController extends Controller
 	public function actionCreate()
 	{
 		$model=new Equipo;
+		$aux= new Pertenece;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -70,8 +71,12 @@ class EquipoController extends Controller
 		if(isset($_POST['Equipo']))
 		{
 			$model->attributes=$_POST['Equipo'];
-			if($model->save())
+			$aux->attributes=$_POST['Pertenece'];
+			if($model->save()){
+				$aux->PER_equCorrel=$model->EQU_correl;
+				$aux->save();
 				$this->redirect(array('view','id'=>$model->EQU_correl));
+			}
 		}
 
 		$this->render('create',array(
@@ -87,6 +92,7 @@ class EquipoController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
+		$aux= new Pertenece;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -94,8 +100,12 @@ class EquipoController extends Controller
 		if(isset($_POST['Equipo']))
 		{
 			$model->attributes=$_POST['Equipo'];
-			if($model->save())
+			$aux->attributes=$_POST['Pertenece'];
+			if($model->save()){
+				$aux->PER_equCorrel=$model->EQU_correl;
+				$aux->save();
 				$this->redirect(array('view','id'=>$model->EQU_correl));
+			}
 		}
 
 		$this->render('update',array(

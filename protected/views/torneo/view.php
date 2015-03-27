@@ -3,27 +3,25 @@
 /* @var $model Torneo */
 
 $this->breadcrumbs=array(
-	'Torneos'=>array('index'),
-	$model->TOR_correl,
+	'Torneos'=>array('admin'),
+	$model->TOR_nombre." ".$model->TOR_agno,
 );
 
 $this->menu=array(
-	array('label'=>'List Torneo', 'url'=>array('index')),
-	array('label'=>'Create Torneo', 'url'=>array('create')),
-	array('label'=>'Update Torneo', 'url'=>array('update', 'id'=>$model->TOR_correl)),
-	array('label'=>'Delete Torneo', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->TOR_correl),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Torneo', 'url'=>array('admin')),
+	array('label'=>'Actualizar Torneo', 'url'=>array('update', 'id'=>$model->TOR_correl)),
+	array('label'=>'Borrar Torneo', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->TOR_correl),'confirm'=>'¿Esta seguro de eliminar torneo?')),
+	array('label'=>'Ver Tabla', 'url'=>array('//Integra/admin', 'id'=>$model->TOR_correl)),
+	array('label'=>'Volver', 'url'=>array('admin')),
 );
 ?>
-
-<h1>View Torneo #<?php echo $model->TOR_correl; ?></h1>
+<?php echo BsHtml::pageHeader('Detalle','Torneo '.$model->TOR_nombre) ?>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		'TOR_correl',
-		'TOR_division',
+		//'TOR_correl',
 		'TOR_nombre',
+		'TOR_division',
 		'TOR_agno',
 		'TOR_periodo',
 		'TOR_premio',

@@ -1,10 +1,12 @@
 body
 {
+	width:100%;
+	height:100%;
 	margin: 0;
 	padding: 0;
 	color: #555;
 	font: normal 10pt Arial,Helvetica,sans-serif;
-	background: #EFEFEF;
+	background: black;
 }
 
 #page
@@ -17,9 +19,13 @@ body
 
 #header
 {
+	background: black;
+	text-align: center;
+	width:100%;
+	height:100%;
 	margin: 0;
 	padding: 0;
-	border-top: 3px solid #C9E0ED;
+	border-top: 3px solid black;
 }
 
 #content
@@ -43,17 +49,20 @@ body
 
 #logo
 {
+	width:100%;
+	height:100%;
 	padding: 10px 20px;
 	font-size: 200%;
 }
 
 #mainmenu
 {
-	background:white url(bg.gif) repeat-x left top;
+	background:black url(bg4.gif) repeat-x left top;
 }
 
 #mainmenu ul
 {
+
 	padding:6px 20px 5px 20px;
 	margin:0px;
 }
@@ -76,7 +85,7 @@ body
 #mainmenu ul li a:hover, #mainmenu ul li.active a
 {
 	color: #6399cd;
-	background-color:#EFF4FA;
+	background-color:transparent;
 	text-decoration:none;
 }
 
@@ -138,11 +147,11 @@ div.view
 div.breadcrumbs
 {
 	font-size: 0.9em;
-	padding: 5px 20px;
+	padding: 5px 19px;
 }
 
 div.breadcrumbs span
-{
+{	
 	font-weight: bold;
 }
 

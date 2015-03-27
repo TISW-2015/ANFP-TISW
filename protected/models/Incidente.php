@@ -62,7 +62,7 @@ class Incidente extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'INC_correl' => 'Inc Correl',
+			'INC_correl' => 'Insidente',
 			'INC_parCorrel' => 'Inc Par Correl',
 			'INC_arbCorrel' => 'Inc Arb Correl',
 			'INC_descripcion' => 'Inc Descripcion',

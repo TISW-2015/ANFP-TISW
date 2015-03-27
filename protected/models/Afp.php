@@ -6,7 +6,7 @@
  * The followings are the available columns in table 'afp':
  * @property string $AFP_correl
  * @property string $AFP_nombre
- * @property integer $AFP_porcentaje
+ * @property double $AFP_porcentaje
  *
  * The followings are the available model relations:
  * @property Salario[] $salarios
@@ -29,7 +29,7 @@ class Afp extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('AFP_porcentaje', 'numerical', 'integerOnly'=>true),
+			array('AFP_porcentaje', 'numerical'),
 			array('AFP_nombre', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.

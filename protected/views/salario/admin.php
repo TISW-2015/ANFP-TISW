@@ -11,52 +11,27 @@ $this->menu=array(
 	array('label'=>'List Salario', 'url'=>array('index')),
 	array('label'=>'Create Salario', 'url'=>array('create')),
 );
-
-Yii::app()->clientScript->registerScript('search', "
-$('.search-button').click(function(){
-	$('.search-form').toggle();
-	return false;
-});
-$('.search-form form').submit(function(){
-	$('#salario-grid').yiiGridView('update', {
-		data: $(this).serialize()
-	});
-	return false;
-});
-");
 ?>
 
-<h1>Manage Salarios</h1>
+<h1>Salarios</h1>
 
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
-
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
-<div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'salario-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'SAL_correl',
-		'SAL_afpCorrel',
-		'SAL_JUG_correl',
-		'SAL_TEC_correl',
-		'SAL_saluCorrel',
-		'SAL_fechaPaga',
-		/*
+		//'SAL_correl',
+		//'SAL_JUG_correl',
+		//'SAL_TEC_correl',
 		'SAL_monto',
+		'SAL_fechaPaga',
+		'SAL_afpCorrel',
+		'SAL_saluCorrel',
 		'SAL_salud',
 		'SAL_prevision',
 		'SAL_sueldoLiquido',
-		*/
+		
 		array(
 			'class'=>'CButtonColumn',
 		),

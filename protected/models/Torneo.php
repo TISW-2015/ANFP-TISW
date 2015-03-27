@@ -63,13 +63,13 @@ class Torneo extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'TOR_correl' => 'Tor Correl',
-			'TOR_division' => 'Tor Division',
-			'TOR_nombre' => 'Tor Nombre',
-			'TOR_agno' => 'Tor Agno',
-			'TOR_periodo' => 'Tor Periodo',
-			'TOR_premio' => 'Tor Premio',
-			'TOR_ganador' => 'Tor Ganador',
+			'TOR_correl' => 'Torneo id',
+			'TOR_division' => 'Division',
+			'TOR_nombre' => 'Nombre',
+			'TOR_agno' => 'Año',
+			'TOR_periodo' => 'Periodo',
+			'TOR_premio' => 'Premio',
+			'TOR_ganador' => 'Ganador',
 		);
 	}
 

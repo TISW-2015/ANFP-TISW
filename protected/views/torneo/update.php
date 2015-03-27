@@ -3,19 +3,16 @@
 /* @var $model Torneo */
 
 $this->breadcrumbs=array(
-	'Torneos'=>array('index'),
-	$model->TOR_correl=>array('view','id'=>$model->TOR_correl),
-	'Update',
+	'Torneos'=>array('admin'),
+	$model->TOR_nombre." ".$model->TOR_agno=>array('view','id'=>$model->TOR_correl),
+	'Actualizar',
 );
 
 $this->menu=array(
-	array('label'=>'List Torneo', 'url'=>array('index')),
-	array('label'=>'Create Torneo', 'url'=>array('create')),
-	array('label'=>'View Torneo', 'url'=>array('view', 'id'=>$model->TOR_correl)),
-	array('label'=>'Manage Torneo', 'url'=>array('admin')),
+	array('label'=>'Administrar Torneos', 'url'=>array('admin')),
+	array('label'=>'Cancelar', 'url'=>array('view', 'id'=>$model->TOR_correl)),
 );
 ?>
-
-<h1>Update Torneo <?php echo $model->TOR_correl; ?></h1>
+<?php echo BsHtml::pageHeader('Actualizar','Torneo'." ".$model->TOR_nombre) ?>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
