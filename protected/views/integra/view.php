@@ -19,9 +19,13 @@ $this->menu=array(
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		'INT_correl',
-		'INT_torCorrel',
-		'INT_equCorrel',
+		//'INT_correl',
+		//'INT_torCorrel',
+		array('name'=>"Torneo",
+			'value'=>Torneo::model()->findByPk($model->INT_torCorrel)->TOR_nombre." ".Torneo::model()->findByPk($model->INT_torCorrel)->TOR_agno),
+		//'INT_equCorrel',
+		array('name'=>"Equipo",
+			'value'=>Equipo::model()->findByPk($model->INT_equCorrel)->EQU_nombre),
 		'INT_puntaje',
 		'INT_golesFavor',
 		'INT_golesContra',

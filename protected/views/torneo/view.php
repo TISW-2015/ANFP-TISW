@@ -21,7 +21,9 @@ $this->menu=array(
 	'attributes'=>array(
 		//'TOR_correl',
 		'TOR_nombre',
-		'TOR_division',
+		//'TOR_division',
+		array('name'=>"Division",
+			'value'=>Division::model()->findByPk($model->TOR_division)->DIV_nombre),
 		'TOR_agno',
 		'TOR_periodo',
 		'TOR_premio',
