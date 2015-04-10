@@ -10,6 +10,7 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'Actualizar Equipo', 'url'=>array('update', 'id'=>$model->EQU_correl)),
 	array('label'=>'Borar Equipo', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->EQU_correl),'confirm'=>'¿Seguro quiere borar este equipo?')),
+	array('label'=>'Historial', 'url'=>array('//Pertenece/admin', 'id'=>$model->EQU_correl)),
 	array('label'=>'Volver', 'url'=>array('admin')),
 );
 $var;

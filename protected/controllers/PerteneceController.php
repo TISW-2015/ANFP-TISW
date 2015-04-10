@@ -131,10 +131,11 @@ class PerteneceController extends Controller
 	/**
 	 * Manages all models.
 	 */
-	public function actionAdmin()
+	public function actionAdmin($id)
 	{
 		$model=new Pertenece('search');
 		$model->unsetAttributes();  // clear any default values
+		$model->PER_equCorrel=$id;
 		if(isset($_GET['Pertenece']))
 			$model->attributes=$_GET['Pertenece'];
 

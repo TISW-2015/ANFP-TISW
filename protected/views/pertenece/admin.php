@@ -3,54 +3,29 @@
 /* @var $model Pertenece */
 
 $this->breadcrumbs=array(
-	'Perteneces'=>array('index'),
-	'Manage',
+	'Equipos'=>array('admin'),
+	Equipo::model()->findByPk($_GET)->EQU_nombre,
 );
 
 $this->menu=array(
 	array('label'=>'List Pertenece', 'url'=>array('index')),
 	array('label'=>'Create Pertenece', 'url'=>array('create')),
 );
-
-Yii::app()->clientScript->registerScript('search', "
-$('.search-button').click(function(){
-	$('.search-form').toggle();
-	return false;
-});
-$('.search-form form').submit(function(){
-	$('#pertenece-grid').yiiGridView('update', {
-		data: $(this).serialize()
-	});
-	return false;
-});
-");
 ?>
 
-<h1>Manage Perteneces</h1>
-
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
-
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
-<div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
+<?php echo BsHtml::pageHeader('Historial','Equipos') ?>
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'pertenece-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'PER_correl',
-		'PER_equCorrel',
-		'PER_divCorrel',
+		//'PER_correl',
+		//'PER_equCorrel',
+		array('name'=>'PER_divCorrel','value'=>'Division::model()->findByPk($data->PER_divCorrel)->DIV_nombre'),
 		'PER_fecha',
-		array(
-			'class'=>'CButtonColumn',
-		),
+		//array(
+			//'class'=>'CButtonColumn',
+		//),
 	),
 )); ?>
