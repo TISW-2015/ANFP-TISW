@@ -8,21 +8,21 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Lesion', 'url'=>array('index')),
-	array('label'=>'Create Lesion', 'url'=>array('create')),
-	array('label'=>'Update Lesion', 'url'=>array('update', 'id'=>$model->LES_correl)),
-	array('label'=>'Delete Lesion', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->LES_correl),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Lesion', 'url'=>array('admin')),
+	array('label'=>'Lista de Lesiones', 'url'=>array('index')),
+	array('label'=>'Registrar Lesion', 'url'=>array('create')),
+	array('label'=>'Actializar Lesion', 'url'=>array('update', 'id'=>$model->LES_correl)),
+	array('label'=>'Eliminar Lesion', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->LES_correl),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Buscar Lesion', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View Lesion #<?php echo $model->LES_correl; ?></h1>
+<h1>Detalle Lesiones </h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		'LES_correl',
-		'LES_futCorrel',
+		//'LES_correl',
+		//'LES_futCorrel',
 		'LES_glosa',
 		'LES_fecha',
 		'LES_descripcion',

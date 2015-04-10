@@ -3,16 +3,16 @@
 /* @var $model Lesion */
 
 $this->breadcrumbs=array(
-	'Lesions'=>array('index'),
-	'Create',
+	'Lesiones'=>array('index'),
+	'Agregar',
 );
 
 $this->menu=array(
-	array('label'=>'List Lesion', 'url'=>array('index')),
-	array('label'=>'Manage Lesion', 'url'=>array('admin')),
+	array('label'=>'Lista de Lesiones', 'url'=>array('index')),
+	array('label'=>'Buscar Lesión', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Lesion</h1>
+<h1>Agregar Lesión</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -4,12 +4,12 @@
 
 $this->breadcrumbs=array(
 	'Futbolistas'=>array('index'),
-	'Manage',
+	'Buscar',
 );
 
 $this->menu=array(
-	array('label'=>'List Futbolista', 'url'=>array('index')),
-	array('label'=>'Create Futbolista', 'url'=>array('create')),
+	array('label'=>'Lista de Futbolistas', 'url'=>array('index')),
+	array('label'=>'Agregar Futbolista', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -26,12 +26,9 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Futbolistas</h1>
+<h1>Buscar Futbolistas</h1>
 
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
+
 
 <?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
@@ -45,16 +42,15 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'FUT_correl',
+		//'FUT_correl',
 		'FUT_nombre',
 		'FUT_apellidoPat',
 		'FUT_apellidoMat',
 		'FUT_fechaNacimiento',
-		'FUT_nacionalidad',
-		/*
+		'FUT_nacionalidad',		
 		'FUT_estado',
 		'FUT_estadoCivil',
-		*/
+		
 		array(
 			'class'=>'CButtonColumn',
 		),

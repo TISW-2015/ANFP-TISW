@@ -61,11 +61,11 @@ class Lesion extends CActiveRecord
 	{
 		return array(
 			'LES_correl' => 'Les Correl',
-			'LES_futCorrel' => 'Les Fut Correl',
-			'LES_glosa' => 'Les Glosa',
-			'LES_fecha' => 'Les Fecha',
-			'LES_descripcion' => 'Les Descripcion',
-			'LES_tiempoReposo' => 'Les Tiempo Reposo',
+			'LES_futCorrel' => 'Futbolista',
+			'LES_glosa' => 'Glosa',
+			'LES_fecha' => 'Fecha Ocurrencia',
+			'LES_descripcion' => 'Descripcion',
+			'LES_tiempoReposo' => 'Reposo',
 		);
 	}
 
