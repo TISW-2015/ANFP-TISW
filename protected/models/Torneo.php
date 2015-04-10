@@ -11,9 +11,11 @@
  * @property integer $TOR_periodo
  * @property integer $TOR_premio
  * @property integer $TOR_ganador
+ * @property string $TOR_tipo
  *
  * The followings are the available model relations:
  * @property Integra[] $integras
+ * @property Partido[] $partidos
  * @property Division $tORDivision
  */
 class Torneo extends CActiveRecord
@@ -36,11 +38,11 @@ class Torneo extends CActiveRecord
 		return array(
 			array('TOR_division', 'required'),
 			array('TOR_agno, TOR_periodo, TOR_premio, TOR_ganador', 'numerical', 'integerOnly'=>true),
-			array('TOR_division', 'length', 'max'=>10),
+			array('TOR_division, TOR_tipo', 'length', 'max'=>10),
 			array('TOR_nombre', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('TOR_correl, TOR_division, TOR_nombre, TOR_agno, TOR_periodo, TOR_premio, TOR_ganador', 'safe', 'on'=>'search'),
+			array('TOR_correl, TOR_division, TOR_nombre, TOR_agno, TOR_periodo, TOR_premio, TOR_ganador, TOR_tipo', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -53,6 +55,7 @@ class Torneo extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'integras' => array(self::HAS_MANY, 'Integra', 'INT_torCorrel'),
+			'partidos' => array(self::HAS_MANY, 'Partido', 'PAR_torCorrel'),
 			'tORDivision' => array(self::BELONGS_TO, 'Division', 'TOR_division'),
 		);
 	}
@@ -63,13 +66,14 @@ class Torneo extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'TOR_correl' => 'Torneo id',
+			'TOR_correl' => 'ID',
 			'TOR_division' => 'Division',
 			'TOR_nombre' => 'Nombre',
 			'TOR_agno' => 'Año',
 			'TOR_periodo' => 'Periodo',
 			'TOR_premio' => 'Premio',
 			'TOR_ganador' => 'Ganador',
+			'TOR_tipo' => 'Tipo',
 		);
 	}
 
@@ -98,6 +102,7 @@ class Torneo extends CActiveRecord
 		$criteria->compare('TOR_periodo',$this->TOR_periodo);
 		$criteria->compare('TOR_premio',$this->TOR_premio);
 		$criteria->compare('TOR_ganador',$this->TOR_ganador);
+		$criteria->compare('TOR_tipo',$this->TOR_tipo,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

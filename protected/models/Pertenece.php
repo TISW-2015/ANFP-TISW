@@ -60,8 +60,8 @@ class Pertenece extends CActiveRecord
 		return array(
 			'PER_correl' => 'Per Correl',
 			'PER_equCorrel' => 'Per Equ Correl',
-			'PER_divCorrel' => 'Per Div Correl',
-			'PER_fecha' => 'Per Fecha',
+			'PER_divCorrel' => 'Division',
+			'PER_fecha' => 'Fecha',
 		);
 	}
 

@@ -28,5 +28,6 @@ $this->menu=array(
 		'TOR_periodo',
 		'TOR_premio',
 		'TOR_ganador',
+		'TOR_tipo',
 	),
 )); ?>

@@ -50,12 +50,17 @@
 		<?php echo $form->error($model,'TOR_premio'); ?>
 	</div>
 
-	<!--<div class="row">
+	<div class="row">
 		<?php echo $form->labelEx($model,'TOR_ganador'); ?>
 		<?php echo $form->textField($model,'TOR_ganador'); ?>
 		<?php echo $form->error($model,'TOR_ganador'); ?>
 	</div>
--->
+
+	<div class="row">
+		<?php echo $form->dropDownListControlGroup($model, 'TOR_tipo', array(
+        '1' => 'Apertura', '2' => 'Clausura','3'=>'Liguilla'
+        ), array('empty' => 'Seleccione Periodo' ));  ?>
+	</div>
 
 	<div class="row buttons">
 		 <?php echo BsHtml::submitButton('Aceptar', array('color' => BsHtml::BUTTON_COLOR_PRIMARY)); ?>

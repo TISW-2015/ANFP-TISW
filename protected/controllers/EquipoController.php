@@ -28,7 +28,7 @@ class EquipoController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','mayor'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -71,12 +71,17 @@ class EquipoController extends Controller
 		if(isset($_POST['Equipo']))
 		{
 			$model->attributes=$_POST['Equipo'];
-			$aux->attributes=$_POST['Pertenece'];
-			if($model->save()){
-				$aux->PER_equCorrel=$model->EQU_correl;
-				$aux->save();
-				$this->redirect(array('view','id'=>$model->EQU_correl));
+			if(isset($_POST['Pertenece']))
+				$aux->attributes=$_POST['Pertenece'];
+			if($aux->PER_divCorrel==null||$aux->PER_fecha==null){
+				echo "Equipo debe pertenecer a una division";
+				die();
 			}
+			if($model->save()){
+					$aux->PER_equCorrel=$model->EQU_correl;
+					$aux->save();
+				}
+				$this->redirect(array('view','id'=>$model->EQU_correl));
 		}
 
 		$this->render('create',array(
@@ -92,8 +97,17 @@ class EquipoController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
+		$var;
+		$idPer=Pertenece::model()->findAllByAttributes(array('PER_equCorrel'=>$id));
+		//$agno=explode("-",$idPer->PER_fecha);
+		//var_dump($agno);
+		foreach ($idPer as $value) {
+			$var[]=array(explode("-",$value->PER_fecha)[0],$value->PER_correl);
+			//var_dump($value);
+		}
+		$var=(Utils::mayor($var));
+		//var_dump($idPer);
 		$aux= new Pertenece;
-
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
@@ -102,8 +116,15 @@ class EquipoController extends Controller
 			$model->attributes=$_POST['Equipo'];
 			$aux->attributes=$_POST['Pertenece'];
 			if($model->save()){
-				$aux->PER_equCorrel=$model->EQU_correl;
-				$aux->save();
+				if($aux->PER_divCorrel!=null&&$aux->PER_fecha!=null){	
+					$aux->PER_equCorrel=$model->EQU_correl;
+					if(explode("-",$aux->PER_fecha)[0]!=$var[0])
+						$aux->save();
+					else{
+						echo "El equipo no puede cambiar de division por este año";
+						die();
+						}
+					}
 				$this->redirect(array('view','id'=>$model->EQU_correl));
 			}
 		}

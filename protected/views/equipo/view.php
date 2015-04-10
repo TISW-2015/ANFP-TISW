@@ -12,6 +12,11 @@ $this->menu=array(
 	array('label'=>'Borar Equipo', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->EQU_correl),'confirm'=>'¿Seguro quiere borar este equipo?')),
 	array('label'=>'Volver', 'url'=>array('admin')),
 );
+$var;
+$lista=Pertenece::model()->findAllByAttributes(array('PER_equCorrel'=>$model->EQU_correl));
+foreach ($lista as $value)
+			$var[]=array(explode("-",$value->PER_fecha)[0],$value->PER_divCorrel);
+
 ?>
 
 <?php echo BsHtml::pageHeader('Detalle','Equipo '.$model->EQU_nombre) ?>
@@ -27,7 +32,7 @@ $this->menu=array(
 		'EQU_telefono',
 		//'EQU_logo',
 		array('name'=>"Division",
-			'value'=>Division::model()->findByPk((Pertenece::model()->findByAttributes(array('PER_equCorrel'=>$model->EQU_correl))->PER_divCorrel))->DIV_nombre
+			'value'=>Division::model()->findByPk(Utils::mayor($var)[1])->DIV_nombre
 			),
 	),
 )); ?>

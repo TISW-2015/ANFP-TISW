@@ -6,6 +6,7 @@
  * The followings are the available columns in table 'partido':
  * @property string $PAR_correl
  * @property string $PAR_estCorrel
+ * @property string $PAR_torCorrel
  * @property string $PAR_programacion
  * @property string $PAR_hora
  * @property integer $PAR_fecha
@@ -22,6 +23,7 @@
  * @property Incidente[] $incidentes
  * @property Participa[] $participas
  * @property Estadio $pAREstCorrel
+ * @property Torneo $pARTorCorrel
  */
 class Partido extends CActiveRecord
 {
@@ -42,11 +44,11 @@ class Partido extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('PAR_fecha, PAR_asistencia, PAR_recaudo', 'numerical', 'integerOnly'=>true),
-			array('PAR_estCorrel, PAR_estado', 'length', 'max'=>10),
+			array('PAR_estCorrel, PAR_torCorrel, PAR_estado', 'length', 'max'=>10),
 			array('PAR_programacion, PAR_hora, PAR_tiempo', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('PAR_correl, PAR_estCorrel, PAR_programacion, PAR_hora, PAR_fecha, PAR_asistencia, PAR_recaudo, PAR_estado, PAR_tiempo', 'safe', 'on'=>'search'),
+			array('PAR_correl, PAR_estCorrel, PAR_torCorrel, PAR_programacion, PAR_hora, PAR_fecha, PAR_asistencia, PAR_recaudo, PAR_estado, PAR_tiempo', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -65,6 +67,7 @@ class Partido extends CActiveRecord
 			'incidentes' => array(self::HAS_MANY, 'Incidente', 'INC_parCorrel'),
 			'participas' => array(self::HAS_MANY, 'Participa', 'PART_parCorrel'),
 			'pAREstCorrel' => array(self::BELONGS_TO, 'Estadio', 'PAR_estCorrel'),
+			'pARTorCorrel' => array(self::BELONGS_TO, 'Torneo', 'PAR_torCorrel'),
 		);
 	}
 
@@ -76,6 +79,7 @@ class Partido extends CActiveRecord
 		return array(
 			'PAR_correl' => 'Par Correl',
 			'PAR_estCorrel' => 'Par Est Correl',
+			'PAR_torCorrel' => 'Par Tor Correl',
 			'PAR_programacion' => 'Par Programacion',
 			'PAR_hora' => 'Par Hora',
 			'PAR_fecha' => 'Par Fecha',
@@ -106,6 +110,7 @@ class Partido extends CActiveRecord
 
 		$criteria->compare('PAR_correl',$this->PAR_correl,true);
 		$criteria->compare('PAR_estCorrel',$this->PAR_estCorrel,true);
+		$criteria->compare('PAR_torCorrel',$this->PAR_torCorrel,true);
 		$criteria->compare('PAR_programacion',$this->PAR_programacion,true);
 		$criteria->compare('PAR_hora',$this->PAR_hora,true);
 		$criteria->compare('PAR_fecha',$this->PAR_fecha);

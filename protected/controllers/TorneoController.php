@@ -65,18 +65,23 @@ class TorneoController extends Controller
 		$model=new Torneo;
 		$team=new Equipo;
 		$var=new Pertenece;
+		$lista;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 		if(isset($_POST['Torneo']))
 		{
 			$model->attributes=$_POST['Torneo'];
-			$var=(Pertenece::model()->findAllByAttributes(array('PER_divCorrel'=>$model->TOR_division)));
+			$var=Pertenece::model()->findAllByAttributes(array('PER_divCorrel'=>$model->TOR_division));
+			//$var=Pertenece::model()->findAllByAttributes(array('PER_divCorrel'=>$model->TOR_division,explode("-",$value->PER_fecha)[0]=>$model->TOR_agno));
+			//$var=(Pertenece::model()->findAllByAttributes(array('PER_divCorrel'=>$model->TOR_division,)));
 			if($model->save()){
 				foreach ($var as $key) {
-					$aux = new Integra;
-					$aux->INT_torCorrel=$model->TOR_correl;
-					$aux->INT_equCorrel=$key->PER_equCorrel;
-					$aux->save();
+					if(explode("-",$key->PER_fecha)[0]==$model->TOR_agno) {
+						$aux = new Integra;
+						$aux->INT_torCorrel=$model->TOR_correl;
+						$aux->INT_equCorrel=$key->PER_equCorrel;
+						$aux->save();
+					}
 				}
 				$this->redirect(array('view','id'=>$model->TOR_correl));
 			}
