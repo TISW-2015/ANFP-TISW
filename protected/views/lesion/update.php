@@ -3,16 +3,16 @@
 /* @var $model Lesion */
 
 $this->breadcrumbs=array(
-	'Lesions'=>array('index'),
+	'Lesiones'=>array('index'),
 	$model->LES_correl=>array('view','id'=>$model->LES_correl),
-	'Update',
+	'Actualizar',
 );
 
 $this->menu=array(
-	array('label'=>'List Lesion', 'url'=>array('index')),
-	array('label'=>'Create Lesion', 'url'=>array('create')),
-	array('label'=>'View Lesion', 'url'=>array('view', 'id'=>$model->LES_correl)),
-	array('label'=>'Manage Lesion', 'url'=>array('admin')),
+	array('label'=>'Lista de Lesiones', 'url'=>array('index')),
+	array('label'=>'Agregar Lesión', 'url'=>array('create')),
+	array('label'=>'Detalle Lesión', 'url'=>array('view', 'id'=>$model->LES_correl)),
+	array('label'=>'Buscar Lesión', 'url'=>array('admin')),
 );
 ?>
 
