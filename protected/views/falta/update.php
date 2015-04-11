@@ -9,13 +9,13 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Falta', 'url'=>array('index')),
-	array('label'=>'Create Falta', 'url'=>array('create')),
-	array('label'=>'View Falta', 'url'=>array('view', 'id'=>$model->FAL_correl)),
-	array('label'=>'Manage Falta', 'url'=>array('admin')),
+	//array('label'=>'List Falta', 'url'=>array('index')),
+	//array('label'=>'Create Falta', 'url'=>array('create')),
+	array('label'=>'Detalle Falta', 'url'=>array('view', 'id'=>$model->FAL_correl)),
+	array('label'=>'Volver', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update Falta <?php echo $model->FAL_correl; ?></h1>
+<h1>Actualizar Falta <?php echo $model->FAL_correl; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

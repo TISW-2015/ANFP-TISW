@@ -4,11 +4,11 @@
 
 $this->breadcrumbs=array(
 	'Futbolistas'=>array('index'),
-	'Buscar',
+	'Administrar',
 );
 
 $this->menu=array(
-	array('label'=>'Lista de Futbolistas', 'url'=>array('index')),
+	//array('label'=>'Lista de Futbolistas', 'url'=>array('index')),
 	array('label'=>'Agregar Futbolista', 'url'=>array('create')),
 );
 
@@ -26,21 +26,13 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Buscar Futbolistas</h1>
+<h3>Administrar Futbolistas</h3>
 
-
-
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
-<div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
-
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php $this->widget('bootstrap.widgets.BsGridView', array(
 	'id'=>'futbolista-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
+	'type'=>BsHtml::GRID_TYPE_BORDERED,
 	'columns'=>array(
 		//'FUT_correl',
 		'FUT_nombre',

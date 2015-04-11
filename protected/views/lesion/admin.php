@@ -4,12 +4,12 @@
 
 $this->breadcrumbs=array(
 	'Lesiones'=>array('index'),
-	'Buscar',
+	'Administrar',
 );
 
 $this->menu=array(
-	array('label'=>'Lista de Lesiones', 'url'=>array('index')),
-	array('label'=>'Agregar Lesión', 'url'=>array('create')),
+	//array('label'=>'Lista de Lesiones', 'url'=>array('index')),
+	array('label'=>'Agregar Lesión', 'url'=>array('Agregar')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -26,23 +26,19 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Buscar Lesión</h1>
+<h3>Administrar Lesiones</h3>
 
 
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
-<div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
-
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php $this->widget('bootstrap.widgets.BsGridView', array(
 	'id'=>'lesion-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
+	'type'=>BsHtml::GRID_TYPE_BORDERED,
 	'columns'=>array(
 		//'LES_correl',
 		'LES_futCorrel',
+		//array('name'=>'LES_futCorrel',
+			//'value'=>'Lesion::model()->findByAttributes($data->LES_futCorrel)->FUT_nombre'),
 		'LES_glosa',
 		'LES_fecha',
 		'LES_descripcion',

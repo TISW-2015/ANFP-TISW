@@ -3,16 +3,16 @@
 /* @var $model Futbolista */
 
 $this->breadcrumbs=array(
-	'Futbolistas'=>array('index'),
+	'Futbolistas'=>array('admin'),
 	'Registro',
 );
 
 $this->menu=array(
-	array('label'=>'Lista de Futbolista', 'url'=>array('index')),
-	array('label'=>'Buscar Futbolista', 'url'=>array('admin')),
+	//array('label'=>'Lista de Futbolista', 'url'=>array('index')),
+	array('label'=>'Cancelar', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Registro Futbolista</h1>
+<h3>Registrar Futbolista</h3>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

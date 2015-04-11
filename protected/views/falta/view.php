@@ -8,15 +8,15 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Falta', 'url'=>array('index')),
-	array('label'=>'Create Falta', 'url'=>array('create')),
-	array('label'=>'Update Falta', 'url'=>array('update', 'id'=>$model->FAL_correl)),
-	array('label'=>'Delete Falta', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->FAL_correl),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Falta', 'url'=>array('admin')),
+	//array('label'=>'List Falta', 'url'=>array('index')),
+	//array('label'=>'Create Falta', 'url'=>array('create')),
+	array('label'=>'Actualizar Falta', 'url'=>array('update', 'id'=>$model->FAL_correl)),
+	array('label'=>'Eliminar Falta', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->FAL_correl),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Volver', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View Falta #<?php echo $model->FAL_correl; ?></h1>
+<h1>Detalle Falta</h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

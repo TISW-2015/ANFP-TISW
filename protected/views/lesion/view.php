@@ -8,11 +8,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Lista de Lesiones', 'url'=>array('index')),
-	array('label'=>'Registrar Lesion', 'url'=>array('create')),
-	array('label'=>'Actializar Lesion', 'url'=>array('update', 'id'=>$model->LES_correl)),
-	array('label'=>'Eliminar Lesion', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->LES_correl),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Buscar Lesion', 'url'=>array('admin')),
+	//array('label'=>'Lista de Lesiones', 'url'=>array('index')),
+	array('label'=>'Registrar Lesión', 'url'=>array('create')),
+	array('label'=>'Actualizar Lesión', 'url'=>array('update', 'id'=>$model->LES_correl)),
+	array('label'=>'Eliminar Lesión', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->LES_correl),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Buscar Lesión', 'url'=>array('admin')),
 );
 ?>
 
