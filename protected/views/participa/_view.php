@@ -4,7 +4,7 @@
 ?>
 
 <div class="view">
-
+	<div>
 	<b><?php echo CHtml::encode($data->getAttributeLabel('PART_correl')); ?>:</b>
 	<?php echo CHtml::link(CHtml::encode($data->PART_correl), array('view', 'id'=>$data->PART_correl)); ?>
 	<br />
@@ -33,7 +33,6 @@
 	<?php echo CHtml::encode($data->PART_tarjetaAmarilla); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('PART_tarjetaRoja')); ?>:</b>
 	<?php echo CHtml::encode($data->PART_tarjetaRoja); ?>
 	<br />
@@ -53,7 +52,6 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('PART_extranjero')); ?>:</b>
 	<?php echo CHtml::encode($data->PART_extranjero); ?>
 	<br />
-
-	*/ ?>
+	</div>
 
 </div>

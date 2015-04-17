@@ -3909,3 +3909,1076 @@ REQUEST_URI=/yii/ANFP-TISW/index.php/Pertenece/admin/1
 in C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\layouts\main.php (52)
 in C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\layouts\column2.php (22)
 in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PerteneceController.php (144)
+2015/04/15 19:29:00 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`anfp`.`partido`, CONSTRAINT `fk_PARTIDO_ESTADIO1` FOREIGN KEY (`PAR_estCorrel`) REFERENCES `estadio` (`EST_correl`) ON DELETE NO ACTION ON UPDATE NO ACTION). La sentencia SQL ejecutada fue: INSERT INTO `partido` (`PAR_asistencia`, `PAR_recaudo`, `PAR_estCorrel`, `PAR_programacion`, `PAR_hora`, `PAR_fecha`, `PAR_estado`, `PAR_tiempo`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php (73)
+in C:\xampp\htdocs\Yii\ANFP-TISW\index.php (13)
+2015/04/15 19:29:00 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`anfp`.`partido`, CONSTRAINT `fk_PARTIDO_ESTADIO1` FOREIGN KEY (`PAR_estCorrel`) REFERENCES `estadio` (`EST_correl`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `partido` (`PAR_asistencia`, `PAR_recaudo`, `PAR_estCorrel`, `PAR_programacion`, `PAR_hora`, `PAR_fecha`, `PAR_estado`, `PAR_tiempo`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in C:\xampp\htdocs\Yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\Yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\Yii\framework\web\actions\CInlineAction.php(49): PartidoController->actionCreate()
+#4 C:\xampp\htdocs\Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('partido/create')
+#14 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/ANFP-TISW/index.php/partido/create
+HTTP_REFERER=http://localhost:200/yii/ANFP-TISW/index.php/partido/create
+---
+2015/04/15 19:41:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "_view" solicitada.' in C:\xampp\htdocs\Yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\CController.php(270): CController->missingAction('_view')
+#1 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): CController->run('_view')
+#2 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('partido/_view')
+#3 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/ANFP-TISW/index.php/partido/_view
+HTTP_REFERER=http://localhost:200/yii/ANFP-TISW/index.php/partido/admin
+---
+2015/04/15 20:36:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "_view" solicitada.' in C:\xampp\htdocs\Yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\CController.php(270): CController->missingAction('_view')
+#1 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): CController->run('_view')
+#2 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('partido/_view')
+#3 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/ANFP-TISW/index.php/partido/_view
+HTTP_REFERER=http://localhost:200/yii/ANFP-TISW/index.php/partido/admin
+---
+2015/04/15 20:36:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "_view" solicitada.' in C:\xampp\htdocs\Yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\CController.php(270): CController->missingAction('_view')
+#1 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): CController->run('_view')
+#2 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('partido/_view')
+#3 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/ANFP-TISW/index.php/partido/_view
+HTTP_REFERER=http://localhost:200/yii/ANFP-TISW/index.php/partido/admin
+---
+2015/04/15 20:36:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "_view" solicitada.' in C:\xampp\htdocs\Yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\CController.php(270): CController->missingAction('_view')
+#1 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): CController->run('_view')
+#2 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('partido/_view')
+#3 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/ANFP-TISW/index.php/partido/_view
+HTTP_REFERER=http://localhost:200/yii/ANFP-TISW/index.php/partido/admin
+---
+2015/04/15 20:37:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "_view" solicitada.' in C:\xampp\htdocs\Yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\CController.php(270): CController->missingAction('_view')
+#1 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): CController->run('_view')
+#2 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('partido/_view')
+#3 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/ANFP-TISW/index.php/partido/_view
+HTTP_REFERER=http://localhost:200/yii/ANFP-TISW/index.php/partido/admin
+---
+2015/04/15 21:22:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "paciente/admin"' in C:\xampp\htdocs\Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('paciente/admin')
+#1 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/ANFP-TISW/index.php/paciente/admin
+HTTP_REFERER=http://localhost:200/yii/ANFP-TISW/index.php/torneo/admin
+---
+2015/04/15 21:22:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "cama/admin"' in C:\xampp\htdocs\Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('cama/admin')
+#1 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/ANFP-TISW/index.php/cama/admin
+HTTP_REFERER=http://localhost:200/yii/ANFP-TISW/index.php/paciente/admin
+---
+2015/04/15 21:22:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Especialidad/admin"' in C:\xampp\htdocs\Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Especialidad/ad...')
+#1 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/ANFP-TISW/index.php/Especialidad/admin
+HTTP_REFERER=http://localhost:200/yii/ANFP-TISW/index.php/cama/admin
+---
+2015/04/15 21:22:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Especialidad/admin"' in C:\xampp\htdocs\Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Especialidad/ad...')
+#1 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/ANFP-TISW/index.php/Especialidad/admin
+HTTP_REFERER=http://localhost:200/yii/ANFP-TISW/index.php/Especialidad/admin
+---
+2015/04/15 21:22:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "items/admin"' in C:\xampp\htdocs\Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('items/admin')
+#1 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/ANFP-TISW/index.php/items/admin
+HTTP_REFERER=http://localhost:200/yii/ANFP-TISW/index.php/Especialidad/admin
+---
+2015/04/15 21:22:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "cama/admin"' in C:\xampp\htdocs\Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('cama/admin')
+#1 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/ANFP-TISW/index.php/cama/admin
+HTTP_REFERER=http://localhost:200/yii/ANFP-TISW/index.php/site/contact
+---
+2015/04/15 21:22:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "items/admin"' in C:\xampp\htdocs\Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('items/admin')
+#1 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/ANFP-TISW/index.php/items/admin
+HTTP_REFERER=http://localhost:200/yii/ANFP-TISW/index.php/Especialidad/admin
+---
+2015/04/15 21:22:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Especialidad/admin"' in C:\xampp\htdocs\Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Especialidad/ad...')
+#1 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/ANFP-TISW/index.php/Especialidad/admin
+HTTP_REFERER=http://localhost:200/yii/ANFP-TISW/index.php/Especialidad/admin
+---
+2015/04/15 21:22:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "cama/admin"' in C:\xampp\htdocs\Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('cama/admin')
+#1 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/ANFP-TISW/index.php/cama/admin
+HTTP_REFERER=http://localhost:200/yii/ANFP-TISW/index.php/paciente/admin
+---
+2015/04/15 21:22:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "paciente/admin"' in C:\xampp\htdocs\Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('paciente/admin')
+#1 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/ANFP-TISW/index.php/paciente/admin
+HTTP_REFERER=http://localhost:200/yii/ANFP-TISW/index.php/torneo/admin
+---
+2015/04/16 20:06:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "ajaxTest" solicitada.' in C:\xampp\htdocs\Yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\CController.php(270): CController->missingAction('ajaxTest')
+#1 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): CController->run('ajaxTest')
+#2 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/ajaxTest')
+#3 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/ANFP-TISW/index.php/site/ajaxTest
+HTTP_REFERER=http://localhost:200/yii/ANFP-TISW/index.php/partido/index
+---
+2015/04/16 20:06:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "ajaxTest" solicitada.' in C:\xampp\htdocs\Yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\CController.php(270): CController->missingAction('ajaxTest')
+#1 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): CController->run('ajaxTest')
+#2 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/ajaxTest')
+#3 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/ANFP-TISW/index.php/site/ajaxTest
+HTTP_REFERER=http://localhost:200/yii/ANFP-TISW/index.php/partido/index
+---
+2015/04/16 20:07:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "ajaxTest" solicitada.' in C:\xampp\htdocs\Yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\CController.php(270): CController->missingAction('ajaxTest')
+#1 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): CController->run('ajaxTest')
+#2 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/ajaxTest')
+#3 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/ANFP-TISW/index.php/site/ajaxTest
+HTTP_REFERER=http://localhost:200/yii/ANFP-TISW/index.php/partido/index
+---
+2015/04/16 20:07:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "ajaxTest" solicitada.' in C:\xampp\htdocs\Yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\CController.php(270): CController->missingAction('ajaxTest')
+#1 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): CController->run('ajaxTest')
+#2 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/ajaxTest')
+#3 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/ANFP-TISW/index.php/site/ajaxTest
+HTTP_REFERER=http://localhost:200/yii/ANFP-TISW/index.php/partido/index
+---
+2015/04/16 20:16:11 [error] [php] Array to string conversion (C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\_view.php:122)
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\zii\widgets\CListView.php(291): PartidoController->renderFile()
+#1 C:\xampp\htdocs\Yii\framework\zii\widgets\CBaseListView.php(167): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 C:\xampp\htdocs\Yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback()
+#4 C:\xampp\htdocs\Yii\framework\zii\widgets\CBaseListView.php(135): CListView->renderContent()
+#5 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(173): CListView->run()
+#6 C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\index.php(20): PartidoController->widget()
+#7 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(126): require()
+#8 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(95): PartidoController->renderInternal()
+#9 C:\xampp\htdocs\Yii\framework\web\CController.php(869): PartidoController->renderFile()
+#10 C:\xampp\htdocs\Yii\framework\web\CController.php(782): PartidoController->renderPartial()
+#11 C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php(128): PartidoController->render()
+#12 C:\xampp\htdocs\Yii\framework\web\actions\CInlineAction.php(49): PartidoController->actionIndex()
+#13 C:\xampp\htdocs\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): PartidoController->runAction()
+#15 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#17 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): PartidoController->filterAccessControl()
+#18 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#19 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\xampp\htdocs\Yii\framework\web\CController.php(265): PartidoController->runActionWithFilters()
+#21 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): PartidoController->run()
+#22 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#23 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#24 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/ANFP-TISW/index.php/partido/index
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\_view.php (122)
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\index.php (20)
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php (128)
+2015/04/16 20:17:17 [error] [php] Undefined offset: 2 (C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\_view.php:122)
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\zii\widgets\CListView.php(291): PartidoController->renderFile()
+#1 C:\xampp\htdocs\Yii\framework\zii\widgets\CBaseListView.php(167): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 C:\xampp\htdocs\Yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback()
+#4 C:\xampp\htdocs\Yii\framework\zii\widgets\CBaseListView.php(135): CListView->renderContent()
+#5 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(173): CListView->run()
+#6 C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\index.php(20): PartidoController->widget()
+#7 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(126): require()
+#8 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(95): PartidoController->renderInternal()
+#9 C:\xampp\htdocs\Yii\framework\web\CController.php(869): PartidoController->renderFile()
+#10 C:\xampp\htdocs\Yii\framework\web\CController.php(782): PartidoController->renderPartial()
+#11 C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php(128): PartidoController->render()
+#12 C:\xampp\htdocs\Yii\framework\web\actions\CInlineAction.php(49): PartidoController->actionIndex()
+#13 C:\xampp\htdocs\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): PartidoController->runAction()
+#15 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#17 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): PartidoController->filterAccessControl()
+#18 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#19 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\xampp\htdocs\Yii\framework\web\CController.php(265): PartidoController->runActionWithFilters()
+#21 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): PartidoController->run()
+#22 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#23 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#24 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/ANFP-TISW/index.php/partido/index
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\_view.php (122)
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\index.php (20)
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php (128)
+2015/04/16 20:17:23 [error] [php] Undefined offset: 1 (C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\_view.php:122)
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\zii\widgets\CListView.php(291): PartidoController->renderFile()
+#1 C:\xampp\htdocs\Yii\framework\zii\widgets\CBaseListView.php(167): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 C:\xampp\htdocs\Yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback()
+#4 C:\xampp\htdocs\Yii\framework\zii\widgets\CBaseListView.php(135): CListView->renderContent()
+#5 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(173): CListView->run()
+#6 C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\index.php(20): PartidoController->widget()
+#7 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(126): require()
+#8 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(95): PartidoController->renderInternal()
+#9 C:\xampp\htdocs\Yii\framework\web\CController.php(869): PartidoController->renderFile()
+#10 C:\xampp\htdocs\Yii\framework\web\CController.php(782): PartidoController->renderPartial()
+#11 C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php(128): PartidoController->render()
+#12 C:\xampp\htdocs\Yii\framework\web\actions\CInlineAction.php(49): PartidoController->actionIndex()
+#13 C:\xampp\htdocs\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): PartidoController->runAction()
+#15 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#17 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): PartidoController->filterAccessControl()
+#18 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#19 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\xampp\htdocs\Yii\framework\web\CController.php(265): PartidoController->runActionWithFilters()
+#21 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): PartidoController->run()
+#22 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#23 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#24 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/ANFP-TISW/index.php/partido/index
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\_view.php (122)
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\index.php (20)
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php (128)
+2015/04/16 20:17:24 [error] [php] Undefined offset: 1 (C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\_view.php:122)
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\zii\widgets\CListView.php(291): PartidoController->renderFile()
+#1 C:\xampp\htdocs\Yii\framework\zii\widgets\CBaseListView.php(167): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 C:\xampp\htdocs\Yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback()
+#4 C:\xampp\htdocs\Yii\framework\zii\widgets\CBaseListView.php(135): CListView->renderContent()
+#5 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(173): CListView->run()
+#6 C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\index.php(20): PartidoController->widget()
+#7 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(126): require()
+#8 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(95): PartidoController->renderInternal()
+#9 C:\xampp\htdocs\Yii\framework\web\CController.php(869): PartidoController->renderFile()
+#10 C:\xampp\htdocs\Yii\framework\web\CController.php(782): PartidoController->renderPartial()
+#11 C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php(128): PartidoController->render()
+#12 C:\xampp\htdocs\Yii\framework\web\actions\CInlineAction.php(49): PartidoController->actionIndex()
+#13 C:\xampp\htdocs\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): PartidoController->runAction()
+#15 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#17 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): PartidoController->filterAccessControl()
+#18 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#19 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\xampp\htdocs\Yii\framework\web\CController.php(265): PartidoController->runActionWithFilters()
+#21 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): PartidoController->run()
+#22 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#23 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#24 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/ANFP-TISW/index.php/partido/index
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\_view.php (122)
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\index.php (20)
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php (128)
+2015/04/16 20:17:53 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\_view.php:122)
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\zii\widgets\CListView.php(291): PartidoController->renderFile()
+#1 C:\xampp\htdocs\Yii\framework\zii\widgets\CBaseListView.php(167): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 C:\xampp\htdocs\Yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback()
+#4 C:\xampp\htdocs\Yii\framework\zii\widgets\CBaseListView.php(135): CListView->renderContent()
+#5 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(173): CListView->run()
+#6 C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\index.php(20): PartidoController->widget()
+#7 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(126): require()
+#8 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(95): PartidoController->renderInternal()
+#9 C:\xampp\htdocs\Yii\framework\web\CController.php(869): PartidoController->renderFile()
+#10 C:\xampp\htdocs\Yii\framework\web\CController.php(782): PartidoController->renderPartial()
+#11 C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php(128): PartidoController->render()
+#12 C:\xampp\htdocs\Yii\framework\web\actions\CInlineAction.php(49): PartidoController->actionIndex()
+#13 C:\xampp\htdocs\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): PartidoController->runAction()
+#15 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#17 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): PartidoController->filterAccessControl()
+#18 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#19 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\xampp\htdocs\Yii\framework\web\CController.php(265): PartidoController->runActionWithFilters()
+#21 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): PartidoController->run()
+#22 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#23 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#24 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/ANFP-TISW/index.php/partido/index
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\_view.php (122)
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\index.php (20)
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php (128)
+2015/04/16 20:18:03 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\_view.php:122)
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\zii\widgets\CListView.php(291): PartidoController->renderFile()
+#1 C:\xampp\htdocs\Yii\framework\zii\widgets\CBaseListView.php(167): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 C:\xampp\htdocs\Yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback()
+#4 C:\xampp\htdocs\Yii\framework\zii\widgets\CBaseListView.php(135): CListView->renderContent()
+#5 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(173): CListView->run()
+#6 C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\index.php(20): PartidoController->widget()
+#7 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(126): require()
+#8 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(95): PartidoController->renderInternal()
+#9 C:\xampp\htdocs\Yii\framework\web\CController.php(869): PartidoController->renderFile()
+#10 C:\xampp\htdocs\Yii\framework\web\CController.php(782): PartidoController->renderPartial()
+#11 C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php(128): PartidoController->render()
+#12 C:\xampp\htdocs\Yii\framework\web\actions\CInlineAction.php(49): PartidoController->actionIndex()
+#13 C:\xampp\htdocs\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): PartidoController->runAction()
+#15 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#17 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): PartidoController->filterAccessControl()
+#18 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#19 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\xampp\htdocs\Yii\framework\web\CController.php(265): PartidoController->runActionWithFilters()
+#21 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): PartidoController->run()
+#22 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#23 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#24 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/ANFP-TISW/index.php/partido/index
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\_view.php (122)
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\index.php (20)
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php (128)
+2015/04/16 20:18:18 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\_view.php:122)
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\zii\widgets\CListView.php(291): PartidoController->renderFile()
+#1 C:\xampp\htdocs\Yii\framework\zii\widgets\CBaseListView.php(167): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 C:\xampp\htdocs\Yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback()
+#4 C:\xampp\htdocs\Yii\framework\zii\widgets\CBaseListView.php(135): CListView->renderContent()
+#5 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(173): CListView->run()
+#6 C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\index.php(20): PartidoController->widget()
+#7 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(126): require()
+#8 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(95): PartidoController->renderInternal()
+#9 C:\xampp\htdocs\Yii\framework\web\CController.php(869): PartidoController->renderFile()
+#10 C:\xampp\htdocs\Yii\framework\web\CController.php(782): PartidoController->renderPartial()
+#11 C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php(128): PartidoController->render()
+#12 C:\xampp\htdocs\Yii\framework\web\actions\CInlineAction.php(49): PartidoController->actionIndex()
+#13 C:\xampp\htdocs\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): PartidoController->runAction()
+#15 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#17 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): PartidoController->filterAccessControl()
+#18 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#19 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\xampp\htdocs\Yii\framework\web\CController.php(265): PartidoController->runActionWithFilters()
+#21 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): PartidoController->run()
+#22 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#23 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#24 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/ANFP-TISW/index.php/partido/index
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\_view.php (122)
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\index.php (20)
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php (128)
+2015/04/16 20:39:09 [error] [exception.CException] exception 'CException' with message 'La propiedad "CMenu"."color" no se encuentra definida.' in C:\xampp\htdocs\Yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\CWidgetFactory.php(161): CComponent->__set('color', 'inverse')
+#1 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(PartidoController), 'zii.widgets.CMe...', Array)
+#2 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CMe...', Array)
+#3 C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\layouts\main.php(50): CBaseController->widget('zii.widgets.CMe...', Array)
+#4 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\Yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\Yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class="spa...')
+#8 C:\xampp\htdocs\Yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class="spa...')
+#9 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(206): COutputProcessor->run()
+#10 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\layouts\column2.php(22): CBaseController->endContent()
+#12 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\Yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#15 C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php(128): CController->render('index', Array)
+#16 C:\xampp\htdocs\Yii\framework\web\actions\CInlineAction.php(49): PartidoController->actionIndex()
+#17 C:\xampp\htdocs\Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\xampp\htdocs\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): CController->run('index')
+#26 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('partido/index')
+#27 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/yii/ANFP-TISW/index.php/partido/index
+HTTP_REFERER=http://localhost:200/yii/ANFP-TISW/index.php/partido/admin/1
+---
+2015/04/16 20:39:21 [error] [php] Illegal string offset 'label' (C:\xampp\htdocs\Yii\framework\zii\widgets\CMenu.php:271)
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(172): PartidoController->createWidget()
+#1 C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\layouts\main.php(50): PartidoController->widget()
+#2 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(95): PartidoController->renderInternal()
+#4 C:\xampp\htdocs\Yii\framework\web\widgets\CContentDecorator.php(76): PartidoController->renderFile()
+#5 C:\xampp\htdocs\Yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#6 C:\xampp\htdocs\Yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#7 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(206): CContentDecorator->run()
+#8 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(300): PartidoController->endWidget()
+#9 C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\layouts\column2.php(22): PartidoController->endContent()
+#10 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(126): require()
+#11 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(95): PartidoController->renderInternal()
+#12 C:\xampp\htdocs\Yii\framework\web\CController.php(784): PartidoController->renderFile()
+#13 C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php(128): PartidoController->render()
+#14 C:\xampp\htdocs\Yii\framework\web\actions\CInlineAction.php(49): PartidoController->actionIndex()
+#15 C:\xampp\htdocs\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#16 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): PartidoController->runAction()
+#17 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#19 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): PartidoController->filterAccessControl()
+#20 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#21 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\xampp\htdocs\Yii\framework\web\CController.php(265): PartidoController->runActionWithFilters()
+#23 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): PartidoController->run()
+#24 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#25 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/ANFP-TISW/index.php/partido/index
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\layouts\main.php (50)
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\layouts\column2.php (22)
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php (128)
+2015/04/16 20:44:48 [error] [php] Undefined variable: dataProvider (C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\admin.php:16)
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\CController.php(869): PartidoController->renderFile()
+#1 C:\xampp\htdocs\Yii\framework\web\CController.php(782): PartidoController->renderPartial()
+#2 C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php(144): PartidoController->render()
+#3 unknown(0): PartidoController->actionAdmin()
+#4 C:\xampp\htdocs\Yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\Yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): PartidoController->runAction()
+#8 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): PartidoController->filterAccessControl()
+#11 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\Yii\framework\web\CController.php(265): PartidoController->runActionWithFilters()
+#14 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): PartidoController->run()
+#15 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/ANFP-TISW/index.php/partido/admin
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\admin.php (16)
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php (144)
+in C:\xampp\htdocs\Yii\ANFP-TISW\index.php (13)
+2015/04/16 20:46:09 [error] [php] Undefined variable: id (C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\admin.php:15)
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\CController.php(869): PartidoController->renderFile()
+#1 C:\xampp\htdocs\Yii\framework\web\CController.php(782): PartidoController->renderPartial()
+#2 C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php(144): PartidoController->render()
+#3 unknown(0): PartidoController->actionAdmin()
+#4 C:\xampp\htdocs\Yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\Yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): PartidoController->runAction()
+#8 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): PartidoController->filterAccessControl()
+#11 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\Yii\framework\web\CController.php(265): PartidoController->runActionWithFilters()
+#14 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): PartidoController->run()
+#15 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/ANFP-TISW/index.php/partido/admin
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\admin.php (15)
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php (144)
+in C:\xampp\htdocs\Yii\ANFP-TISW\index.php (13)
+2015/04/16 21:10:00 [error] [exception.CException] exception 'CException' with message 'La propiedad "PartidoController"."renderPartial" no se encuentra definida.' in C:\xampp\htdocs\Yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\admin.php(18): CComponent->__get('renderPartial')
+#1 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#3 C:\xampp\htdocs\Yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\Yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#5 C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php(144): CController->render('admin', Array)
+#6 [internal function]: PartidoController->actionAdmin('17')
+#7 C:\xampp\htdocs\Yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PartidoController), Array)
+#8 C:\xampp\htdocs\Yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PartidoController), Object(ReflectionMethod), Array)
+#9 C:\xampp\htdocs\Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#18 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('partido/admin')
+#19 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/yii/ANFP-TISW/index.php/partido/admin/17
+HTTP_REFERER=http://localhost:200/yii/ANFP-TISW/index.php/partido/admin/15
+---
+2015/04/16 21:12:18 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\admin.php:27)
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\CController.php(869): PartidoController->renderFile()
+#1 C:\xampp\htdocs\Yii\framework\web\CController.php(782): PartidoController->renderPartial()
+#2 C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php(144): PartidoController->render()
+#3 unknown(0): PartidoController->actionAdmin()
+#4 C:\xampp\htdocs\Yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\Yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): PartidoController->runAction()
+#8 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): PartidoController->filterAccessControl()
+#11 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\Yii\framework\web\CController.php(265): PartidoController->runActionWithFilters()
+#14 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): PartidoController->run()
+#15 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/ANFP-TISW/index.php/partido/admin/1
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\admin.php (27)
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php (144)
+in C:\xampp\htdocs\Yii\ANFP-TISW\index.php (13)
+2015/04/16 21:12:36 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\admin.php:27)
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\CController.php(869): PartidoController->renderFile()
+#1 C:\xampp\htdocs\Yii\framework\web\CController.php(782): PartidoController->renderPartial()
+#2 C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php(144): PartidoController->render()
+#3 unknown(0): PartidoController->actionAdmin()
+#4 C:\xampp\htdocs\Yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\Yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): PartidoController->runAction()
+#8 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): PartidoController->filterAccessControl()
+#11 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\Yii\framework\web\CController.php(265): PartidoController->runActionWithFilters()
+#14 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): PartidoController->run()
+#15 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/ANFP-TISW/index.php/partido/admin/1
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\admin.php (27)
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php (144)
+in C:\xampp\htdocs\Yii\ANFP-TISW\index.php (13)
+2015/04/16 21:12:37 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\admin.php:27)
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\CController.php(869): PartidoController->renderFile()
+#1 C:\xampp\htdocs\Yii\framework\web\CController.php(782): PartidoController->renderPartial()
+#2 C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php(144): PartidoController->render()
+#3 unknown(0): PartidoController->actionAdmin()
+#4 C:\xampp\htdocs\Yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\Yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): PartidoController->runAction()
+#8 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): PartidoController->filterAccessControl()
+#11 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\Yii\framework\web\CController.php(265): PartidoController->runActionWithFilters()
+#14 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): PartidoController->run()
+#15 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/ANFP-TISW/index.php/partido/admin/1
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\admin.php (27)
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php (144)
+in C:\xampp\htdocs\Yii\ANFP-TISW\index.php (13)
+2015/04/16 21:13:04 [error] [php] Undefined variable: data (C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\admin.php:27)
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\CController.php(869): PartidoController->renderFile()
+#1 C:\xampp\htdocs\Yii\framework\web\CController.php(782): PartidoController->renderPartial()
+#2 C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php(144): PartidoController->render()
+#3 unknown(0): PartidoController->actionAdmin()
+#4 C:\xampp\htdocs\Yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\Yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): PartidoController->runAction()
+#8 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): PartidoController->filterAccessControl()
+#11 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\Yii\framework\web\CController.php(265): PartidoController->runActionWithFilters()
+#14 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): PartidoController->run()
+#15 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/ANFP-TISW/index.php/partido/admin/1
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\admin.php (27)
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php (144)
+in C:\xampp\htdocs\Yii\ANFP-TISW\index.php (13)
+2015/04/16 21:13:19 [error] [exception.CException] exception 'CException' with message 'La propiedad "BsDataColumn"."nombre" no se encuentra definida.' in C:\xampp\htdocs\Yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\YiiBase.php(220): CComponent->__set('nombre', 'Estadio')
+#1 C:\xampp\htdocs\Yii\framework\zii\widgets\grid\CGridView.php(388): YiiBase::createComponent(Array, Object(BsGridView))
+#2 C:\xampp\htdocs\Yii\ANFP-TISW\protected\extensions\bootstrap\widgets\BsGridView.php(90): CGridView->initColumns()
+#3 C:\xampp\htdocs\Yii\framework\zii\widgets\grid\CGridView.php(359): BsGridView->initColumns()
+#4 C:\xampp\htdocs\Yii\ANFP-TISW\protected\extensions\bootstrap\widgets\BsGridView.php(49): CGridView->init()
+#5 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(147): BsGridView->init()
+#6 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#7 C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\admin.php(42): CBaseController->widget('bootstrap.widge...', Array)
+#8 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\Yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#11 C:\xampp\htdocs\Yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#12 C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php(144): CController->render('admin', Array)
+#13 [internal function]: PartidoController->actionAdmin('1')
+#14 C:\xampp\htdocs\Yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PartidoController), Array)
+#15 C:\xampp\htdocs\Yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PartidoController), Object(ReflectionMethod), Array)
+#16 C:\xampp\htdocs\Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#25 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('partido/admin')
+#26 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/yii/ANFP-TISW/index.php/partido/admin/1
+HTTP_REFERER=http://localhost:200/yii/ANFP-TISW/index.php/partido/admin/2
+---
+2015/04/16 21:13:32 [error] [exception.CException] exception 'CException' with message 'La propiedad "Partido"."Estadio" no se encuentra definida.' in C:\xampp\htdocs\Yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('Estadio')
+#1 C:\xampp\htdocs\Yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('Estadio')
+#2 C:\xampp\htdocs\Yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Partido), 'Estadio')
+#3 C:\xampp\htdocs\Yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Partido), 'Estadio', Array)
+#4 C:\xampp\htdocs\Yii\ANFP-TISW\protected\extensions\bootstrap\widgets\BsDataColumn.php(105): CHtml::activeTextField(Object(Partido), 'Estadio', Array)
+#5 C:\xampp\htdocs\Yii\ANFP-TISW\protected\extensions\bootstrap\widgets\BsDataColumn.php(65): BsDataColumn->renderFilterCellContent()
+#6 C:\xampp\htdocs\Yii\framework\zii\widgets\grid\CGridView.php(532): BsDataColumn->renderFilterCell()
+#7 C:\xampp\htdocs\Yii\framework\zii\widgets\grid\CGridView.php(510): CGridView->renderFilter()
+#8 C:\xampp\htdocs\Yii\framework\zii\widgets\grid\CGridView.php(480): CGridView->renderTableHeader()
+#9 C:\xampp\htdocs\Yii\framework\zii\widgets\CBaseListView.php(167): CGridView->renderItems()
+#10 [internal function]: CBaseListView->renderSection(Array)
+#11 C:\xampp\htdocs\Yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback('/{(\\w+)}/', Array, '{items}\n{pager}...')
+#12 C:\xampp\htdocs\Yii\framework\zii\widgets\CBaseListView.php(135): CBaseListView->renderContent()
+#13 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(173): CBaseListView->run()
+#14 C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\admin.php(42): CBaseController->widget('bootstrap.widge...', Array)
+#15 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#16 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#17 C:\xampp\htdocs\Yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#18 C:\xampp\htdocs\Yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#19 C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php(144): CController->render('admin', Array)
+#20 [internal function]: PartidoController->actionAdmin('1')
+#21 C:\xampp\htdocs\Yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PartidoController), Array)
+#22 C:\xampp\htdocs\Yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PartidoController), Object(ReflectionMethod), Array)
+#23 C:\xampp\htdocs\Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#24 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#25 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#26 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#27 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#28 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#29 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#30 C:\xampp\htdocs\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#31 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#32 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('partido/admin')
+#33 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#34 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CApplication->run()
+#35 {main}
+REQUEST_URI=/yii/ANFP-TISW/index.php/partido/admin/1
+HTTP_REFERER=http://localhost:200/yii/ANFP-TISW/index.php/partido/admin/2
+---
+2015/04/16 21:13:59 [error] [php] Undefined variable: model (C:\xampp\htdocs\Yii\framework\base\CComponent.php(612) : eval()'d code:1)
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\zii\widgets\grid\CGridColumn.php(151): BsDataColumn->renderDataCellContent()
+#1 C:\xampp\htdocs\Yii\framework\zii\widgets\grid\CGridView.php(616): BsDataColumn->renderDataCell()
+#2 C:\xampp\htdocs\Yii\framework\zii\widgets\grid\CGridView.php(572): BsGridView->renderTableRow()
+#3 C:\xampp\htdocs\Yii\framework\zii\widgets\grid\CGridView.php(482): BsGridView->renderTableBody()
+#4 C:\xampp\htdocs\Yii\framework\zii\widgets\CBaseListView.php(167): BsGridView->renderItems()
+#5 unknown(0): BsGridView->renderSection()
+#6 C:\xampp\htdocs\Yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback()
+#7 C:\xampp\htdocs\Yii\framework\zii\widgets\CBaseListView.php(135): BsGridView->renderContent()
+#8 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(173): BsGridView->run()
+#9 C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\admin.php(42): PartidoController->widget()
+#10 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(126): require()
+#11 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(95): PartidoController->renderInternal()
+#12 C:\xampp\htdocs\Yii\framework\web\CController.php(869): PartidoController->renderFile()
+#13 C:\xampp\htdocs\Yii\framework\web\CController.php(782): PartidoController->renderPartial()
+#14 C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php(144): PartidoController->render()
+#15 unknown(0): PartidoController->actionAdmin()
+#16 C:\xampp\htdocs\Yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#17 C:\xampp\htdocs\Yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#18 C:\xampp\htdocs\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#19 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): PartidoController->runAction()
+#20 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#22 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): PartidoController->filterAccessControl()
+#23 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#24 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\xampp\htdocs\Yii\framework\web\CController.php(265): PartidoController->runActionWithFilters()
+#26 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): PartidoController->run()
+#27 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#28 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#29 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/ANFP-TISW/index.php/partido/admin/1
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\partido\admin.php (42)
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\PartidoController.php (144)
+in C:\xampp\htdocs\Yii\ANFP-TISW\index.php (13)
+2015/04/16 21:20:37 [error] [exception.CException] exception 'CException' with message 'La propiedad "Participa"."TA" no se encuentra definida.' in C:\xampp\htdocs\Yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('TA')
+#1 C:\xampp\htdocs\Yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('TA')
+#2 C:\xampp\htdocs\Yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Participa), 'TA')
+#3 C:\xampp\htdocs\Yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Participa), 'TA', Array)
+#4 C:\xampp\htdocs\Yii\ANFP-TISW\protected\extensions\bootstrap\widgets\BsDataColumn.php(105): CHtml::activeTextField(Object(Participa), 'TA', Array)
+#5 C:\xampp\htdocs\Yii\ANFP-TISW\protected\extensions\bootstrap\widgets\BsDataColumn.php(65): BsDataColumn->renderFilterCellContent()
+#6 C:\xampp\htdocs\Yii\framework\zii\widgets\grid\CGridView.php(532): BsDataColumn->renderFilterCell()
+#7 C:\xampp\htdocs\Yii\framework\zii\widgets\grid\CGridView.php(510): CGridView->renderFilter()
+#8 C:\xampp\htdocs\Yii\framework\zii\widgets\grid\CGridView.php(480): CGridView->renderTableHeader()
+#9 C:\xampp\htdocs\Yii\framework\zii\widgets\CBaseListView.php(167): CGridView->renderItems()
+#10 [internal function]: CBaseListView->renderSection(Array)
+#11 C:\xampp\htdocs\Yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback('/{(\\w+)}/', Array, '{items}\n{pager}...')
+#12 C:\xampp\htdocs\Yii\framework\zii\widgets\CBaseListView.php(135): CBaseListView->renderContent()
+#13 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(173): CBaseListView->run()
+#14 C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\participa\admin.php(40): CBaseController->widget('bootstrap.widge...', Array)
+#15 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#16 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#17 C:\xampp\htdocs\Yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#18 C:\xampp\htdocs\Yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#19 C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\ParticipaController.php(143): CController->render('admin', Array)
+#20 C:\xampp\htdocs\Yii\framework\web\actions\CInlineAction.php(49): ParticipaController->actionAdmin()
+#21 C:\xampp\htdocs\Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#22 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#23 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#24 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#25 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#26 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#27 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#28 C:\xampp\htdocs\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#30 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('participa/admin')
+#31 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#32 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CApplication->run()
+#33 {main}
+REQUEST_URI=/yii/ANFP-TISW/index.php/participa/admin
+HTTP_REFERER=http://localhost:200/yii/ANFP-TISW/index.php/partido/admin
+---
+2015/04/16 22:12:33 [error] [php] Undefined variable: Log (C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\equipo\_form.php:53)
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\CController.php(869): EquipoController->renderFile()
+#1 C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\equipo\create.php(17): EquipoController->renderPartial()
+#2 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(95): EquipoController->renderInternal()
+#4 C:\xampp\htdocs\Yii\framework\web\CController.php(869): EquipoController->renderFile()
+#5 C:\xampp\htdocs\Yii\framework\web\CController.php(782): EquipoController->renderPartial()
+#6 C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\EquipoController.php(89): EquipoController->render()
+#7 C:\xampp\htdocs\Yii\framework\web\actions\CInlineAction.php(49): EquipoController->actionCreate()
+#8 C:\xampp\htdocs\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): EquipoController->runAction()
+#10 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): EquipoController->filterAccessControl()
+#13 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\Yii\framework\web\CController.php(265): EquipoController->runActionWithFilters()
+#16 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): EquipoController->run()
+#17 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/ANFP-TISW/index.php/equipo/create
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\equipo\_form.php (53)
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\equipo\create.php (17)
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\EquipoController.php (89)
+2015/04/16 22:16:49 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`anfp`.`pertenece`, CONSTRAINT `fk_EQUIPO_has_DIVISION_EQUIPO1` FOREIGN KEY (`PER_equCorrel`) REFERENCES `equipo` (`EQU_correl`) ON DELETE NO ACTION ON UPDATE NO ACTION). La sentencia SQL ejecutada fue: DELETE FROM `equipo` WHERE `equipo`.`EQU_correl`='3'.
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\EquipoController.php (144)
+in C:\xampp\htdocs\Yii\ANFP-TISW\index.php (13)
+2015/04/16 22:16:49 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`anfp`.`pertenece`, CONSTRAINT `fk_EQUIPO_has_DIVISION_EQUIPO1` FOREIGN KEY (`PER_equCorrel`) REFERENCES `equipo` (`EQU_correl`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: DELETE FROM `equipo` WHERE `equipo`.`EQU_correl`='3'' in C:\xampp\htdocs\Yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\db\ar\CActiveRecord.php(1802): CDbCommand->execute()
+#1 C:\xampp\htdocs\Yii\framework\db\ar\CActiveRecord.php(1222): CActiveRecord->deleteByPk('3')
+#2 C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\EquipoController.php(144): CActiveRecord->delete()
+#3 [internal function]: EquipoController->actionDelete('3')
+#4 C:\xampp\htdocs\Yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(EquipoController), Array)
+#5 C:\xampp\htdocs\Yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(EquipoController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\Yii\framework\web\CController.php(1116): CFilterChain->run()
+#9 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#10 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#18 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('equipo/delete')
+#19 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/yii/ANFP-TISW/index.php/equipo/delete/3
+HTTP_REFERER=http://localhost:200/yii/ANFP-TISW/index.php/equipo/3
+---
+2015/04/16 22:20:59 [warning] [application] Error al establecer unsafe al atributo "username" de "Logo".
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\EquipoController.php (82)
+in C:\xampp\htdocs\Yii\ANFP-TISW\index.php (13)
+2015/04/16 22:21:46 [warning] [application] Error al establecer unsafe al atributo "username" de "Logo".
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\EquipoController.php (82)
+in C:\xampp\htdocs\Yii\ANFP-TISW\index.php (13)
+2015/04/16 22:35:27 [warning] [application] Error al establecer unsafe al atributo "username" de "Logo".
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\EquipoController.php (82)
+in C:\xampp\htdocs\Yii\ANFP-TISW\index.php (13)
+2015/04/16 22:36:51 [warning] [application] Error al establecer unsafe al atributo "username" de "Logo".
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\EquipoController.php (82)
+in C:\xampp\htdocs\Yii\ANFP-TISW\index.php (13)
+2015/04/16 22:36:56 [warning] [application] Error al establecer unsafe al atributo "username" de "Logo".
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\EquipoController.php (82)
+in C:\xampp\htdocs\Yii\ANFP-TISW\index.php (13)
+2015/04/16 22:37:28 [warning] [application] Error al establecer unsafe al atributo "username" de "Logo".
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\EquipoController.php (82)
+in C:\xampp\htdocs\Yii\ANFP-TISW\index.php (13)
+2015/04/16 22:37:51 [warning] [application] Error al establecer unsafe al atributo "username" de "Logo".
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\EquipoController.php (82)
+in C:\xampp\htdocs\Yii\ANFP-TISW\index.php (13)
+2015/04/16 22:42:19 [warning] [application] Error al establecer unsafe al atributo "username" de "Logo".
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\EquipoController.php (82)
+in C:\xampp\htdocs\Yii\ANFP-TISW\index.php (13)
+2015/04/16 22:43:18 [warning] [application] Error al establecer unsafe al atributo "username" de "Logo".
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\EquipoController.php (82)
+in C:\xampp\htdocs\Yii\ANFP-TISW\index.php (13)
+2015/04/16 22:46:41 [error] [php] Object of class Logo could not be converted to string (C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\EquipoController.php:83)
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): EquipoController->runAction()
+#1 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): EquipoController->filterAccessControl()
+#4 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii\framework\web\CController.php(265): EquipoController->runActionWithFilters()
+#7 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): EquipoController->run()
+#8 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/ANFP-TISW/index.php/equipo/create
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\EquipoController.php (83)
+in C:\xampp\htdocs\Yii\ANFP-TISW\index.php (13)
+2015/04/16 22:47:02 [error] [php] Object of class Logo could not be converted to string (C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\EquipoController.php:83)
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): EquipoController->runAction()
+#1 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): EquipoController->filterAccessControl()
+#4 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii\framework\web\CController.php(265): EquipoController->runActionWithFilters()
+#7 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): EquipoController->run()
+#8 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/ANFP-TISW/index.php/equipo/create
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\EquipoController.php (83)
+in C:\xampp\htdocs\Yii\ANFP-TISW\index.php (13)
+2015/04/16 22:48:03 [error] [php] Object of class Logo could not be converted to string (C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\EquipoController.php:83)
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): EquipoController->runAction()
+#1 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): EquipoController->filterAccessControl()
+#4 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii\framework\web\CController.php(265): EquipoController->runActionWithFilters()
+#7 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): EquipoController->run()
+#8 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/ANFP-TISW/index.php/equipo/create
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\EquipoController.php (83)
+in C:\xampp\htdocs\Yii\ANFP-TISW\index.php (13)
+2015/04/16 22:49:43 [error] [php] Object of class Logo could not be converted to string (C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\EquipoController.php:83)
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): EquipoController->runAction()
+#1 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): EquipoController->filterAccessControl()
+#4 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii\framework\web\CController.php(265): EquipoController->runActionWithFilters()
+#7 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): EquipoController->run()
+#8 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/ANFP-TISW/index.php/equipo/create
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\EquipoController.php (83)
+in C:\xampp\htdocs\Yii\ANFP-TISW\index.php (13)
+2015/04/16 22:50:16 [error] [php] Object of class Logo could not be converted to string (C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\EquipoController.php:83)
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): EquipoController->runAction()
+#1 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): EquipoController->filterAccessControl()
+#4 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii\framework\web\CController.php(265): EquipoController->runActionWithFilters()
+#7 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): EquipoController->run()
+#8 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/ANFP-TISW/index.php/equipo/create
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\EquipoController.php (83)
+in C:\xampp\htdocs\Yii\ANFP-TISW\index.php (13)
+2015/04/16 22:50:56 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`anfp`.`pertenece`, CONSTRAINT `fk_EQUIPO_has_DIVISION_EQUIPO1` FOREIGN KEY (`PER_equCorrel`) REFERENCES `equipo` (`EQU_correl`) ON DELETE NO ACTION ON UPDATE NO ACTION). La sentencia SQL ejecutada fue: DELETE FROM `equipo` WHERE `equipo`.`EQU_correl`='4'.
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\EquipoController.php (151)
+in C:\xampp\htdocs\Yii\ANFP-TISW\index.php (13)
+2015/04/16 22:50:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`anfp`.`pertenece`, CONSTRAINT `fk_EQUIPO_has_DIVISION_EQUIPO1` FOREIGN KEY (`PER_equCorrel`) REFERENCES `equipo` (`EQU_correl`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: DELETE FROM `equipo` WHERE `equipo`.`EQU_correl`='4'' in C:\xampp\htdocs\Yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\db\ar\CActiveRecord.php(1802): CDbCommand->execute()
+#1 C:\xampp\htdocs\Yii\framework\db\ar\CActiveRecord.php(1222): CActiveRecord->deleteByPk('4')
+#2 C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\EquipoController.php(151): CActiveRecord->delete()
+#3 [internal function]: EquipoController->actionDelete('4')
+#4 C:\xampp\htdocs\Yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(EquipoController), Array)
+#5 C:\xampp\htdocs\Yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(EquipoController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\Yii\framework\web\CController.php(1116): CFilterChain->run()
+#9 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#10 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#18 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('equipo/delete')
+#19 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/yii/ANFP-TISW/index.php/equipo/delete/4
+HTTP_REFERER=http://localhost:200/yii/ANFP-TISW/index.php/equipo/4
+---
+2015/04/16 22:52:51 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`anfp`.`integra`, CONSTRAINT `fk_TORNEO_has_EQUIPO_TORNEO1` FOREIGN KEY (`INT_torCorrel`) REFERENCES `torneo` (`TOR_correl`) ON DELETE NO ACTION ON UPDATE NO ACTION). La sentencia SQL ejecutada fue: DELETE FROM `torneo` WHERE `torneo`.`TOR_correl`='9'.
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\TorneoController.php (126)
+in C:\xampp\htdocs\Yii\ANFP-TISW\index.php (13)
+2015/04/16 22:52:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`anfp`.`integra`, CONSTRAINT `fk_TORNEO_has_EQUIPO_TORNEO1` FOREIGN KEY (`INT_torCorrel`) REFERENCES `torneo` (`TOR_correl`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: DELETE FROM `torneo` WHERE `torneo`.`TOR_correl`='9'' in C:\xampp\htdocs\Yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\db\ar\CActiveRecord.php(1802): CDbCommand->execute()
+#1 C:\xampp\htdocs\Yii\framework\db\ar\CActiveRecord.php(1222): CActiveRecord->deleteByPk('9')
+#2 C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\TorneoController.php(126): CActiveRecord->delete()
+#3 [internal function]: TorneoController->actionDelete('9')
+#4 C:\xampp\htdocs\Yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(TorneoController), Array)
+#5 C:\xampp\htdocs\Yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(TorneoController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\Yii\framework\web\CController.php(1116): CFilterChain->run()
+#9 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#10 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#18 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('torneo/delete')
+#19 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/yii/ANFP-TISW/index.php/torneo/delete/9?ajax=torneo-grid
+HTTP_REFERER=http://localhost:200/yii/ANFP-TISW/index.php/torneo/admin
+---
+2015/04/16 22:52:56 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`anfp`.`integra`, CONSTRAINT `fk_TORNEO_has_EQUIPO_TORNEO1` FOREIGN KEY (`INT_torCorrel`) REFERENCES `torneo` (`TOR_correl`) ON DELETE NO ACTION ON UPDATE NO ACTION). La sentencia SQL ejecutada fue: DELETE FROM `torneo` WHERE `torneo`.`TOR_correl`='8'.
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\TorneoController.php (126)
+in C:\xampp\htdocs\Yii\ANFP-TISW\index.php (13)
+2015/04/16 22:52:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`anfp`.`integra`, CONSTRAINT `fk_TORNEO_has_EQUIPO_TORNEO1` FOREIGN KEY (`INT_torCorrel`) REFERENCES `torneo` (`TOR_correl`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: DELETE FROM `torneo` WHERE `torneo`.`TOR_correl`='8'' in C:\xampp\htdocs\Yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\db\ar\CActiveRecord.php(1802): CDbCommand->execute()
+#1 C:\xampp\htdocs\Yii\framework\db\ar\CActiveRecord.php(1222): CActiveRecord->deleteByPk('8')
+#2 C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\TorneoController.php(126): CActiveRecord->delete()
+#3 [internal function]: TorneoController->actionDelete('8')
+#4 C:\xampp\htdocs\Yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(TorneoController), Array)
+#5 C:\xampp\htdocs\Yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(TorneoController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\Yii\framework\web\CController.php(1116): CFilterChain->run()
+#9 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#10 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#18 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('torneo/delete')
+#19 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/yii/ANFP-TISW/index.php/torneo/delete/8?ajax=torneo-grid
+HTTP_REFERER=http://localhost:200/yii/ANFP-TISW/index.php/torneo/admin
+---

@@ -35,6 +35,8 @@
 				array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>'Torneo', 'url'=>array('/torneo/admin')),
 				array('label'=>'Equipo', 'url'=>array('/equipo/admin')),
+				array('label'=>'Partidos', 'url'=>array('/partido/admin')),
+				array('label'=>'Resumen Partido', 'url'=>array('/participa/admin')),
 				//array('label'=>'Tabla', 'url'=>array('/integra/admin')),
 				//array('label'=>'Insidente', 'url'=>array('/incidente/admin')),
 				//array('label'=>'Salario', 'url'=>array('/salario/admin')),

@@ -77,16 +77,16 @@ class Partido extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'PAR_correl' => 'Par Correl',
-			'PAR_estCorrel' => 'Par Est Correl',
-			'PAR_torCorrel' => 'Par Tor Correl',
-			'PAR_programacion' => 'Par Programacion',
-			'PAR_hora' => 'Par Hora',
-			'PAR_fecha' => 'Par Fecha',
-			'PAR_asistencia' => 'Par Asistencia',
-			'PAR_recaudo' => 'Par Recaudo',
-			'PAR_estado' => 'Par Estado',
-			'PAR_tiempo' => 'Par Tiempo',
+			'PAR_correl' => 'ID',
+			'PAR_estCorrel' => 'Estadio',
+			'PAR_torCorrel' => 'Torneo',
+			'PAR_programacion' => 'Fechas',
+			'PAR_hora' => 'Hora',
+			'PAR_fecha' => 'Fecha',
+			'PAR_asistencia' => 'Asistencia',
+			'PAR_recaudo' => 'Recaudo',
+			'PAR_estado' => 'Estado',
+			'PAR_tiempo' => 'Tiempo',
 		);
 	}
 

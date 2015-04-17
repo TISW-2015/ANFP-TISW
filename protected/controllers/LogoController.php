@@ -1,6 +1,6 @@
 <?php
 
-class EquipoController extends Controller
+class LogoController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -28,7 +28,7 @@ class EquipoController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','mayor'),
+				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -62,33 +62,16 @@ class EquipoController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Equipo;
-		$aux= new Pertenece;
-		$log= new Logo;
+		$model=new Logo;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Equipo']))
+		if(isset($_POST['Logo']))
 		{
-			$model->attributes=$_POST['Equipo'];
-			if(isset($_POST['Pertenece']))
-				$aux->attributes=$_POST['Pertenece'];
-			if($aux->PER_divCorrel==null||$aux->PER_fecha==null){
-				echo "Equipo debe pertenecer a una division";
-				die();
-			}
-			/*if(isset($_POST['Logo'])){
-				$log->attributes=$_POST['Logo'];
-				echo($log);
-				var_dump($log);
-				die;
-			}*/
-			if($model->save()){
-					$aux->PER_equCorrel=$model->EQU_correl;
-					$aux->save();
-				}
-				$this->redirect(array('view','id'=>$model->EQU_correl));
+			$model->attributes=$_POST['Logo'];
+			if($model->save())
+				$this->redirect(array('view','id'=>$model->LOG_correl));
 		}
 
 		$this->render('create',array(
@@ -104,36 +87,15 @@ class EquipoController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
-		$var;
-		$idPer=Pertenece::model()->findAllByAttributes(array('PER_equCorrel'=>$id));
-		//$agno=explode("-",$idPer->PER_fecha);
-		//var_dump($agno);
-		foreach ($idPer as $value) {
-			$var[]=array(explode("-",$value->PER_fecha)[0],$value->PER_correl);
-			//var_dump($value);
-		}
-		$var=(Utils::mayor($var));
-		//var_dump($idPer);
-		$aux= new Pertenece;
+
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Equipo']))
+		if(isset($_POST['Logo']))
 		{
-			$model->attributes=$_POST['Equipo'];
-			$aux->attributes=$_POST['Pertenece'];
-			if($model->save()){
-				if($aux->PER_divCorrel!=null&&$aux->PER_fecha!=null){	
-					$aux->PER_equCorrel=$model->EQU_correl;
-					if(explode("-",$aux->PER_fecha)[0]!=$var[0])
-						$aux->save();
-					else{
-						echo "El equipo no puede cambiar de division por este año";
-						die();
-						}
-					}
-				$this->redirect(array('view','id'=>$model->EQU_correl));
-			}
+			$model->attributes=$_POST['Logo'];
+			if($model->save())
+				$this->redirect(array('view','id'=>$model->LOG_correl));
 		}
 
 		$this->render('update',array(
@@ -160,7 +122,7 @@ class EquipoController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Equipo');
+		$dataProvider=new CActiveDataProvider('Logo');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -171,10 +133,10 @@ class EquipoController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Equipo('search');
+		$model=new Logo('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Equipo']))
-			$model->attributes=$_GET['Equipo'];
+		if(isset($_GET['Logo']))
+			$model->attributes=$_GET['Logo'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -185,12 +147,12 @@ class EquipoController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Equipo the loaded model
+	 * @return Logo the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Equipo::model()->findByPk($id);
+		$model=Logo::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -198,11 +160,11 @@ class EquipoController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Equipo $model the model to be validated
+	 * @param Logo $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='equipo-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='logo-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

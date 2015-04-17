@@ -68,18 +68,18 @@ class Participa extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'PART_correl' => 'Part Correl',
-			'PART_equCorrel' => 'Part Equ Correl',
-			'PART_parCorrel' => 'Part Par Correl',
-			'PART_posicion' => 'Part Posicion',
-			'PART_goles' => 'Part Goles',
-			'PART_faltas' => 'Part Faltas',
-			'PART_tarjetaAmarilla' => 'Part Tarjeta Amarilla',
-			'PART_tarjetaRoja' => 'Part Tarjeta Roja',
-			'PART_tiroLibre' => 'Part Tiro Libre',
-			'PART_corner' => 'Part Corner',
-			'PART_penal' => 'Part Penal',
-			'PART_extranjero' => 'Part Extranjero',
+			'PART_correl' => 'ID',
+			'PART_equCorrel' => 'Equipo',
+			'PART_parCorrel' => 'Partido',
+			'PART_posicion' => 'Posicion',
+			'PART_goles' => 'Goles',
+			'PART_faltas' => 'Faltas',
+			'PART_tarjetaAmarilla' => 'Tarjeta Amarilla',
+			'PART_tarjetaRoja' => 'Tarjeta Roja',
+			'PART_tiroLibre' => 'Tiro Libre',
+			'PART_corner' => 'Corner',
+			'PART_penal' => 'Penal',
+			'PART_extranjero' => 'Extranjero',
 		);
 	}
 

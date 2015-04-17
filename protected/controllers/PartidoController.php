@@ -120,7 +120,7 @@ class PartidoController extends Controller
 	/**
 	 * Lists all models.
 	 */
-	public function actionIndex()
+	public function actionIndex($id=null)
 	{
 		$dataProvider=new CActiveDataProvider('Partido');
 		$this->render('index',array(
@@ -131,10 +131,11 @@ class PartidoController extends Controller
 	/**
 	 * Manages all models.
 	 */
-	public function actionAdmin()
+	public function actionAdmin($id=null)
 	{
 		$model=new Partido('search');
 		$model->unsetAttributes();  // clear any default values
+		$model->PAR_fecha=$id;
 		if(isset($_GET['Partido']))
 			$model->attributes=$_GET['Partido'];
 

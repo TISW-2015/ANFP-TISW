@@ -10,7 +10,6 @@
  * @property string $EQU_direccionClub
  * @property string $EQU_sitio
  * @property string $EQU_telefono
- * @property string $EQU_logo
  *
  * The followings are the available model relations:
  * @property Anfitrion[] $anfitrions
@@ -18,6 +17,7 @@
  * @property Contratotecnico[] $contratotecnicos
  * @property Formacion[] $formacions
  * @property Integra[] $integras
+ * @property Logo[] $logos
  * @property Participa[] $participas
  * @property Pertenece[] $perteneces
  * @property Sancionequipo[] $sancionequipos
@@ -41,10 +41,9 @@ class Equipo extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('EQU_nombre, EQU_presidente, EQU_direccionClub, EQU_sitio, EQU_telefono', 'length', 'max'=>45),
-			array('EQU_logo', 'length', 'max'=>400),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('EQU_correl, EQU_nombre, EQU_presidente, EQU_direccionClub, EQU_sitio, EQU_telefono, EQU_logo', 'safe', 'on'=>'search'),
+			array('EQU_correl, EQU_nombre, EQU_presidente, EQU_direccionClub, EQU_sitio, EQU_telefono', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -61,6 +60,7 @@ class Equipo extends CActiveRecord
 			'contratotecnicos' => array(self::HAS_MANY, 'Contratotecnico', 'CON_TEC_equCorrel'),
 			'formacions' => array(self::HAS_MANY, 'Formacion', 'FOR_equCorrel'),
 			'integras' => array(self::HAS_MANY, 'Integra', 'INT_equCorrel'),
+			'logos' => array(self::HAS_MANY, 'Logo', 'LOG_equCorrel'),
 			'participas' => array(self::HAS_MANY, 'Participa', 'PART_equCorrel'),
 			'perteneces' => array(self::HAS_MANY, 'Pertenece', 'PER_equCorrel'),
 			'sancionequipos' => array(self::HAS_MANY, 'Sancionequipo', 'SAN_EQU_equCorrel'),
@@ -73,13 +73,12 @@ class Equipo extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'EQU_correl' => 'Equipo id',
+			'EQU_correl' => 'Correl',
 			'EQU_nombre' => 'Nombre',
 			'EQU_presidente' => 'Presidente',
-			'EQU_direccionClub' => 'Dirección Club',
-			'EQU_sitio' => 'Sitio web',
+			'EQU_direccionClub' => 'Direccion Club',
+			'EQU_sitio' => 'Sitio',
 			'EQU_telefono' => 'Telefono',
-			'EQU_logo' => 'Logo',
 		);
 	}
 
@@ -107,7 +106,6 @@ class Equipo extends CActiveRecord
 		$criteria->compare('EQU_direccionClub',$this->EQU_direccionClub,true);
 		$criteria->compare('EQU_sitio',$this->EQU_sitio,true);
 		$criteria->compare('EQU_telefono',$this->EQU_telefono,true);
-		$criteria->compare('EQU_logo',$this->EQU_logo,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

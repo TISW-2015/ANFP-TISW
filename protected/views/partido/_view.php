@@ -1,47 +1,139 @@
 <?php
-/* @var $this PartidoController */
-/* @var $data Partido */
+echo BsHtml::buttonToolbar(array(
+    array(
+        'items' => array(
+            array(
+                //'icon' => '<img src="'.Yii::app()->request->baseUrl.'/images/futbol.ico">',
+                'label'=>'Fechas',
+                'color' => BsHtml::BUTTON_COLOR_INFO
+                //'imageUrl'=>'<img src="'.Yii::app()->request->baseUrl.'/images/futbol.ico">'
+                //'template'=>'<img src="'.Yii::app()->request->baseUrl.'/images/futbol.ico">'
+                //'label'=>'<img src="'.Yii::app()->request->baseUrl.'/images/AAA.ico">'
+
+
+            ),
+            array(
+                'label' => '1',
+                'url' =>array('admin','id'=>'1'),
+                'type' => BsHtml::BUTTON_TYPE_LINK
+                //'color' => BsHtml::BUTTON_COLOR_INFO
+                ),
+            array(
+                'label' => '2',
+                'url' =>array('//partido/admin','id'=>'2'),
+                'type' => BsHtml::BUTTON_TYPE_LINK
+                //'color' => BsHtml::BUTTON_COLOR_INFO
+            ),
+            array(
+                'label' => '3',
+                'url' =>array('//partido/admin','id'=>'3'),
+                'type' => BsHtml::BUTTON_TYPE_LINK
+                //'color' => BsHtml::BUTTON_COLOR_INFO
+            ),
+            array(
+                'label' => '4',
+                'url' =>array('//partido/admin','id'=>'4'),
+                'type' => BsHtml::BUTTON_TYPE_LINK
+                //'color' => BsHtml::BUTTON_COLOR_INFO
+            ),
+            array(
+                'label' => '5',
+                'url' =>array('//partido/admin','id'=>'5'),
+                'type' => BsHtml::BUTTON_TYPE_LINK
+                //'color' => BsHtml::BUTTON_COLOR_INFO
+            ),
+            array(
+                'label' => '6',
+                'url' =>array('//partido/admin','id'=>'6'),
+                'type' => BsHtml::BUTTON_TYPE_LINK
+                //'color' => BsHtml::BUTTON_COLOR_INFO
+            ),
+            array(
+                'label' => '7',
+                'url' =>array('//partido/admin','id'=>'7'),
+                'type' => BsHtml::BUTTON_TYPE_LINK
+                //'color' => BsHtml::BUTTON_COLOR_INFO
+            ),
+            array(
+                'label' => '8',
+                'url' =>array('//partido/admin','id'=>'8'),
+                'type' => BsHtml::BUTTON_TYPE_LINK
+                //'color' => BsHtml::BUTTON_COLOR_INFO
+                ),
+            array(
+                'label' => '9',
+                'url' =>array('//partido/admin','id'=>'9'),
+                'type' => BsHtml::BUTTON_TYPE_LINK
+                //'color' => BsHtml::BUTTON_COLOR_INFO
+            ),
+            array(
+                'label' => '10',
+                'url' =>array('//partido/admin','id'=>'10'),
+                'type' => BsHtml::BUTTON_TYPE_LINK
+                //'color' => BsHtml::BUTTON_COLOR_INFO
+            ),
+            array(
+                'label' => '11',
+                'url' =>array('//partido/admin','id'=>'11'),
+                'type' => BsHtml::BUTTON_TYPE_LINK
+                //'color' => BsHtml::BUTTON_COLOR_INFO
+            ),
+            array(
+                'label' => '12',
+                'url' =>array('//partido/admin','id'=>'12'),
+                'type' => BsHtml::BUTTON_TYPE_LINK
+                //'color' => BsHtml::BUTTON_COLOR_INFO
+            ),
+            array(
+                'label' => '13',
+                'url' =>array('//partido/admin','id'=>'13'),
+                'type' => BsHtml::BUTTON_TYPE_LINK
+                //'color' => BsHtml::BUTTON_COLOR_INFO
+            ),
+            array(
+                'label' => '14',
+                'url' =>array('//partido/admin','id'=>'14'),
+                'type' => BsHtml::BUTTON_TYPE_LINK
+                //'color' => BsHtml::BUTTON_COLOR_INFO
+            ),
+            array(
+                'label' => '15',
+                'url' =>array('//partido/admin','id'=>'15'),
+                'type' => BsHtml::BUTTON_TYPE_LINK
+                //'color' => BsHtml::BUTTON_COLOR_INFO
+            ),
+            array(
+                'label' => '16',
+                'url' =>array('//partido/admin','id'=>'16'),
+                'type' => BsHtml::BUTTON_TYPE_LINK
+                //'color' => BsHtml::BUTTON_COLOR_INFO
+            ),
+            array(
+                'label' => '17',
+                'url' =>array('//partido/admin','id'=>'17'),
+                'type' => BsHtml::BUTTON_TYPE_LINK
+                //'color' => BsHtml::BUTTON_COLOR_INFO
+            ),
+           /* array(
+            'own' => BsHtml::ajaxButton('own', Yii::app()->createAbsoluteUrl('site/ajaxTest'), array(
+                'cache' => true,
+                'data' => array(
+                    'message' => 'clicked the Ajaxbutton from the buttongroup'
+                ),
+                'type' => 'POST',
+                'success' => 'js:function(data){
+                            console.log(data);
+                            $(".modal-body").html(data);
+                            $("#demo_modal").modal("show");
+                        }'
+                ), array(
+                'icon' => BsHtml::GLYPHICON_BELL
+                ))
+            )*/
+        )
+    )
+), array(
+    'size' => BsHtml::BUTTON_SIZE_MINI
+    //'justified' => true
+));
 ?>
-
-<div class="view">
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('PAR_correl')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->PAR_correl), array('view', 'id'=>$data->PAR_correl)); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('PAR_estCorrel')); ?>:</b>
-	<?php echo CHtml::encode($data->PAR_estCorrel); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('PAR_programacion')); ?>:</b>
-	<?php echo CHtml::encode($data->PAR_programacion); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('PAR_hora')); ?>:</b>
-	<?php echo CHtml::encode($data->PAR_hora); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('PAR_fecha')); ?>:</b>
-	<?php echo CHtml::encode($data->PAR_fecha); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('PAR_asistencia')); ?>:</b>
-	<?php echo CHtml::encode($data->PAR_asistencia); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('PAR_recaudo')); ?>:</b>
-	<?php echo CHtml::encode($data->PAR_recaudo); ?>
-	<br />
-
-	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('PAR_estado')); ?>:</b>
-	<?php echo CHtml::encode($data->PAR_estado); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('PAR_tiempo')); ?>:</b>
-	<?php echo CHtml::encode($data->PAR_tiempo); ?>
-	<br />
-
-	*/ ?>
-
-</div>

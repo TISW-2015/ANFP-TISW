@@ -3,6 +3,7 @@
 /* @var $model Equipo */
 /* @var $form CActiveForm */
 $aux= new Pertenece;
+$log= new Logo;
 ?>
 <div class="form">
 
@@ -48,12 +49,6 @@ $aux= new Pertenece;
 		<?php echo $form->textField($model,'EQU_telefono',array('size'=>45,'maxlength'=>45)); ?>
 		<?php echo $form->error($model,'EQU_telefono'); ?>
 	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'EQU_logo'); ?>
-		<?php echo $form->textField($model,'EQU_logo',array('size'=>60,'maxlength'=>400)); ?>
-		<?php echo $form->error($model,'EQU_logo'); ?>
-	</div>
 	<div class="row">
 		<?php echo $form->dropDownListControlGroup($aux,'PER_divCorrel', array(
         CHtml::listData(Division::model()->findAll(),'DIV_correl','DIV_nombre'),
@@ -63,7 +58,6 @@ $aux= new Pertenece;
 	<div class="row">
 		<?php echo $form->dateFieldControlGroup($aux,'PER_fecha'); ?>
 	</div>
-
 	<div class="row buttons">
 		<?php echo BsHtml::submitButton('Aceptar', array('color' => BsHtml::BUTTON_COLOR_PRIMARY)); ?>
 	</div>
