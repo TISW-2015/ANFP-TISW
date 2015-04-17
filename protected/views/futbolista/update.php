@@ -10,9 +10,9 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	//array('label'=>'Lista de Futbolista', 'url'=>array('index')),
-	array('label'=>'Agregar Futbolista', 'url'=>array('create')),
-	array('label'=>'Detalle Futbolista', 'url'=>array('view', 'id'=>$model->FUT_correl)),
-	array('label'=>'Buscar Futbolista', 'url'=>array('admin')),
+	//array('label'=>'Agregar Futbolista', 'url'=>array('create')),
+	array('label'=>'Volver', 'url'=>array('view', 'id'=>$model->FUT_correl)),
+	
 );
 ?>
 

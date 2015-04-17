@@ -35,7 +35,7 @@
 				array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>'Torneo', 'url'=>array('/torneo/admin')),
 				array('label'=>'Equipo', 'url'=>array('/equipo/admin')),
-				array('label'=>'Lesión', 'url'=>array('/Lesion/admin')),
+				//array('label'=>'Lesión', 'url'=>array('/Lesion/admin')),
 				array('label'=>'Futbolista', 'url'=>array('/Futbolista/admin')),
 				array('label'=>'Falta', 'url'=>array('/Falta/admin')),
 				//array('label'=>'Tabla', 'url'=>array('/integra/admin')),

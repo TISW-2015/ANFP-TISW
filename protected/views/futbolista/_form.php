@@ -6,16 +6,15 @@
 
 <div class="form">
 
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'futbolista-form',
+<?php $form=$this->beginWidget('bootstrap.widgets.BsActiveForm', array(
+	'id'=>'torneo-form',
 	// Please note: When you enable ajax validation, make sure the corresponding
 	// controller action is handling ajax validation correctly.
 	// There is a call to performAjaxValidation() commented in generated controller code.
 	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
 )); ?>
-
-	<p class="note">Campos con <span class="required">*</span> son requeridos.</p>
+	<p class="help-block">Campos con <span class="required">*</span> son obligatorios.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -50,19 +49,19 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'FUT_estado'); ?>
-		<?php echo $form->textField($model,'FUT_estado',array('size'=>10,'maxlength'=>10)); ?>
-		<?php echo $form->error($model,'FUT_estado'); ?>
+		<?php echo $form->dropDownListControlGroup($model, 'FUT_estado', array(
+        '1' => 'Habilitado', '2' => 'Deshabilitado'
+        ), array('empty' => 'Seleccione Estado' ));  ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'FUT_estadoCivil'); ?>
-		<?php echo $form->textField($model,'FUT_estadoCivil',array('size'=>10,'maxlength'=>10)); ?>
-		<?php echo $form->error($model,'FUT_estadoCivil'); ?>
-	</div>
+		<?php echo $form->dropDownListControlGroup($model, 'FUT_estadoCivil', array(
+        '1' => 'Soltero', '2' => 'Casado', '3' => 'Viudo', '4' => 'Separado'
+        ), array('empty' => 'Seleccione Estado Civil' ));  ?>
+	</div>	
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar'); ?>
+		 <?php echo BsHtml::submitButton('Aceptar', array('color' => BsHtml::BUTTON_COLOR_PRIMARY)); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

@@ -2,14 +2,21 @@
 /* @var $this LesionController */
 /* @var $model Lesion */
 
+$modelo= new futbolista;
+$modelo->FUT_correl=$_GET['id'];
+$modelo=futbolista::model()->findByPk($modelo->FUT_correl);
+
 $this->breadcrumbs=array(
-	'Lesiones'=>array('index'),
+	'Futbolista'=>array('//futbolista/admin'),
+	$modelo->FUT_nombre." ".$modelo->FUT_apellidoPat=>array('//futbolista/view','id'=>$modelo->FUT_correl),
+	'Lesion'=>array('admin','id'=>$modelo->FUT_correl),
 	'Agregar',
 );
 
+
 $this->menu=array(
-	array('label'=>'Lista de Lesiones', 'url'=>array('index')),
-	array('label'=>'Buscar Lesión', 'url'=>array('admin')),
+	 array('label'=>'Cancelar', 'url'=>array('admin','id'=>$modelo->FUT_correl))
+	//array('label'=>'Buscar Lesión', 'url'=>array('admin')),
 );
 ?>
 

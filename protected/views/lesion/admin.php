@@ -2,28 +2,25 @@
 /* @var $this LesionController */
 /* @var $model Lesion */
 
+$modelo= new futbolista;
+$modelo->FUT_correl=$_GET['id'];
+$modelo=futbolista::model()->findByPk($modelo->FUT_correl);
+
 $this->breadcrumbs=array(
-	'Lesiones'=>array('index'),
-	'Administrar',
+	'Futbolista'=>array('//futbolista/admin'),
+	$modelo->FUT_nombre." ".$modelo->FUT_apellidoPat=>array('//futbolista/view','id'=>$modelo->FUT_correl),
+	'Lesiones',
 );
+
 
 $this->menu=array(
 	//array('label'=>'Lista de Lesiones', 'url'=>array('index')),
-	array('label'=>'Agregar Lesión', 'url'=>array('Agregar')),
+	
+	array('label'=>'Agregar Lesión', 'url'=>array('create','id'=>$modelo->FUT_correl)),
+	array('label'=>'Volver', 'url'=>array('//futbolista/view','id'=>$modelo->FUT_correl)),
 );
 
-Yii::app()->clientScript->registerScript('search', "
-$('.search-button').click(function(){
-	$('.search-form').toggle();
-	return false;
-});
-$('.search-form form').submit(function(){
-	$('#lesion-grid').yiiGridView('update', {
-		data: $(this).serialize()
-	});
-	return false;
-});
-");
+
 ?>
 
 <h3>Administrar Lesiones</h3>
@@ -36,7 +33,7 @@ $('.search-form form').submit(function(){
 	'type'=>BsHtml::GRID_TYPE_BORDERED,
 	'columns'=>array(
 		//'LES_correl',
-		'LES_futCorrel',
+		//'LES_futCorrel',
 		//array('name'=>'LES_futCorrel',
 			//'value'=>'Lesion::model()->findByAttributes($data->LES_futCorrel)->FUT_nombre'),
 		'LES_glosa',
