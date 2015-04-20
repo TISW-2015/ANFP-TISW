@@ -40,6 +40,7 @@
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container-fluid">
+				<!-- chupalá -->
 				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -47,30 +48,76 @@
 				</a>
 				<a class="brand" href="#"><?php echo Yii::app()->name ?></a>
 				<div class="nav-collapse">
-					<?php $this->widget('zii.widgets.CMenu',array(
-						'htmlOptions' => array( 'class' => 'nav' ),
-						'activeCssClass'	=> 'active',
-						'items'=>array(
-							array('label'=>'Inicio', 'url'=>array('/site/index')),
-				array('label'=>'Pacientes', 'url'=>array('/paciente/admin')),
-				array('label'=>'Areas', 'url'=>array('/area/admin')),						
-				array('label'=>'Salas', 'url'=>array('/sala/admin')),
-				array('label'=>'Camas', 'url'=>array('/cama/admin')),
-				array('label'=>'Especialidad', 'url'=>array('/Especialidad/admin')),
-				array('label'=>'Items', 'url'=>array('/items/admin')),								
-				array('label'=>'Usuario', 'url'=>array('/usuario/admin')),
-				array('label'=>'Contáctenos', 'url'=>array('/site/contact')),
-				array('label'=>'Acerca de Nosotros', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Antecedentes', 'url'=>array('/antecedentes/admin')),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-						),
-					)); ?>
+					<?php
+
+						echo BsHtml::pills(array(
+    						array('label' => 'Home','url'=>array('/site/index'),'active' => true),
+      						array('label'=>'About','url'=>array('/site/page', 'view'=>'about')),
+      						array('label'=>'Contact', 'url'=>array('/site/contact')),
+      						array('label' => 'Help','url' => '#'),
+      						array('label' => 'Partidos','items' => array(
+            					array('label'=>'Fechas', 'url'=>array('/participa/index')),
+            					array(
+                					'label' => 'Apertura',
+                					'url' => '#'
+           					 	),
+            					BsHtml::menuDivider(),
+            					array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+            					array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
+            					array(
+                					'label' => 'Separate link',
+                					'url' => '#'
+            					)
+        					)
+    ),
+      						array('label' => 'Torneos','items' => array(
+            					array(
+                					'label' => 'Apertura'." ".(DATE('y')+2000),
+                					'url' => array('/integra/admin','id'=>Torneo::model()->findByAttributes(array('TOR_agno'=>(DATE('y')+2000),'TOR_tipo'=>1))->TOR_correl),
+           			 			),
+           			 			array(
+                					'label' => 'Clausura'." ".(DATE('y')+2000),
+                					'url' => array('/integra/admin','id'=>Torneo::model()->findByAttributes(array('TOR_agno'=>(DATE('y')+2000),'TOR_tipo'=>2))->TOR_correl),
+           			 			),
+            				BsHtml::menuDivider(),
+            				array(
+                				'label' => 'Separate link',
+                				'url' => '#'
+            						),
+            				array('label'=>'Historial', 'url'=>array('/torneo/admin'))
+        						)
+    						),
+    						array('label' => 'Mi cuenta','items' => array(
+            				array(
+                				'label' => 'Another action',
+                				'url' => '#'
+            				),
+            				array(
+                				'label' => 'Something else here',
+                				'url' => '#'
+            				),
+            				BsHtml::menuDivider(),
+            				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+            				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
+            				array(
+                				'label' => 'Separate link',
+                				'url' => '#'
+            				)
+        				),
+    				 'visible'=>!Yii::app()->user->isGuest),
+    						array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest)
+));
+?>
 					
 				</div><!--/.nav-collapse -->
 			</div>
 		</div>
 	</div>
+<?php  
+	//$ano=Torneo::model()->findByAttributes(array('TOR_agno'=>(DATE('y')+2000),'TOR_periodo'=>1))->TOR_correl;
+	//				var_dump($ano);
+	//				die();
+?>
 	
 	<div class="cont">
 	<div class="container-fluid">
@@ -113,5 +160,8 @@
 		 </div> <!-- /row -->
 	  </div> <!-- /container -->
 	</div>
+	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.js"></script>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.Rut.min.js"></script>
+<?php Yii::app()->bootstrap->register(); ?>
 </body>
 </html>

@@ -21,8 +21,11 @@ $this->menu=array(
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'PART_correl',
-		'PART_equCorrel',
+		//'PART_correl',
+		//'PART_equCorrel',
+		array('name'=>'PART_equCorrel',
+			'value'=>'Equipo::model()->findByPk($data->PART_equCorrel)->EQU_nombre'
+			),
 		'PART_parCorrel',
 		'PART_posicion',
 		'PART_goles',
