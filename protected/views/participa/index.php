@@ -12,7 +12,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>Participas</h1>
+<?php echo BsHtml::pageHeader('','Fechas');?>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

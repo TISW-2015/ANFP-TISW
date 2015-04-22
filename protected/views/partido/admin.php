@@ -13,7 +13,9 @@ $this->menu=array(
 );
 ?>
 <?php echo BsHtml::pageHeader('Administrar','Partidos') ?>
+
 <?php $this->renderPartial('_view'); ?>
+
 <?php $this->widget('bootstrap.widgets.BsGridView', array(
 	'id'=>'partido-grid',
 	'dataProvider'=>$model->search(),

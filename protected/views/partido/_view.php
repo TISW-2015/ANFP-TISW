@@ -5,7 +5,7 @@ echo BsHtml::buttonToolbar(array(
             array(
                 //'icon' => '<img src="'.Yii::app()->request->baseUrl.'/images/futbol.ico">',
                 'label'=>'Fechas',
-                'color' => BsHtml::BUTTON_COLOR_INFO
+                'color' => BsHtml::BUTTON_COLOR_INFO,
                 //'imageUrl'=>'<img src="'.Yii::app()->request->baseUrl.'/images/futbol.ico">'
                 //'template'=>'<img src="'.Yii::app()->request->baseUrl.'/images/futbol.ico">'
                 //'label'=>'<img src="'.Yii::app()->request->baseUrl.'/images/AAA.ico">'
