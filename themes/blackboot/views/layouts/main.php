@@ -70,6 +70,23 @@
             					)
         					)
     ),
+      						array('label' => 'Equipos','items' => array(
+            					array(
+                					'label' => 'Historial',
+                					'url' => array('/Equipo/admin'),
+           			 			),
+           			 			array(
+                					'label' => 'Clausura'." ".(DATE('y')+2000),
+                					'url' => array('/integra/admin','id'=>Torneo::model()->findByAttributes(array('TOR_agno'=>(DATE('y')+2000),'TOR_tipo'=>2))->TOR_correl),
+           			 			),
+            				BsHtml::menuDivider(),
+            				array(
+                				'label' => 'Separate link',
+                				'url' => '#'
+            						),
+            				array('label'=>'Historial', 'url'=>array('/torneo/admin'))
+        						)
+    						),
       						array('label' => 'Torneos','items' => array(
             					array(
                 					'label' => 'Apertura'." ".(DATE('y')+2000),

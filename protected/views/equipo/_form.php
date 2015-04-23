@@ -58,6 +58,11 @@ $log= new Logo;
 	<div class="row">
 		<?php echo $form->dateFieldControlGroup($aux,'PER_fecha'); ?>
 	</div>
+
+	<div class="row">
+		<br>
+	   <?php echo CHtml::activeFileField($log,'EQU_logo'); ?>
+    </div>
 	<div class="row buttons">
 		<?php echo BsHtml::submitButton('Aceptar', array('color' => BsHtml::BUTTON_COLOR_PRIMARY)); ?>
 	</div>

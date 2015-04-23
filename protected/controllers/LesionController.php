@@ -134,7 +134,7 @@ class LesionController extends Controller
 	public function actionAdmin()
 	{
 		$model=new Lesion('search');
-		$model->unsetAttributes();  // clear any default values
+		$model->unsetAttributes(); // clear any default values
 		if(isset($_GET['Lesion']))
 			$model->attributes=$_GET['Lesion'];
 

@@ -6258,3 +6258,142 @@ REQUEST_URI=/yii/ANFP-TISW/index.php/participa/index
 in C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\participa\_view.php (29)
 in C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\participa\index.php (20)
 in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\ParticipaController.php (128)
+2015/04/23 00:28:56 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`anfp`.`gol`, CONSTRAINT `fk_GOL_FUTBOLISTA1` FOREIGN KEY (`GOL_futCorrel`) REFERENCES `futbolista` (`FUT_correl`) ON DELETE NO ACTION ON UPDATE NO ACTION). La sentencia SQL ejecutada fue: INSERT INTO `gol` (`GOL_minuto`, `GOL_asistente`, `GOL_futCorrel`, `GOL_parCorrel`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\GolController.php (73)
+in C:\xampp\htdocs\Yii\ANFP-TISW\index.php (13)
+2015/04/23 00:28:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`anfp`.`gol`, CONSTRAINT `fk_GOL_FUTBOLISTA1` FOREIGN KEY (`GOL_futCorrel`) REFERENCES `futbolista` (`FUT_correl`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `gol` (`GOL_minuto`, `GOL_asistente`, `GOL_futCorrel`, `GOL_parCorrel`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\Yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\Yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\GolController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\Yii\framework\web\actions\CInlineAction.php(49): GolController->actionCreate()
+#4 C:\xampp\htdocs\Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gol/create')
+#14 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/ANFP-TISW/index.php/gol/create
+HTTP_REFERER=http://localhost:200/yii/ANFP-TISW/index.php/gol/create
+---
+2015/04/23 00:29:00 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`anfp`.`gol`, CONSTRAINT `fk_GOL_FUTBOLISTA1` FOREIGN KEY (`GOL_futCorrel`) REFERENCES `futbolista` (`FUT_correl`) ON DELETE NO ACTION ON UPDATE NO ACTION). La sentencia SQL ejecutada fue: INSERT INTO `gol` (`GOL_minuto`, `GOL_asistente`, `GOL_futCorrel`, `GOL_parCorrel`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\GolController.php (73)
+in C:\xampp\htdocs\Yii\ANFP-TISW\index.php (13)
+2015/04/23 00:29:00 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`anfp`.`gol`, CONSTRAINT `fk_GOL_FUTBOLISTA1` FOREIGN KEY (`GOL_futCorrel`) REFERENCES `futbolista` (`FUT_correl`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `gol` (`GOL_minuto`, `GOL_asistente`, `GOL_futCorrel`, `GOL_parCorrel`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\Yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\Yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\GolController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\Yii\framework\web\actions\CInlineAction.php(49): GolController->actionCreate()
+#4 C:\xampp\htdocs\Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gol/create')
+#14 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/ANFP-TISW/index.php/gol/create
+HTTP_REFERER=http://localhost:200/yii/ANFP-TISW/index.php/gol/create
+---
+2015/04/23 00:29:04 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`anfp`.`gol`, CONSTRAINT `fk_GOL_FUTBOLISTA1` FOREIGN KEY (`GOL_futCorrel`) REFERENCES `futbolista` (`FUT_correl`) ON DELETE NO ACTION ON UPDATE NO ACTION). La sentencia SQL ejecutada fue: INSERT INTO `gol` (`GOL_minuto`, `GOL_asistente`, `GOL_futCorrel`, `GOL_parCorrel`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\GolController.php (73)
+in C:\xampp\htdocs\Yii\ANFP-TISW\index.php (13)
+2015/04/23 00:29:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`anfp`.`gol`, CONSTRAINT `fk_GOL_FUTBOLISTA1` FOREIGN KEY (`GOL_futCorrel`) REFERENCES `futbolista` (`FUT_correl`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `gol` (`GOL_minuto`, `GOL_asistente`, `GOL_futCorrel`, `GOL_parCorrel`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\Yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\Yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\GolController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\Yii\framework\web\actions\CInlineAction.php(49): GolController->actionCreate()
+#4 C:\xampp\htdocs\Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gol/create')
+#14 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/ANFP-TISW/index.php/gol/create
+HTTP_REFERER=http://localhost:200/yii/ANFP-TISW/index.php/gol/create
+---
+2015/04/23 00:29:12 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`anfp`.`gol`, CONSTRAINT `fk_GOL_FUTBOLISTA1` FOREIGN KEY (`GOL_futCorrel`) REFERENCES `futbolista` (`FUT_correl`) ON DELETE NO ACTION ON UPDATE NO ACTION). La sentencia SQL ejecutada fue: INSERT INTO `gol` (`GOL_minuto`, `GOL_asistente`, `GOL_futCorrel`, `GOL_parCorrel`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\GolController.php (73)
+in C:\xampp\htdocs\Yii\ANFP-TISW\index.php (13)
+2015/04/23 00:29:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`anfp`.`gol`, CONSTRAINT `fk_GOL_FUTBOLISTA1` FOREIGN KEY (`GOL_futCorrel`) REFERENCES `futbolista` (`FUT_correl`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `gol` (`GOL_minuto`, `GOL_asistente`, `GOL_futCorrel`, `GOL_parCorrel`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\Yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\Yii\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\GolController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\Yii\framework\web\actions\CInlineAction.php(49): GolController->actionCreate()
+#4 C:\xampp\htdocs\Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gol/create')
+#14 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/ANFP-TISW/index.php/gol/create
+HTTP_REFERER=http://localhost:200/yii/ANFP-TISW/index.php/gol/create
+---
+2015/04/23 17:20:15 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\xampp\htdocs\Yii\framework\web\helpers\CHtml.php:103)
+Stack trace:
+#0 C:\xampp\htdocs\Yii\framework\web\helpers\CHtml.php(158): renderAttributes()
+#1 C:\xampp\htdocs\Yii\ANFP-TISW\protected\extensions\bootstrap\helpers\BsHtml.php(515): tag()
+#2 C:\xampp\htdocs\Yii\ANFP-TISW\protected\extensions\bootstrap\helpers\BsHtml.php(1073): tag()
+#3 C:\xampp\htdocs\Yii\ANFP-TISW\protected\extensions\bootstrap\helpers\BsHtml.php(3073): openTag()
+#4 C:\xampp\htdocs\Yii\ANFP-TISW\protected\extensions\bootstrap\helpers\BsHtml.php(3023): menuDropdown()
+#5 C:\xampp\htdocs\Yii\ANFP-TISW\protected\extensions\bootstrap\helpers\BsHtml.php(3514): menu()
+#6 C:\xampp\htdocs\Yii\ANFP-TISW\protected\extensions\bootstrap\helpers\BsHtml.php(3537): nav()
+#7 C:\xampp\htdocs\Yii\ANFP-TISW\themes\blackboot\views\layouts\main.php(126): pills()
+#8 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(126): require()
+#9 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(95): ParticipaController->renderInternal()
+#10 C:\xampp\htdocs\Yii\framework\web\widgets\CContentDecorator.php(76): ParticipaController->renderFile()
+#11 C:\xampp\htdocs\Yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#12 C:\xampp\htdocs\Yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#13 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(206): CContentDecorator->run()
+#14 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(300): ParticipaController->endWidget()
+#15 C:\xampp\htdocs\Yii\ANFP-TISW\themes\blackboot\views\layouts\column2.php(22): ParticipaController->endContent()
+#16 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(126): require()
+#17 C:\xampp\htdocs\Yii\framework\web\CBaseController.php(95): ParticipaController->renderInternal()
+#18 C:\xampp\htdocs\Yii\framework\web\CController.php(784): ParticipaController->renderFile()
+#19 C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\ParticipaController.php(128): ParticipaController->render()
+#20 C:\xampp\htdocs\Yii\framework\web\actions\CInlineAction.php(49): ParticipaController->actionIndex()
+#21 C:\xampp\htdocs\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#22 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(133): ParticipaController->runAction()
+#23 C:\xampp\htdocs\Yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#24 C:\xampp\htdocs\Yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#25 C:\xampp\htdocs\Yii\framework\web\filters\CInlineFilter.php(58): ParticipaController->filterAccessControl()
+#26 C:\xampp\htdocs\Yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#27 C:\xampp\htdocs\Yii\framework\web\CController.php(291): CFilterChain->run()
+#28 C:\xampp\htdocs\Yii\framework\web\CController.php(265): ParticipaController->runActionWithFilters()
+#29 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(282): ParticipaController->run()
+#30 C:\xampp\htdocs\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#31 C:\xampp\htdocs\Yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#32 C:\xampp\htdocs\Yii\ANFP-TISW\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/ANFP-TISW/index.php/participa/index
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\extensions\bootstrap\helpers\BsHtml.php (515)
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\extensions\bootstrap\helpers\BsHtml.php (1073)
+in C:\xampp\htdocs\Yii\ANFP-TISW\protected\extensions\bootstrap\helpers\BsHtml.php (3073)
