@@ -3,20 +3,18 @@
 /* @var $model Partido */
 
 $this->breadcrumbs=array(
-	'Partidos'=>array('index'),
-	$model->PAR_correl,
+	'Partidos'=>array('admin'),
+	'Detalle'
 );
 
 $this->menu=array(
-	array('label'=>'List Partido', 'url'=>array('index')),
-	array('label'=>'Create Partido', 'url'=>array('create')),
-	array('label'=>'Update Partido', 'url'=>array('update', 'id'=>$model->PAR_correl)),
-	array('label'=>'Delete Partido', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->PAR_correl),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Partido', 'url'=>array('admin')),
+	array('label'=>'Actualizar Partido', 'url'=>array('update', 'id'=>$model->PAR_correl)),
+	array('label'=>'Borrar Partido', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->PAR_correl),'confirm'=>'¿Esta seguro de eliminar Partido?')),
+	array('label'=>'Volver', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View Partido #<?php echo $model->PAR_correl; ?></h1>
+<?php echo BsHtml::pageHeader('Detalle','Partido '.$model->PAR_correl) ?>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

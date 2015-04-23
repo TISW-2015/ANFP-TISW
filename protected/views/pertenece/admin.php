@@ -3,22 +3,23 @@
 /* @var $model Pertenece */
 
 $this->breadcrumbs=array(
-	'Equipos'=>array('admin'),
-	Equipo::model()->findByPk($_GET)->EQU_nombre,
+	'Equipos'=>array('//Equipo/admin'),
+	Equipo::model()->findByPk($_GET)->EQU_nombre=>array('//Equipo/view','id'=>Equipo::model()->findByPk($_GET)->EQU_correl),
+	"Historial",
 );
 
 $this->menu=array(
-	array('label'=>'List Pertenece', 'url'=>array('index')),
-	array('label'=>'Create Pertenece', 'url'=>array('create')),
+	array('label'=>'Volver', 'url'=>array('//Equipo/view','id'=>Equipo::model()->findByPk($_GET)->EQU_correl)),
 );
 ?>
 
 <?php echo BsHtml::pageHeader('Historial','Equipos') ?>
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php $this->widget('bootstrap.widgets.BsGridView', array(
 	'id'=>'pertenece-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
+	'type'=>BsHtml::GRID_TYPE_BORDERED,
 	'columns'=>array(
 		//'PER_correl',
 		//'PER_equCorrel',

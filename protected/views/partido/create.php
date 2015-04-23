@@ -3,16 +3,15 @@
 /* @var $model Partido */
 
 $this->breadcrumbs=array(
-	'Partidos'=>array('index'),
-	'Create',
+	'Partidos'=>array('admin'),
+	'Registrar',
 );
 
 $this->menu=array(
-	array('label'=>'List Partido', 'url'=>array('index')),
-	array('label'=>'Manage Partido', 'url'=>array('admin')),
+	array('label'=>'Cancelar', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Partido</h1>
+<?php echo BsHtml::pageHeader('Registrar','Partido') ?>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

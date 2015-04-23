@@ -6,7 +6,7 @@
 
 <div class="form">
 
-<?php $form=$this->beginWidget('CActiveForm', array(
+<?php $form=$this->beginWidget('bootstrap.widgets.BsActiveForm', array(
 	'id'=>'partido-form',
 	// Please note: When you enable ajax validation, make sure the corresponding
 	// controller action is handling ajax validation correctly.
@@ -15,7 +15,8 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+ <p class="help-block">Campos con <span class="required">*</span> son obligatorios.</p>
+
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -26,8 +27,7 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'PAR_programacion'); ?>
-		<?php echo $form->textField($model,'PAR_programacion'); ?>
+		<?php echo $form->dateFieldControlGroup($model,'PAR_programacion'); ?>
 		<?php echo $form->error($model,'PAR_programacion'); ?>
 	</div>
 
@@ -38,8 +38,10 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'PAR_fecha'); ?>
-		<?php echo $form->textField($model,'PAR_fecha'); ?>
+		<?php echo $form->dropDownListControlGroup($model, 'PAR_fecha', array(
+        '1' => '1', '2' => '2','3' => '3', '4' => '4','5' => '5', '6' => '6','7' => '7', '8' => '8','9' => '9', '10' => '10','11' => '11',
+         '12' => '12','13' => '13', '14' => '14','15' => '15', '16' => '16','17' => '17'
+        ), array('empty' => 'Seleccione Fecha' ));  ?>
 		<?php echo $form->error($model,'PAR_fecha'); ?>
 	</div>
 
@@ -56,8 +58,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'PAR_estado'); ?>
-		<?php echo $form->textField($model,'PAR_estado',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->dropDownListControlGroup($model, 'PAR_estado', array(
+        '1' => 'En espera','2'=>'En juego','3'=>'Terminado'
+        ), array('empty' => 'Seleccione Estado' ));  ?>
 		<?php echo $form->error($model,'PAR_estado'); ?>
 	</div>
 
@@ -68,7 +71,7 @@
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo BsHtml::submitButton('Aceptar', array('color' => BsHtml::BUTTON_COLOR_PRIMARY)); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

@@ -545,3 +545,17 @@ p.hint { float:left; display:block;}
 }
 
 .col-md-3 { float: left; }
+
+.parent {
+    margin-bottom: 15px;
+    padding: 10px;
+    color: #0A416B;
+    clear:both;
+}
+.left, .center, .right{
+    float:left;
+    width:32%;
+    border:1px solid #CEDCEA; 
+    padding:5px;
+
+}

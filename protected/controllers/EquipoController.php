@@ -64,6 +64,7 @@ class EquipoController extends Controller
 	{
 		$model=new Equipo;
 		$aux= new Pertenece;
+		$log= new Logo;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -77,6 +78,12 @@ class EquipoController extends Controller
 				echo "Equipo debe pertenecer a una division";
 				die();
 			}
+			/*if(isset($_POST['Logo'])){
+				$log->attributes=$_POST['Logo'];
+				echo($log);
+				var_dump($log);
+				die;
+			}*/
 			if($model->save()){
 					$aux->PER_equCorrel=$model->EQU_correl;
 					$aux->save();

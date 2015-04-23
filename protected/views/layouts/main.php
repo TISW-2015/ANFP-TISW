@@ -28,16 +28,21 @@
 	</div><!-- header -->
 
 	<div id="mainmenu">
-		<?php $this->widget('zii.widgets.CMenu',array(
+		<!--<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index')),
 				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 				array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>'Torneo', 'url'=>array('/torneo/admin')),
 				array('label'=>'Equipo', 'url'=>array('/equipo/admin')),
+<<<<<<< HEAD
 				//array('label'=>'Lesión', 'url'=>array('/Lesion/admin')),
 				array('label'=>'Futbolista', 'url'=>array('/Futbolista/admin')),
 				array('label'=>'Falta', 'url'=>array('/Falta/admin')),
+=======
+				array('label'=>'Partidos', 'url'=>array('/partido/admin')),
+				array('label'=>'Resumen Partido', 'url'=>array('/participa/admin')),
+>>>>>>> JuanoV/master
 				//array('label'=>'Tabla', 'url'=>array('/integra/admin')),
 				//array('label'=>'Insidente', 'url'=>array('/incidente/admin')),
 				//array('label'=>'Salario', 'url'=>array('/salario/admin')),
@@ -47,7 +52,49 @@
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
-		)); ?>
+		)); ?>-->
+		<?php
+echo BsHtml::pills(array(
+    array('label' => 'Home','url'=>array('/site/index'),'active' => true),
+    array('label'=>'About','url'=>array('/site/page', 'view'=>'about')),
+    array('label'=>'Contact', 'url'=>array('/site/contact')),
+    array('label' => 'Help','url' => '#'),
+    array('label' => 'Torneos','items' => array(
+            array('label'=>'Torneo', 'url'=>array('/torneo/admin')),
+            array(
+                'label' => 'Something else here',
+                'url' => '#'
+            ),
+            BsHtml::menuDivider(),
+            array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+            array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
+            array(
+                'label' => 'Separate link',
+                'url' => '#'
+            )
+        )
+    ),
+    array('label' => 'Mi cuenta','items' => array(
+            array(
+                'label' => 'Another action',
+                'url' => '#'
+            ),
+            array(
+                'label' => 'Something else here',
+                'url' => '#'
+            ),
+            BsHtml::menuDivider(),
+            array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+            array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
+            array(
+                'label' => 'Separate link',
+                'url' => '#'
+            )
+        )
+    )
+));
+?>
+
 	</div><!-- mainmenu -->
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
