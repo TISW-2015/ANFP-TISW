@@ -63,6 +63,7 @@ class FutbolistaController extends Controller
 	public function actionCreate()
 	{
 		$model=new Futbolista;
+		
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -70,6 +71,7 @@ class FutbolistaController extends Controller
 		if(isset($_POST['Futbolista']))
 		{
 			$model->attributes=$_POST['Futbolista'];
+			
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->FUT_correl));
 		}

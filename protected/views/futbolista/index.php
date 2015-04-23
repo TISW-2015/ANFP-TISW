@@ -7,8 +7,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Futbolista', 'url'=>array('create')),
-	array('label'=>'Manage Futbolista', 'url'=>array('admin')),
+	array('label'=>'Agregar Futbolista', 'url'=>array('create')),
+	array('label'=>'Buscar Futbolista', 'url'=>array('admin')),
 );
 ?>
 

@@ -9,8 +9,8 @@ class FutbolistaModule extends CWebModule
 
 		// import the module-level models and components
 		$this->setImport(array(
-			'futbolista.models.*',
-			'futbolista.components.*',
+			'Futbolista.models.*',
+			'Futbolista.components.*',
 		));
 	}
 

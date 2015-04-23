@@ -2,20 +2,28 @@
 /* @var $this LesionController */
 /* @var $model Lesion */
 
+$modelo= new futbolista;
+$model->LES_correl=$_GET['id'];
+$model=Lesion::model()->findByPk($model->LES_correl);
+$modelo=futbolista::model()->findByPk($model->LES_futCorrel);
+
 $this->breadcrumbs=array(
-	'Lesions'=>array('index'),
-	$model->LES_correl=>array('view','id'=>$model->LES_correl),
-	'Update',
+	'Futbolista'=>array('//futbolista/admin'),
+	$modelo->FUT_nombre." ".$modelo->FUT_apellidoPat=>array('//futbolista/view','id'=>$modelo->FUT_correl),
+	'Lesiones'=>array('admin','id'=>$modelo->FUT_correl),
+	$model->LES_fecha=>array('view','id'=>$model->LES_correl),
+	'Actualizar',
 );
 
+
 $this->menu=array(
-	array('label'=>'List Lesion', 'url'=>array('index')),
-	array('label'=>'Create Lesion', 'url'=>array('create')),
-	array('label'=>'View Lesion', 'url'=>array('view', 'id'=>$model->LES_correl)),
-	array('label'=>'Manage Lesion', 'url'=>array('admin')),
+	//array('label'=>'Lista de Lesiones', 'url'=>array('index')),
+	//array('label'=>'Agregar Lesión', 'url'=>array('create')),
+	//array('label'=>'Detalle Lesión', 'url'=>array('view', 'id'=>$model->LES_correl)),
+	 array('label'=>'Cancelar', 'url'=>array('admin','id'=>$modelo->FUT_correl)),
 );
 ?>
 
-<h1>Update Lesion <?php echo $model->LES_correl; ?></h1>
+<h3>Actualizar Lesión</h3>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -4,18 +4,18 @@
 
 $this->breadcrumbs=array(
 	'Futbolistas'=>array('index'),
-	$model->FUT_correl=>array('view','id'=>$model->FUT_correl),
-	'Update',
+	$model->FUT_nombre." ".$model->FUT_apellidoPat=>array('view','id'=>$model->FUT_correl),
+	'Actualizar',
 );
 
 $this->menu=array(
-	array('label'=>'List Futbolista', 'url'=>array('index')),
-	array('label'=>'Create Futbolista', 'url'=>array('create')),
-	array('label'=>'View Futbolista', 'url'=>array('view', 'id'=>$model->FUT_correl)),
-	array('label'=>'Manage Futbolista', 'url'=>array('admin')),
+	//array('label'=>'Lista de Futbolista', 'url'=>array('index')),
+	//array('label'=>'Agregar Futbolista', 'url'=>array('create')),
+	array('label'=>'Volver', 'url'=>array('view', 'id'=>$model->FUT_correl)),
+	
 );
 ?>
 
-<h1>Update Futbolista <?php echo $model->FUT_correl; ?></h1>
+<h1>Actualizar Futbolista <?php echo $model->FUT_nombre." ".$model->FUT_apellidoPat." ".$model->FUT_apellidoMat; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

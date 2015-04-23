@@ -72,13 +72,13 @@ class Futbolista extends CActiveRecord
 	{
 		return array(
 			'FUT_correl' => 'Fut Correl',
-			'FUT_nombre' => 'Fut Nombre',
-			'FUT_apellidoPat' => 'Fut Apellido Pat',
-			'FUT_apellidoMat' => 'Fut Apellido Mat',
-			'FUT_fechaNacimiento' => 'Fut Fecha Nacimiento',
-			'FUT_nacionalidad' => 'Fut Nacionalidad',
-			'FUT_estado' => 'Fut Estado',
-			'FUT_estadoCivil' => 'Fut Estado Civil',
+			'FUT_nombre' => 'Nombre',
+			'FUT_apellidoPat' => 'Apellido Paterno',
+			'FUT_apellidoMat' => 'Apellido Materno',
+			'FUT_fechaNacimiento' => 'Fecha Nacimiento',
+			'FUT_nacionalidad' => 'Nacionalidad',
+			'FUT_estado' => 'Estado',
+			'FUT_estadoCivil' => 'Estado Civil',
 		);
 	}
 
