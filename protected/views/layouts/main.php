@@ -35,8 +35,14 @@
 				array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>'Torneo', 'url'=>array('/torneo/admin')),
 				array('label'=>'Equipo', 'url'=>array('/equipo/admin')),
+<<<<<<< HEAD
+				//array('label'=>'Lesión', 'url'=>array('/Lesion/admin')),
+				array('label'=>'Futbolista', 'url'=>array('/Futbolista/admin')),
+				array('label'=>'Falta', 'url'=>array('/Falta/admin')),
+=======
 				array('label'=>'Partidos', 'url'=>array('/partido/admin')),
 				array('label'=>'Resumen Partido', 'url'=>array('/participa/admin')),
+>>>>>>> JuanoV/master
 				//array('label'=>'Tabla', 'url'=>array('/integra/admin')),
 				//array('label'=>'Insidente', 'url'=>array('/incidente/admin')),
 				//array('label'=>'Salario', 'url'=>array('/salario/admin')),

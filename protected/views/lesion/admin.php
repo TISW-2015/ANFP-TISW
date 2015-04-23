@@ -2,51 +2,40 @@
 /* @var $this LesionController */
 /* @var $model Lesion */
 
+$modelo= new futbolista;
+$modelo->FUT_correl=$_GET['id'];
+$modelo=futbolista::model()->findByPk($modelo->FUT_correl);
+
 $this->breadcrumbs=array(
-	'Lesions'=>array('index'),
-	'Manage',
+	'Futbolista'=>array('//futbolista/admin'),
+	$modelo->FUT_nombre." ".$modelo->FUT_apellidoPat=>array('//futbolista/view','id'=>$modelo->FUT_correl),
+	'Lesiones',
 );
+
 
 $this->menu=array(
-	array('label'=>'List Lesion', 'url'=>array('index')),
-	array('label'=>'Create Lesion', 'url'=>array('create')),
+	//array('label'=>'Lista de Lesiones', 'url'=>array('index')),
+	
+	array('label'=>'Agregar Lesión', 'url'=>array('create','id'=>$modelo->FUT_correl)),
+	array('label'=>'Volver', 'url'=>array('//futbolista/view','id'=>$modelo->FUT_correl)),
 );
 
-Yii::app()->clientScript->registerScript('search', "
-$('.search-button').click(function(){
-	$('.search-form').toggle();
-	return false;
-});
-$('.search-form form').submit(function(){
-	$('#lesion-grid').yiiGridView('update', {
-		data: $(this).serialize()
-	});
-	return false;
-});
-");
+
 ?>
 
-<h1>Manage Lesions</h1>
+<h3>Administrar Lesiones</h3>
 
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
 
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
-<div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
-
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php $this->widget('bootstrap.widgets.BsGridView', array(
 	'id'=>'lesion-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
+	'type'=>BsHtml::GRID_TYPE_BORDERED,
 	'columns'=>array(
-		'LES_correl',
-		'LES_futCorrel',
+		//'LES_correl',
+		//'LES_futCorrel',
+		//array('name'=>'LES_futCorrel',
+			//'value'=>'Lesion::model()->findByAttributes($data->LES_futCorrel)->FUT_nombre'),
 		'LES_glosa',
 		'LES_fecha',
 		'LES_descripcion',

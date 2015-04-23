@@ -3,16 +3,16 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Lesions',
+	'Lesiones',
 );
 
 $this->menu=array(
-	array('label'=>'Create Lesion', 'url'=>array('create')),
-	array('label'=>'Manage Lesion', 'url'=>array('admin')),
+	array('label'=>'Agregar Lesión', 'url'=>array('create')),
+	array('label'=>'Buscar Lesión', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Lesions</h1>
+<h1>Lesiones</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

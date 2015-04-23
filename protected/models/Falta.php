@@ -63,12 +63,12 @@ class Falta extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'FAL_correl' => 'Fal Correl',
-			'FAL_castigo' => 'Fal Castigo',
-			'FAL_minuto' => 'Fal Minuto',
-			'FAL_futCorrel' => 'Fal Fut Correl',
-			'FAL_parCorrel' => 'Fal Par Correl',
-			'FAL_arbCorrel' => 'Fal Arb Correl',
+			'FAL_correl' => 'Falta',
+			'FAL_castigo' => 'Castigo',
+			'FAL_minuto' => 'Minuto Falta',
+			'FAL_futCorrel' => 'Futbolista',
+			'FAL_parCorrel' => 'Partido',
+			'FAL_arbCorrel' => 'Arbitro',
 		);
 	}
 

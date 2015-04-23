@@ -4,15 +4,15 @@
 
 $this->breadcrumbs=array(
 	'Faltas'=>array('index'),
-	'Create',
+	'Agregar',
 );
 
 $this->menu=array(
-	array('label'=>'List Falta', 'url'=>array('index')),
-	array('label'=>'Manage Falta', 'url'=>array('admin')),
+	//array('label'=>'List Falta', 'url'=>array('index')),
+	array('label'=>'Volver', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Falta</h1>
+<h3>Agregar Falta</h3>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

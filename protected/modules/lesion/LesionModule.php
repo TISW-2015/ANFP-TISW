@@ -9,8 +9,8 @@ class LesionModule extends CWebModule
 
 		// import the module-level models and components
 		$this->setImport(array(
-			'lesion.models.*',
-			'lesion.components.*',
+			'Lesion.models.*',
+			'Lesion.components.*',
 		));
 	}
 
