@@ -61,10 +61,10 @@ class Estadio extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'EST_correl' => 'Est Correl',
-			'EST_nombre' => 'Est Nombre',
-			'EST_capacidad' => 'Est Capacidad',
-			'EST_estado' => 'Est Estado',
+			'EST_correl' => 'Estadio Correl',
+			'EST_nombre' => 'Nombre Estadio',
+			'EST_capacidad' => 'Capacidad',
+			'EST_estado' => 'Disponibilidad',
 		);
 	}
 

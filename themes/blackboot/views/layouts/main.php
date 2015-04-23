@@ -51,10 +51,11 @@
 					<?php
 
 						echo BsHtml::pills(array(
-    						array('label' => 'Home','url'=>array('/site/index'),'active' => true),
-      						array('label'=>'About','url'=>array('/site/page', 'view'=>'about')),
-      						array('label'=>'Contact', 'url'=>array('/site/contact')),
-      						array('label'=>'Futbolista', 'url'=>array('/futbolista/admin')),
+    						array('label' => 'Inicio','url'=>array('/site/index'),'active' => true),
+      						array('label'=>'Acerca de nosotros','url'=>array('/site/page', 'view'=>'about')),
+      						array('label'=>'Contacto', 'url'=>array('/site/contact')),
+      						array('label'=>'Futbolistas', 'url'=>array('/futbolista/admin')),
+      						array('label'=>'Estadios', 'url'=>array('/estadio/admin')),
       						array('label'=>'Árbitro', 'url'=>array('/arbitro/admin')),
       						array('label' => 'Help','url' => '#'),
       						array('label' => 'Partidos','items' => array(
