@@ -6258,3 +6258,149 @@ REQUEST_URI=/yii/ANFP-TISW/index.php/participa/index
 in C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\participa\_view.php (29)
 in C:\xampp\htdocs\Yii\ANFP-TISW\protected\views\participa\index.php (20)
 in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\ParticipaController.php (128)
+2015/04/23 18:38:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "futbolista" solicitada.' in C:\xampp\htdocs\Yii2\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\CController.php(270): CController->missingAction('futbolista')
+#1 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('futbolista')
+#2 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('site/futbolista')
+#3 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/site/futbolista
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/site/index
+---
+2015/04/23 18:38:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "futbolista" solicitada.' in C:\xampp\htdocs\Yii2\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\CController.php(270): CController->missingAction('futbolista')
+#1 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('futbolista')
+#2 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('site/futbolista')
+#3 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/site/futbolista
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/site/futbolista
+---
+2015/04/23 23:53:43 [error] [exception.CException] exception 'CException' with message 'CActiveForm y sus behaviors no tienen un método o closure llamado "dropDownListControlGroup".' in C:\xampp\htdocs\Yii2\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\ANFP-TISW\protected\views\arbitro\_form.php(95): CComponent->__call('dropDownListCon...', Array)
+#1 C:\xampp\htdocs\Yii2\ANFP-TISW\protected\views\arbitro\_form.php(95): CActiveForm->dropDownListControlGroup(Object(Arbitro), 'ARB_nacionalida...', Array, Array)
+#2 C:\xampp\htdocs\Yii2\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Yii2\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\Yii2\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\Yii2\ANFP-TISW\protected\views\arbitro\update.php(21): CController->renderPartial('_form', Array)
+#6 C:\xampp\htdocs\Yii2\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\Yii2\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\Yii2\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\Yii2\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\protected\controllers\ArbitroController.php(103): CController->render('update', Array)
+#11 [internal function]: ArbitroController->actionUpdate('1')
+#12 C:\xampp\htdocs\Yii2\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(ArbitroController), Array)
+#13 C:\xampp\htdocs\Yii2\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ArbitroController), Object(ReflectionMethod), Array)
+#14 C:\xampp\htdocs\Yii2\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('update')
+#23 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('arbitro/update')
+#24 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/arbitro/update/1
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/arbitro/admin
+---
+2015/04/23 23:54:35 [error] [exception.CException] exception 'CException' with message 'CActiveForm y sus behaviors no tienen un método o closure llamado "dropDownListControlGroup".' in C:\xampp\htdocs\Yii2\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\ANFP-TISW\protected\views\arbitro\_form.php(95): CComponent->__call('dropDownListCon...', Array)
+#1 C:\xampp\htdocs\Yii2\ANFP-TISW\protected\views\arbitro\_form.php(95): CActiveForm->dropDownListControlGroup(Object(Arbitro), 'ARB_nacionalida...', Array, Array)
+#2 C:\xampp\htdocs\Yii2\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Yii2\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\Yii2\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\Yii2\ANFP-TISW\protected\views\arbitro\create.php(18): CController->renderPartial('_form', Array)
+#6 C:\xampp\htdocs\Yii2\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\Yii2\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\Yii2\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\Yii2\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\protected\controllers\ArbitroController.php(79): CController->render('create', Array)
+#11 C:\xampp\htdocs\Yii2\framework\web\actions\CInlineAction.php(49): ArbitroController->actionCreate()
+#12 C:\xampp\htdocs\Yii2\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('create')
+#21 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('arbitro/create')
+#22 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/arbitro/create
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/arbitro/admin
+---
+2015/04/23 23:59:23 [error] [exception.CException] exception 'CException' with message 'CActiveForm y sus behaviors no tienen un método o closure llamado "dropDownListControlGroup".' in C:\xampp\htdocs\Yii2\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\ANFP-TISW\protected\views\arbitro\_form.php(95): CComponent->__call('dropDownListCon...', Array)
+#1 C:\xampp\htdocs\Yii2\ANFP-TISW\protected\views\arbitro\_form.php(95): CActiveForm->dropDownListControlGroup(Object(Arbitro), 'ARB_nacionalida...', Array, Array)
+#2 C:\xampp\htdocs\Yii2\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Yii2\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\Yii2\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\Yii2\ANFP-TISW\protected\views\arbitro\create.php(18): CController->renderPartial('_form', Array)
+#6 C:\xampp\htdocs\Yii2\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\Yii2\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\Yii2\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\Yii2\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\protected\controllers\ArbitroController.php(79): CController->render('create', Array)
+#11 C:\xampp\htdocs\Yii2\framework\web\actions\CInlineAction.php(49): ArbitroController->actionCreate()
+#12 C:\xampp\htdocs\Yii2\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('create')
+#21 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('arbitro/create')
+#22 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/arbitro/create
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/arbitro/admin
+---
+2015/04/23 23:59:27 [error] [exception.CException] exception 'CException' with message 'CActiveForm y sus behaviors no tienen un método o closure llamado "dropDownListControlGroup".' in C:\xampp\htdocs\Yii2\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\ANFP-TISW\protected\views\arbitro\_form.php(95): CComponent->__call('dropDownListCon...', Array)
+#1 C:\xampp\htdocs\Yii2\ANFP-TISW\protected\views\arbitro\_form.php(95): CActiveForm->dropDownListControlGroup(Object(Arbitro), 'ARB_nacionalida...', Array, Array)
+#2 C:\xampp\htdocs\Yii2\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Yii2\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\Yii2\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\Yii2\ANFP-TISW\protected\views\arbitro\update.php(21): CController->renderPartial('_form', Array)
+#6 C:\xampp\htdocs\Yii2\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\Yii2\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\Yii2\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\Yii2\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\protected\controllers\ArbitroController.php(103): CController->render('update', Array)
+#11 [internal function]: ArbitroController->actionUpdate('1')
+#12 C:\xampp\htdocs\Yii2\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(ArbitroController), Array)
+#13 C:\xampp\htdocs\Yii2\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ArbitroController), Object(ReflectionMethod), Array)
+#14 C:\xampp\htdocs\Yii2\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('update')
+#23 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('arbitro/update')
+#24 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/arbitro/update/1
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/arbitro/admin
+---

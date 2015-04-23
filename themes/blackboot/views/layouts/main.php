@@ -54,6 +54,8 @@
     						array('label' => 'Home','url'=>array('/site/index'),'active' => true),
       						array('label'=>'About','url'=>array('/site/page', 'view'=>'about')),
       						array('label'=>'Contact', 'url'=>array('/site/contact')),
+      						array('label'=>'Futbolista', 'url'=>array('/futbolista/admin')),
+      						array('label'=>'Árbitro', 'url'=>array('/arbitro/admin')),
       						array('label' => 'Help','url' => '#'),
       						array('label' => 'Partidos','items' => array(
             					array('label'=>'Fechas', 'url'=>array('/participa/index')),
