@@ -42,9 +42,23 @@ $('.search-form form').submit(function(){
 		'FUT_nacionalidad',		
 		'FUT_estado',
 		'FUT_estadoCivil',
-		
 		array(
-			'class'=>'CButtonColumn',
+			    'class'=>'CButtonColumn',
+                'template' => '{falta} {lesion} {view} {update} {delete} ',
+            	'buttons'=>array(
+                    'falta' => array(
+                        'label'=>'Agregar Falta', 'url'=>"CHtml::normalizeUrl(array('falta/create', 'id'=>\$data->FUT_correl))",
+                        'imageUrl'=>Yii::app()->request->baseUrl.'/images/tarjetas.ico', 
+                        'options' => array('class'=>'falta'),
+                		),
+        			
+            		'lesion' => array(
+                        'label'=>'Agregar Lesión', 'url'=>"CHtml::normalizeUrl(array('lesion/create', 'id'=>\$data->FUT_correl))",
+                        'imageUrl'=>Yii::app()->request->baseUrl.'/images/lesion.ico', 
+                        'options' => array('class'=>'lesion'),
+                		),
+        			),
+    			),
 		),
-	),
-)); ?>
+	)
+); ?>
