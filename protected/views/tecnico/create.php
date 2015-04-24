@@ -3,16 +3,16 @@
 /* @var $model Tecnico */
 
 $this->breadcrumbs=array(
-	'Tecnicos'=>array('index'),
-	'Create',
+	'Técnicos'=>array('index'),
+	'Registro',
 );
 
 $this->menu=array(
-	array('label'=>'List Tecnico', 'url'=>array('index')),
-	array('label'=>'Manage Tecnico', 'url'=>array('admin')),
+	//array('label'=>'List Tecnico', 'url'=>array('index')),
+	array('label'=>'Volver', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Tecnico</h1>
+<h1>Registrar Técnico</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -55,6 +55,7 @@
       						array('label'=>'Acerca de nosotros','url'=>array('/site/page', 'view'=>'about')),
       						array('label'=>'Contacto', 'url'=>array('/site/contact')),
       						array('label'=>'Futbolistas', 'url'=>array('/futbolista/admin')),
+      						array('label'=>'Técnicos', 'url'=>array('/tecnico/admin')),
       						
       						array('label' => 'Contratos','items' => array(
             					array(

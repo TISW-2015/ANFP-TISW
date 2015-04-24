@@ -60,12 +60,12 @@ class Tecnico extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'TEC_correl' => 'Tec Correl',
-			'TEC_nombre' => 'Tec Nombre',
-			'TEC_apellidoPat' => 'Tec Apellido Pat',
-			'TEC_apellidoMat' => 'Tec Apellido Mat',
-			'TEC_fechaNac' => 'Tec Fecha Nac',
-			'TEC_nacionalidad' => 'Tec Nacionalidad',
+			'TEC_correl' => 'Tecnico Correl',
+			'TEC_nombre' => 'Nombre',
+			'TEC_apellidoPat' => 'Apellido Paterno',
+			'TEC_apellidoMat' => 'Apellido Materno',
+			'TEC_fechaNac' => 'Fecha de Nacimiento',
+			'TEC_nacionalidad' => 'Pais de Origen',
 		);
 	}
 

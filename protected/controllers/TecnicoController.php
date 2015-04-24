@@ -71,7 +71,7 @@ class TecnicoController extends Controller
 		{
 			$model->attributes=$_POST['Tecnico'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->TEC_correl));
+				$this->redirect(array('admin','id'=>$model->TEC_correl));
 		}
 
 		$this->render('create',array(
@@ -95,7 +95,7 @@ class TecnicoController extends Controller
 		{
 			$model->attributes=$_POST['Tecnico'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->TEC_correl));
+				$this->redirect(array('admin','id'=>$model->TEC_correl));
 		}
 
 		$this->render('update',array(

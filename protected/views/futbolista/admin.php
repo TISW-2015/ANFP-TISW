@@ -44,7 +44,7 @@ $('.search-form form').submit(function(){
 		'FUT_estadoCivil',
 		array(
 			    'class'=>'CButtonColumn',
-                'template' => '{falta} {lesion} {view} {update} {delete} ',
+                'template' => '{falta} {lesion} {update} {delete} ',
             	'buttons'=>array(
                     'falta' => array(
                         'label'=>'Agregar Falta', 'url'=>"CHtml::normalizeUrl(array('falta/create', 'id'=>\$data->FUT_correl))",
