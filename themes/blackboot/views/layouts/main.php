@@ -55,6 +55,16 @@
       						array('label'=>'Acerca de nosotros','url'=>array('/site/page', 'view'=>'about')),
       						array('label'=>'Contacto', 'url'=>array('/site/contact')),
       						array('label'=>'Futbolistas', 'url'=>array('/futbolista/admin')),
+      						
+      						array('label' => 'Contratos','items' => array(
+            					array(
+                					'label' => 'Contratos Futbolistas',
+                					'url' => array('/contratojugador/admin','id'=>Contratojugador::model()->findByPk(array('CON_JUG_correl')),
+           			 			)),
+           			 			array(
+                					'label' => 'Contratos Técnicos',
+                					'url' => array('/contratotecnico/admin','id'=>Contratotecnico::model()->findByPk(array('CON_TEC_correl')),
+           			 			)))),
       						array('label'=>'Estadios', 'url'=>array('/estadio/admin')),
       						array('label'=>'Árbitro', 'url'=>array('/arbitro/admin')),
       						array('label' => 'Help','url' => '#'),
@@ -72,7 +82,7 @@
                 					'url' => '#'
             					)
         					)
-    ),
+    						),
       						array('label' => 'Torneos','items' => array(
             					array(
                 					'label' => 'Apertura'." ".(DATE('y')+2000),
@@ -107,10 +117,10 @@
                 				'url' => '#'
             				)
         				),
-    				 'visible'=>!Yii::app()->user->isGuest),
+    				'visible'=>!Yii::app()->user->isGuest),
     						array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest)
-));
-?>
+					));
+					?>
 					
 				</div><!--/.nav-collapse -->
 			</div>
