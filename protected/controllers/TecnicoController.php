@@ -131,10 +131,12 @@ class TecnicoController extends Controller
 	/**
 	 * Manages all models.
 	 */
-	public function actionAdmin()
+	public function actionAdmin($id=null)
 	{
 		$model=new Tecnico('search');
 		$model->unsetAttributes();  // clear any default values
+		if($id != null)
+			$model->TEC_correl=$id;
 		if(isset($_GET['Tecnico']))
 			$model->attributes=$_GET['Tecnico'];
 

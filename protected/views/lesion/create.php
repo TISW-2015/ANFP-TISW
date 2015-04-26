@@ -9,7 +9,7 @@ $modelo=futbolista::model()->findByPk($modelo->FUT_correl);
 $this->breadcrumbs=array(
 	'Futbolista'=>array('//futbolista/admin'),
 	$modelo->FUT_nombre." ".$modelo->FUT_apellidoPat=>array('//futbolista/view','id'=>$modelo->FUT_correl),
-	'Lesion'=>array('admin','id'=>$modelo->FUT_correl),
+	'Lesiones'=>array('admin','id'=>$modelo->FUT_correl),
 	'Agregar',
 );
 

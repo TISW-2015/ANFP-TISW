@@ -42,6 +42,7 @@ $this->menu=array(
 		'LES_tiempoReposo',
 		array(
 			'class'=>'CButtonColumn',
+			'template' => '{update} {delete}',
 		),
 	),
 )); ?>
