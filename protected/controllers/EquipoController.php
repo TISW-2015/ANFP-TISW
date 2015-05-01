@@ -67,10 +67,14 @@ class EquipoController extends Controller
 		$log= new Logo;
 
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		 $this->performAjaxValidation($model);
 
 		if(isset($_POST['Equipo']))
 		{
+			if (isset($_POST['Equipo'])) {
+				$log->LOG_url=CUploadedFile::getInstance($log,'LOG_url');
+				
+			}
 			$model->attributes=$_POST['Equipo'];
 			if(isset($_POST['Pertenece']))
 				$aux->attributes=$_POST['Pertenece'];
@@ -85,6 +89,10 @@ class EquipoController extends Controller
 				die;
 			}*/
 			if($model->save()){
+					$log->LOG_url->saveAs('images/'.$model->EQU_correl.'.png');
+					$log->LOG_nombre=$log->LOG_url;
+					$log->LOG_equCorrel=$model->EQU_correl;
+					$log->LOG_url=$model->EQU_correl;
 					$aux->PER_equCorrel=$model->EQU_correl;
 					$aux->save();
 				}
@@ -148,7 +156,10 @@ class EquipoController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
+		$var=Equipo::model()->findByPk($id);
+		$var->EQU_estado=0;
+		$var->save();
+		// $this->loadModel($id)->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
@@ -172,7 +183,8 @@ class EquipoController extends Controller
 	public function actionAdmin()
 	{
 		$model=new Equipo('search');
-		$model->unsetAttributes();  // clear any default values
+		$model->unsetAttributes();
+		// $model->EQU_estado=1;  // clear any default values
 		if(isset($_GET['Equipo']))
 			$model->attributes=$_GET['Equipo'];
 

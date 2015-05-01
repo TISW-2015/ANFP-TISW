@@ -25,9 +25,9 @@
 		<?php echo $form->error($model,'TOR_nombre'); ?>
 	</div>
 	<div class="row">
-		<?php echo $form->dropDownListControlGroup($model,'TOR_division', array(
+		<?php echo $form->dropDownListControlGroup($model,'TOR_division',
         CHtml::listData(Division::model()->findAll(),'DIV_correl','DIV_nombre'),
-        ), array('empty' => 'Seleccione División',
+        array('empty' => 'Seleccione División',
         ));?>
 	</div>
 

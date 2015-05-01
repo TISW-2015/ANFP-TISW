@@ -58,9 +58,9 @@
       						array('label' => 'Partidos','items' => array(
             					array('label'=>'Fechas', 'url'=>array('/participa/index')),
             					array(
-                					'label' => 'Apertura',
-                					'url' => '#'
-           					 	),
+                					'label' => 'Partidos',
+                					'url' => array('/partido/index')
+                					),
             					BsHtml::menuDivider(),
             					array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
             					array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),

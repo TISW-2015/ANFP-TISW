@@ -1,139 +1,38 @@
 <?php
-echo BsHtml::buttonToolbar(array(
-    array(
-        'items' => array(
-            array(
-                //'icon' => '<img src="'.Yii::app()->request->baseUrl.'/images/futbol.ico">',
-                'label'=>'Fechas',
-                'color' => BsHtml::BUTTON_COLOR_INFO,
-                //'imageUrl'=>'<img src="'.Yii::app()->request->baseUrl.'/images/futbol.ico">'
-                //'template'=>'<img src="'.Yii::app()->request->baseUrl.'/images/futbol.ico">'
-                //'label'=>'<img src="'.Yii::app()->request->baseUrl.'/images/AAA.ico">'
+/* @var $this ParticipaController */
+/* @var $data Participa */
+$part= Participa::model()->findAllByAttributes(array('PART_parCorrel'=>$data->PAR_correl));
+$equipo1=Equipo::model()->findByPk($part[0]->PART_equCorrel);
+$equipo2=Equipo::model()->findByPk($part[1]->PART_equCorrel);
 
-
-            ),
-            array(
-                'label' => '1',
-                'url' =>array('admin','id'=>'1'),
-                'type' => BsHtml::BUTTON_TYPE_LINK
-                //'color' => BsHtml::BUTTON_COLOR_INFO
-                ),
-            array(
-                'label' => '2',
-                'url' =>array('//partido/admin','id'=>'2'),
-                'type' => BsHtml::BUTTON_TYPE_LINK
-                //'color' => BsHtml::BUTTON_COLOR_INFO
-            ),
-            array(
-                'label' => '3',
-                'url' =>array('//partido/admin','id'=>'3'),
-                'type' => BsHtml::BUTTON_TYPE_LINK
-                //'color' => BsHtml::BUTTON_COLOR_INFO
-            ),
-            array(
-                'label' => '4',
-                'url' =>array('//partido/admin','id'=>'4'),
-                'type' => BsHtml::BUTTON_TYPE_LINK
-                //'color' => BsHtml::BUTTON_COLOR_INFO
-            ),
-            array(
-                'label' => '5',
-                'url' =>array('//partido/admin','id'=>'5'),
-                'type' => BsHtml::BUTTON_TYPE_LINK
-                //'color' => BsHtml::BUTTON_COLOR_INFO
-            ),
-            array(
-                'label' => '6',
-                'url' =>array('//partido/admin','id'=>'6'),
-                'type' => BsHtml::BUTTON_TYPE_LINK
-                //'color' => BsHtml::BUTTON_COLOR_INFO
-            ),
-            array(
-                'label' => '7',
-                'url' =>array('//partido/admin','id'=>'7'),
-                'type' => BsHtml::BUTTON_TYPE_LINK
-                //'color' => BsHtml::BUTTON_COLOR_INFO
-            ),
-            array(
-                'label' => '8',
-                'url' =>array('//partido/admin','id'=>'8'),
-                'type' => BsHtml::BUTTON_TYPE_LINK
-                //'color' => BsHtml::BUTTON_COLOR_INFO
-                ),
-            array(
-                'label' => '9',
-                'url' =>array('//partido/admin','id'=>'9'),
-                'type' => BsHtml::BUTTON_TYPE_LINK
-                //'color' => BsHtml::BUTTON_COLOR_INFO
-            ),
-            array(
-                'label' => '10',
-                'url' =>array('//partido/admin','id'=>'10'),
-                'type' => BsHtml::BUTTON_TYPE_LINK
-                //'color' => BsHtml::BUTTON_COLOR_INFO
-            ),
-            array(
-                'label' => '11',
-                'url' =>array('//partido/admin','id'=>'11'),
-                'type' => BsHtml::BUTTON_TYPE_LINK
-                //'color' => BsHtml::BUTTON_COLOR_INFO
-            ),
-            array(
-                'label' => '12',
-                'url' =>array('//partido/admin','id'=>'12'),
-                'type' => BsHtml::BUTTON_TYPE_LINK
-                //'color' => BsHtml::BUTTON_COLOR_INFO
-            ),
-            array(
-                'label' => '13',
-                'url' =>array('//partido/admin','id'=>'13'),
-                'type' => BsHtml::BUTTON_TYPE_LINK
-                //'color' => BsHtml::BUTTON_COLOR_INFO
-            ),
-            array(
-                'label' => '14',
-                'url' =>array('//partido/admin','id'=>'14'),
-                'type' => BsHtml::BUTTON_TYPE_LINK
-                //'color' => BsHtml::BUTTON_COLOR_INFO
-            ),
-            array(
-                'label' => '15',
-                'url' =>array('//partido/admin','id'=>'15'),
-                'type' => BsHtml::BUTTON_TYPE_LINK
-                //'color' => BsHtml::BUTTON_COLOR_INFO
-            ),
-            array(
-                'label' => '16',
-                'url' =>array('//partido/admin','id'=>'16'),
-                'type' => BsHtml::BUTTON_TYPE_LINK
-                //'color' => BsHtml::BUTTON_COLOR_INFO
-            ),
-            array(
-                'label' => '17',
-                'url' =>array('//partido/admin','id'=>'17'),
-                'type' => BsHtml::BUTTON_TYPE_LINK
-                //'color' => BsHtml::BUTTON_COLOR_INFO
-            ),
-           /* array(
-            'own' => BsHtml::ajaxButton('own', Yii::app()->createAbsoluteUrl('site/ajaxTest'), array(
-                'cache' => true,
-                'data' => array(
-                    'message' => 'clicked the Ajaxbutton from the buttongroup'
-                ),
-                'type' => 'POST',
-                'success' => 'js:function(data){
-                            console.log(data);
-                            $(".modal-body").html(data);
-                            $("#demo_modal").modal("show");
-                        }'
-                ), array(
-                'icon' => BsHtml::GLYPHICON_BELL
-                ))
-            )*/
-        )
-    )
-), array(
-    'size' => BsHtml::BUTTON_SIZE_MINI
-    //'justified' => true
-));
 ?>
+
+<div class="view">
+<div class="parent">
+    <div class="left">
+        <h3><center><b><?php echo $equipo1->EQU_nombre ?></b><br></h3>
+        <?php  
+        echo '<img src="'.Yii::app()->request->baseUrl.'/images/'.$equipo1->EQU_correl.'.png">';
+        ?></center>
+        <!-- <br />
+        <b> <?php //echo $part->PART_posicion ?></b>
+        <br /> -->
+    </div>
+    <div class="center">
+        <center>
+        <b><h1><?php echo $part[0]->PART_goles ?></b>
+        <!-- <b><?php //echo CHtml::encode($data->getAttributeLabel('PART_goles')); ?>:</b>
+        <?php //echo CHtml::encode($data->PART_goles); ?> -->
+        <?php  echo '<img src="'.Yii::app()->request->baseUrl.'/images/versus.ico">';?>
+        <?php echo $part[1]->PART_goles ?></center>
+        <center><h1><?php echo $data->PAR_programacion ?></center>
+    </div>
+    <div class="right">
+        <h3><center><b><?php echo $equipo2->EQU_nombre ?></b><br></h3>
+        <?php  
+        echo '<img src="'.Yii::app()->request->baseUrl.'/images/'.$equipo2->EQU_correl.'.png">';
+        ?></center>
+    </div>
+    <div style="clear:both;"></div>
+</div>
+</div>

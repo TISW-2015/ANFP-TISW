@@ -13,7 +13,7 @@ $log= new Logo;
 	// controller action is handling ajax validation correctly.
 	// There is a call to performAjaxValidation() commented in generated controller code.
 	// See class documentation of CActiveForm for details on this.
-	'enableAjaxValidation'=>false,
+	'enableAjaxValidation'=>false,'htmlOptions'=>array('enctype'=>'multipart/form-data'),
 )); ?>
 
 	<p class="help-block">Campos con <span class="required">*</span> son obligatorios.</p>
@@ -50,9 +50,9 @@ $log= new Logo;
 		<?php echo $form->error($model,'EQU_telefono'); ?>
 	</div>
 	<div class="row">
-		<?php echo $form->dropDownListControlGroup($aux,'PER_divCorrel', array(
-        CHtml::listData(Division::model()->findAll(),'DIV_correl','DIV_nombre'),
-        ), array('empty' => 'Seleccione División',
+		<?php echo $form->dropDownListControlGroup($aux,'PER_divCorrel',
+        CHtml::listData(Division::model()->findAll(),'DIV_correl','DIV_nombre'),	
+         array('empty' => 'Seleccione División',
         ));?>
 	</div>
 	<div class="row">
@@ -61,9 +61,14 @@ $log= new Logo;
 
 	<div class="row">
 		<br>
-	   <?php echo CHtml::activeFileField($log,'EQU_logo'); ?>
+	   <?php echo CHtml::activeFileField($log,'LOG_url'); ?>
     </div>
-	<div class="row buttons">
+	<!-- <div>
+	 <input type="hidden" name="MAX_FILE_SIZE" value="30000000000" />
+	 Enviar este archivo: <input name="userfile" type="file" />
+    <input type="submit" value="Send File" />
+	</div>
+	<div class="row buttons"> -->
 		<?php echo BsHtml::submitButton('Aceptar', array('color' => BsHtml::BUTTON_COLOR_PRIMARY)); ?>
 	</div>
 

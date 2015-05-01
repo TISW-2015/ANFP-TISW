@@ -15,7 +15,7 @@ $this->menu=array(
 
 <?php echo BsHtml::pageHeader('Tabla','Equipos') ?>
 
-<?php $this->widget('bootstrap.widgets.BsGridView', array(
+<?php $this->widget('bootstrap.widgets.TbGridView', array(
 	'id'=>'integra-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
@@ -35,8 +35,16 @@ $this->menu=array(
 		'INT_tarjetaAmarilla',
 		'INT_tarjetaRojas',
 		array(
-			'class'=>'CButtonColumn',
-			'template' => '{view}{update}',
+			// 'class'=>'CButtonColumn',
+			'class'=>'bootstrap.widgets.TbButtonColumn',
+            'template'=>'{update} {delete} {opciones}', //removed {view}
+            'buttons'=>array(
+            	'opciones' => array(
+            		'label'=>'Opciones',
+            		'url'=>'#',
+            	),),
+			
+			//'template' => '{view}{update}',
 		),
 	),
 )); ?>

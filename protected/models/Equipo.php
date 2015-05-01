@@ -10,6 +10,7 @@
  * @property string $EQU_direccionClub
  * @property string $EQU_sitio
  * @property string $EQU_telefono
+ * @property string $EQU_estado
  *
  * The followings are the available model relations:
  * @property Anfitrion[] $anfitrions
@@ -43,7 +44,7 @@ class Equipo extends CActiveRecord
 			array('EQU_nombre, EQU_presidente, EQU_direccionClub, EQU_sitio, EQU_telefono', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('EQU_correl, EQU_nombre, EQU_presidente, EQU_direccionClub, EQU_sitio, EQU_telefono', 'safe', 'on'=>'search'),
+			array('EQU_correl, EQU_nombre, EQU_presidente, EQU_direccionClub, EQU_sitio, EQU_telefono,EQU_estado', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -79,6 +80,7 @@ class Equipo extends CActiveRecord
 			'EQU_direccionClub' => 'Direccion Club',
 			'EQU_sitio' => 'Sitio',
 			'EQU_telefono' => 'Telefono',
+			'EQU_estado' => 'estado',
 		);
 	}
 
@@ -106,6 +108,7 @@ class Equipo extends CActiveRecord
 		$criteria->compare('EQU_direccionClub',$this->EQU_direccionClub,true);
 		$criteria->compare('EQU_sitio',$this->EQU_sitio,true);
 		$criteria->compare('EQU_telefono',$this->EQU_telefono,true);
+		$criteria->compare('EQU_estado',$this->EQU_estado,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

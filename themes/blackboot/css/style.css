@@ -547,15 +547,15 @@ p.hint { float:left; display:block;}
 .col-md-3 { float: left; }
 
 .parent {
-    margin-bottom: 15px;
-    padding: 10px;
+    margin-bottom: 10px;
+    padding: 0px;
+    border:3px solid #CEDCEA; 
     color: #0A416B;
     clear:both;
 }
 .left, .center, .right{
     float:left;
-    width:32%;
-    border:1px solid #CEDCEA; 
+    width:30%;
     padding:5px;
 
 }
