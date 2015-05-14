@@ -63,30 +63,63 @@ class TorneoController extends Controller
 	public function actionCreate()
 	{
 		$model=new Torneo;
+		$modelo=new Torneo;
+		$modelos=new Torneo;
 		$team=new Equipo;
-		$var=new Pertenece;
-		$lista;
+		$flag=0;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 		if(isset($_POST['Torneo']))
 		{
 			$model->attributes=$_POST['Torneo'];
-			$var=Pertenece::model()->findAllByAttributes(array('PER_divCorrel'=>$model->TOR_division));
 			//$var=Pertenece::model()->findAllByAttributes(array('PER_divCorrel'=>$model->TOR_division,explode("-",$value->PER_fecha)[0]=>$model->TOR_agno));
 			//$var=(Pertenece::model()->findAllByAttributes(array('PER_divCorrel'=>$model->TOR_division,)));
-			if($model->save()){
-				foreach ($var as $key) {
-					if(explode("-",$key->PER_fecha)[0]==$model->TOR_agno) {
-						$aux = new Integra;
-						$aux->INT_torCorrel=$model->TOR_correl;
-						$aux->INT_equCorrel=$key->PER_equCorrel;
-						$aux->save();
+			if (Torneo::model()->findByAttributes(array('TOR_agno'=>$model->TOR_agno))==null) {
+				if(Pertenece::model()->findByAttributes(array('PER_divCorrel'=>1,'PER_fecha'=>$model->TOR_agno))!=null){
+					$model->TOR_division=1;
+					$model->TOR_periodo=1;
+					$model->TOR_tipo=1;
+					$modelo->TOR_division=1;
+					$modelo->TOR_nombre=$model->TOR_nombre;
+					$modelo->TOR_agno=$model->TOR_agno;
+					$modelo->TOR_periodo=2;
+					$modelo->TOR_tipo=2;
+					// if($modelo->save())
+					$modelo->save();
+					// var_dump($modelo->TOR_correl);
+					// var_dump($model->TOR_correl);
+					// die();
+					if($model->save()){
+						$this->integrar($model,1,$modelo);
+						$flag=1;
 					}
 				}
-				$this->redirect(array('view','id'=>$model->TOR_correl));
+				$modelo=new Torneo;
+				if(Pertenece::model()->findByAttributes(array('PER_divCorrel'=>2,'PER_fecha'=>$model->TOR_agno))!=null){
+					$modelos->TOR_division=2;
+					$modelos->TOR_periodo=1;
+					$modelos->TOR_tipo=1;
+					$modelos->TOR_nombre=$model->TOR_nombre;
+					$modelos->TOR_agno=$model->TOR_agno;
+					if($modelos->save()){
+						$modelo->TOR_division=2;
+						$modelo->TOR_periodo=2;
+						$modelo->TOR_tipo=2;
+						$modelo->TOR_nombre=$model->TOR_nombre;
+						$modelo->TOR_agno=$model->TOR_agno;
+						$modelo->save();
+						$this->integrar($model,2,$modelo);
+						$flag=1;
+						// $this->redirect(array('view','id'=>$modelos->TOR_correl));
+					}
+				}
+				if($flag==1){
+				$this->redirect(array('admin'));
+				}
 			}
+		echo BsHtml::alert(BsHtml::ALERT_COLOR_WARNING, BsHtml::bold(
+			'Lo sentimos !') . 'Puede que ya exista un torneo este año o que no existan equipos en esta division.');
 		}
-
 		$this->render('create',array(
 			'model'=>$model,
 		));
@@ -123,8 +156,21 @@ class TorneoController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
+		$aux;
+		$model= new Integra;
+		$modelo= new Partido;
+		$modelo=Partido::model()->findAllByAttributes(array('PAR_torCorrel'=>$id));
+		$model=Integra::model()->findAllByAttributes(array('INT_torCorrel'=>$id));
+		foreach ($modelo as$key) {
+			$aux=Participa::model()->findAllByAttributes((array('PART_parCorrel'=>$key->PAR_correl)));
+			foreach ($aux as $value) {
+				$value->delete();
+			}
+			$key->delete();
+		}
 
+		foreach ($model as $key)$key->delete();
+		$this->loadModel($id)->delete();
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
@@ -183,4 +229,106 @@ class TorneoController extends Controller
 			Yii::app()->end();
 		}
 	}
+
+	public function Integrar($model, $div,$modelo)
+	{
+		$var=new Pertenece;
+		$team;
+		$array=[1,2];
+		$rounds;
+		$var=Pertenece::model()->findAllByAttributes(array('PER_divCorrel'=>$div,'PER_fecha'=>$model->TOR_agno));
+		foreach ($var as $value=> $key) {
+							$aux = new Integra;
+							$aux->INT_torCorrel=$model->TOR_correl;
+							$aux->INT_equCorrel=$key->PER_equCorrel;
+							$aux->save();
+							$auxClau = new Integra;
+							$auxClau->INT_torCorrel=$modelo->TOR_correl;
+							$auxClau->INT_equCorrel=$key->PER_equCorrel;
+							$auxClau->save();
+							$team[$value]=Equipo::model()->findByPk($aux->INT_equCorrel);
+							}
+		shuffle($team);
+		$rounds=$this->roundRobin($team);
+		foreach($rounds as $fecha => $games){
+    		foreach($games as $play){
+    			// var_dump($games);
+    			// die();
+    			shuffle($array);
+    			$local= new Participa;
+   				$visita= new Participa;
+   				$localClau= new Participa;
+   				$visitaClau= new Participa;
+   				$apertura = new Partido;
+    			$clausura = new Partido;
+    			$apertura->PAR_torCorrel = $model->TOR_correl;
+    			$apertura->PAR_fecha = $fecha;
+   				$clausura->PAR_torCorrel = $modelo->TOR_correl;
+   				$clausura->PAR_fecha = $fecha+count($rounds);
+    			$local->PART_equCorrel=$play["Home"]->EQU_correl;
+    			$visita->PART_equCorrel=$play["Away"]->EQU_correl;
+    			$local->PART_posicion=$array[0];
+   				$visita->PART_posicion=$array[1];
+   				$localClau->PART_equCorrel=$play["Home"]->EQU_correl;
+    			$visitaClau->PART_equCorrel=$play["Away"]->EQU_correl;
+    			$localClau->PART_posicion=$array[1];
+    			$visitaClau->PART_posicion=$array[0];
+    			if ($apertura->save()) {
+    				$local->PART_parCorrel=$apertura->PAR_correl;
+   					$visita->PART_parCorrel=$apertura->PAR_correl;
+   					$local->save();
+   					$visita->save();
+   					}
+    			if ($clausura->save()) {
+    				$localClau->PART_parCorrel=$clausura->PAR_correl;
+    				$visitaClau->PART_parCorrel=$clausura->PAR_correl;
+    				$localClau->save();
+    				$visitaClau->save();
+    				}
+   	 			}
+			}	
+		}
+
+	public function CopyModel($model){
+		$aux= new Torneo;
+		$aux->TOR_division=$model->TOR_division;
+		$aux->TOR_agno=$model->TOR_agno;
+		$aux->TOR_nombre=$model->TOR_nombre;
+		$aux->TOR_periodo=$model->TOR_periodo;
+		$aux->TOR_premio=$model->TOR_premio;
+		$aux->TOR_tipo=$model->TOR_tipo;
+		return $aux;
+	}
+	function roundRobin( array $teams ){
+
+    if (count($teams)%2 != 0){
+        array_push($teams,"bye");
+    }
+    $away = array_splice($teams,(count($teams)/2));
+    $home = $teams;
+    for ($i=0; $i < count($home)+count($away)-1; $i++)
+    {
+        for ($j=0; $j<count($home); $j++)
+        {
+            $round[$i][$j]["Home"]=$home[$j];
+            $round[$i][$j]["Away"]=$away[$j];
+        }
+        if(count($home)+count($away)-1 > 2)
+        {
+            $s = array_splice( $home, 1, 1 );
+            $slice = array_shift( $s  );
+            array_unshift($away,$slice );
+            array_push( $home, array_pop($away ) );
+        }
+    }
+    return $round;
 }
+	public function Redir()
+	{
+		
+		echo "funca";
+		die();
+	}
+}
+
+?>

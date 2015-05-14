@@ -55,9 +55,11 @@ $log= new Logo;
          array('empty' => 'Seleccione División',
         ));?>
 	</div>
-	<div class="row">
-		<?php echo $form->dateFieldControlGroup($aux,'PER_fecha'); ?>
-	</div>
+	<!-- <div class="row">
+		<?php echo $form->dropDownListControlGroup($aux, 'PER_fecha', array(
+        '1' => '1', '2' => '2'
+        ), array('empty' => 'año' ));  ?>
+	</div> -->
 
 	<div class="row">
 		<br>

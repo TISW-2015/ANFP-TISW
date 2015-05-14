@@ -36,7 +36,7 @@ class Torneo extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('TOR_division', 'required'),
+			array('TOR_nombre,TOR_agno', 'required'),
 			array('TOR_agno, TOR_periodo, TOR_premio, TOR_ganador', 'numerical', 'integerOnly'=>true),
 			array('TOR_division, TOR_tipo', 'length', 'max'=>10),
 			array('TOR_nombre', 'length', 'max'=>45),

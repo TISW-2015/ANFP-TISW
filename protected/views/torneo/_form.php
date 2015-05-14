@@ -22,45 +22,45 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'TOR_nombre'); ?>
 		<?php echo $form->textField($model,'TOR_nombre',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'TOR_nombre'); ?>
+		<!-- <?php echo $form->error($model,'TOR_nombre'); ?> -->
 	</div>
-	<div class="row">
+	<!-- <div class="row">
 		<?php echo $form->dropDownListControlGroup($model,'TOR_division',
         CHtml::listData(Division::model()->findAll(),'DIV_correl','DIV_nombre'),
         array('empty' => 'Seleccione División',
         ));?>
 	</div>
-
+ -->
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'TOR_agno'); ?>
 		<?php echo $form->textField($model,'TOR_agno'); ?>
-		<?php echo $form->error($model,'TOR_agno'); ?>
+		<!-- <?php echo $form->error($model,'TOR_agno'); ?> -->
 	</div>
 
-	<div class="row">
+	<!-- <div class="row">
 		<?php echo $form->dropDownListControlGroup($model, 'TOR_periodo', array(
         '1' => '1', '2' => '2'
         ), array('empty' => 'Seleccione Periodo' ));  ?>
-	</div>
+	</div> -->
 
-	<div class="row">
+	<!-- <div class="row">
 		<?php echo $form->labelEx($model,'TOR_premio'); ?>
 		<?php echo $form->textField($model,'TOR_premio'); ?>
 		<?php echo $form->error($model,'TOR_premio'); ?>
-	</div>
+	</div> -->
 
-	<div class="row">
+	<!-- <div class="row">
 		<?php echo $form->labelEx($model,'TOR_ganador'); ?>
 		<?php echo $form->textField($model,'TOR_ganador'); ?>
 		<?php echo $form->error($model,'TOR_ganador'); ?>
-	</div>
+	</div> -->
 
-	<div class="row">
+	<!-- <div class="row">
 		<?php echo $form->dropDownListControlGroup($model, 'TOR_tipo', array(
         '1' => 'Apertura', '2' => 'Clausura','3'=>'Liguilla'
         ), array('empty' => 'Seleccione Periodo' ));  ?>
-	</div>
+	</div> -->
 
 	<div class="row buttons">
 		 <?php echo BsHtml::submitButton('Aceptar', array('color' => BsHtml::BUTTON_COLOR_PRIMARY)); ?>

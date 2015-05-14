@@ -49,7 +49,7 @@
 				<a class="brand" href="#"><?php echo Yii::app()->name ?></a>
 				<div class="nav-collapse">
 					<?php
-
+						$hola=Yii::app()->createController('Torneo');
 						echo BsHtml::pills(array(
     						array('label' => 'Home','url'=>array('/site/index'),'active' => true),
       						array('label'=>'About','url'=>array('/site/page', 'view'=>'about')),
@@ -75,31 +75,32 @@
                 					'label' => 'Historial',
                 					'url' => array('/Equipo/admin'),
            			 			),
-           			 			array(
-                					'label' => 'Clausura'." ".(DATE('y')+2000),
-                					'url' => array('/integra/admin','id'=>Torneo::model()->findByAttributes(array('TOR_agno'=>(DATE('y')+2000),'TOR_tipo'=>2))->TOR_correl),
-           			 			),
             				BsHtml::menuDivider(),
             				array(
-                				'label' => 'Separate link',
-                				'url' => '#'
+                				'label' => 'Registrar Equipo',
+                				'url' => array('/Equipo/create'),
             						),
             				array('label'=>'Historial', 'url'=>array('/torneo/admin'))
         						)
     						),
+    							
       						array('label' => 'Torneos','items' => array(
-            					array(
-                					'label' => 'Apertura'." ".(DATE('y')+2000),
-                					'url' => array('/integra/admin','id'=>Torneo::model()->findByAttributes(array('TOR_agno'=>(DATE('y')+2000),'TOR_tipo'=>1))->TOR_correl),
-           			 			),
-           			 			array(
-                					'label' => 'Clausura'." ".(DATE('y')+2000),
-                					'url' => array('/integra/admin','id'=>Torneo::model()->findByAttributes(array('TOR_agno'=>(DATE('y')+2000),'TOR_tipo'=>2))->TOR_correl),
-           			 			),
+            					 array(
+                	 				'label' => 'Apertura'." ".DATE('Y'),
+                	 				
+                					 // 'url' => array('/integra/admin','id'=>Torneo::model()->findByAttributes(array('TOR_agno'=>(DATE('y')+2000),'TOR_tipo'=>1))->TOR_correl),
+                	 				 'visible'=>!Torneo::model()->findByAttributes(array('TOR_agno'=>DATE('Y'),'TOR_tipo'=>1)),
+                	 				// 'url'=> $hola->Redir(),
+           			 		 	),
+           			 		// 	array(
+                	// 				'label' => 'Clausura'." ".(DATE('y')+2000),
+                	// 				'url' => array('/integra/admin','id'=>Torneo::model()->findByAttributes(array('TOR_agno'=>(DATE('y')+2000),'TOR_tipo'=>2))->TOR_correl),
+           			 		// 	),
+    						
             				BsHtml::menuDivider(),
             				array(
-                				'label' => 'Separate link',
-                				'url' => '#'
+                				'label' => 'Registrar Apertura/Clausura',
+                				'url'=>array('/torneo/create')
             						),
             				array('label'=>'Historial', 'url'=>array('/torneo/admin'))
         						)

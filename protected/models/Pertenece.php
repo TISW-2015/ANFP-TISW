@@ -61,7 +61,7 @@ class Pertenece extends CActiveRecord
 			'PER_correl' => 'Per Correl',
 			'PER_equCorrel' => 'Per Equ Correl',
 			'PER_divCorrel' => 'Division',
-			'PER_fecha' => 'Fecha',
+			'PER_fecha' => 'Año',
 		);
 	}
 

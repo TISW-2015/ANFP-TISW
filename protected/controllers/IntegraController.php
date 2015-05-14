@@ -171,4 +171,12 @@ class IntegraController extends Controller
 			Yii::app()->end();
 		}
 	}
+	public function Redir()
+	{
+		echo "IntegraController";
+		// die();
+		// if (Torneo::model()->findByAttributes(array('TOR_agno'=>DATE('Y'),'TOR_tipo'=>1))->TOR_correl) {
+		// 	$this->redirect(array('/integra/admin','id'=>Torneo::model()->findByAttributes(array('TOR_agno'=>DATE('Y'),'TOR_tipo'=>1))->TOR_correl));
+		// }
+	}
 }

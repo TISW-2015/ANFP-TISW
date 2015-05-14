@@ -125,4 +125,5 @@ class Equipo extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+	
 }

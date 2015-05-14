@@ -78,9 +78,12 @@ class EquipoController extends Controller
 			$model->attributes=$_POST['Equipo'];
 			if(isset($_POST['Pertenece']))
 				$aux->attributes=$_POST['Pertenece'];
-			if($aux->PER_divCorrel==null||$aux->PER_fecha==null){
+			if($aux->PER_divCorrel==null){
+				$this->redirect('create',array(
+				'model'=>$model,
+				));
 				echo "Equipo debe pertenecer a una division";
-				die();
+				// die();
 			}
 			/*if(isset($_POST['Logo'])){
 				$log->attributes=$_POST['Logo'];
@@ -88,17 +91,18 @@ class EquipoController extends Controller
 				var_dump($log);
 				die;
 			}*/
-			if($model->save()){
+			if($aux->PER_divCorrel!=null&&$model->save()){
 					$log->LOG_url->saveAs('images/'.$model->EQU_correl.'.png');
 					$log->LOG_nombre=$log->LOG_url;
 					$log->LOG_equCorrel=$model->EQU_correl;
 					$log->LOG_url=$model->EQU_correl;
 					$aux->PER_equCorrel=$model->EQU_correl;
-					$aux->save();
-				}
-				$this->redirect(array('view','id'=>$model->EQU_correl));
-		}
+					$aux->PER_fecha=date('Y');
 
+					$aux->save();
+					$this->redirect(array('view','id'=>$model->EQU_correl));
+				}
+		}
 		$this->render('create',array(
 			'model'=>$model,
 		));
@@ -180,10 +184,27 @@ class EquipoController extends Controller
 	/**
 	 * Manages all models.
 	 */
-	public function actionAdmin()
+	public function actionAdmin($id=null)
 	{
 		$model=new Equipo('search');
 		$model->unsetAttributes();
+		$var= Equipo::model()->findAllByAttributes(array());
+		var_dump($this->divActual($var[0]));
+		die();
+		foreach ($var as $key => $value) {
+			if (Pertenece::model()->findByPk($this->divActual($value))->PER_divCorrel==1) {
+				echo $value->EQU_nombre;
+			}
+		}
+		$hol=array('id'=>null,'agno'=>null);
+		var_dump($hol);
+		// var_dump(max($hol[0...7]->EQU_correl));
+		die();
+		// if ($id=1) {
+		// 	if (Equipo::model()->findByAttributes(array(EQU))) {
+		// 		# code...
+		// 	}
+		// }
 		// $model->EQU_estado=1;  // clear any default values
 		if(isset($_GET['Equipo']))
 			$model->attributes=$_GET['Equipo'];
@@ -220,4 +241,28 @@ class EquipoController extends Controller
 			Yii::app()->end();
 		}
 	}
+	// public function Redir()
+	// {
+	// 	if (Torneo::model()->findByAttributes(array('TOR_agno'=>DATE('Y'),'TOR_tipo'=>1))->TOR_correl) {
+	// 		$this->redirect(array('/integra/admin','id'=>Torneo::model()->findByAttributes(array('TOR_agno'=>DATE('Y'),'TOR_tipo'=>1))->TOR_correl));
+	// 	}
+	// }
+
+	public function divActual($equipo)
+	{
+		$aux= Pertenece::model()->findAllByAttributes(array('PER_equCorrel'=>$equipo->EQU_correl));
+		$i=0;
+		// $id;
+		foreach ($aux as $key => $value) {
+			if ($value->PER_fecha>$aux[$i]->PER_fecha) {
+				$i=$key;
+			}
+		}
+		// var_dump($aux[$i]);
+		// $id=;
+		// var_dump($id);
+		// die();
+	return $aux[$i]->PER_correl;
+	}
+
 }

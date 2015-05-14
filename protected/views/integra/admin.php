@@ -18,7 +18,7 @@ $this->menu=array(
 <?php $this->widget('bootstrap.widgets.TbGridView', array(
 	'id'=>'integra-grid',
 	'dataProvider'=>$model->search(),
-	'filter'=>$model,
+	// 'filter'=>$model,
 	'type'=>BsHtml::GRID_TYPE_BORDERED,
 	'columns'=>array(
 		//'INT_correl',
