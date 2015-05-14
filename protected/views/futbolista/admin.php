@@ -3,8 +3,7 @@
 /* @var $model Futbolista */
 
 $this->breadcrumbs=array(
-	'Futbolistas'=>array('index'),
-	'Administrar',
+	'Futbolistas'
 );
 
 $this->menu=array(
@@ -12,21 +11,10 @@ $this->menu=array(
 	array('label'=>'Agregar Futbolista', 'url'=>array('create')),
 );
 
-Yii::app()->clientScript->registerScript('search', "
-$('.search-button').click(function(){
-	$('.search-form').toggle();
-	return false;
-});
-$('.search-form form').submit(function(){
-	$('#futbolista-grid').yiiGridView('update', {
-		data: $(this).serialize()
-	});
-	return false;
-});
-");
+
 ?>
 
-<h3>Administrar Futbolistas</h3>
+<h1>Administrar Futbolistas</h1>
 
 <?php $this->widget('bootstrap.widgets.BsGridView', array(
 	'id'=>'futbolista-grid',
@@ -42,9 +30,22 @@ $('.search-form form').submit(function(){
 		'FUT_nacionalidad',		
 		'FUT_estado',
 		'FUT_estadoCivil',
-		
 		array(
-			'class'=>'CButtonColumn',
+			    'class'=>'CButtonColumn',
+                'template' => ' {lesion} {indexLes} {update} {delete} ',
+            	'buttons'=>array(                       			
+            		'lesion' => array(
+                        'label'=>'Agregar Lesión', 'url'=>"CHtml::normalizeUrl(array('lesion/create', 'id'=>\$data->FUT_correl))",
+                        'imageUrl'=>Yii::app()->request->baseUrl.'/images/lesion.ico', 
+                        'options' => array('class'=>'lesion'),
+                		),
+            		'indexLes' => array(
+            			'label' => 'Indice de Lesiones', 'url'=>"CHtml::normalizeUrl(array('lesion/admin','id'=>\$data->FUT_correl))",
+            			'imageUrl' =>Yii::app()->request->baseUrl.'/images/index lesiones.ico',
+            			'options' => array('class'=>'indexLes'),
+            			),
+        		),
+    		),
 		),
-	),
-)); ?>
+	)
+); ?>

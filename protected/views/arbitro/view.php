@@ -8,20 +8,20 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Arbitro', 'url'=>array('index')),
-	array('label'=>'Create Arbitro', 'url'=>array('create')),
-	array('label'=>'Update Arbitro', 'url'=>array('update', 'id'=>$model->ARB_correl)),
-	array('label'=>'Delete Arbitro', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->ARB_correl),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Arbitro', 'url'=>array('admin')),
+	//array('label'=>'List Arbitro', 'url'=>array('index')),
+	//array('label'=>'Create Arbitro', 'url'=>array('create')),
+	array('label'=>'Editar Árbitro', 'url'=>array('update', 'id'=>$model->ARB_correl)),
+	array('label'=>'Eliminar Árbitro', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->ARB_correl),'confirm'=>'¿Estás seguro de querer eliminar este árbitro?')),
+	array('label'=>'Administrar Árbitro', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View Arbitro #<?php echo $model->ARB_correl; ?></h1>
+<h3>Detalle Arbitro <?php echo $model->ARB_nombre." ".$model->ARB_apellidoPat; ?></h3>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		'ARB_correl',
+		//'ARB_correl',
 		'ARB_nombre',
 		'ARB_apellidoPat',
 		'ARB_apellidoMat',

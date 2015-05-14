@@ -76,7 +76,7 @@ class Futbolista extends CActiveRecord
 			'FUT_apellidoPat' => 'Apellido Paterno',
 			'FUT_apellidoMat' => 'Apellido Materno',
 			'FUT_fechaNacimiento' => 'Fecha Nacimiento',
-			'FUT_nacionalidad' => 'Nacionalidad',
+			'FUT_nacionalidad' => 'País de Origen',
 			'FUT_estado' => 'Estado',
 			'FUT_estadoCivil' => 'Estado Civil',
 		);

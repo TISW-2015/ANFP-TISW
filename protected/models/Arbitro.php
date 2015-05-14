@@ -70,12 +70,12 @@ class Arbitro extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'ARB_correl' => 'Arb Correl',
-			'ARB_nombre' => 'Arb Nombre',
-			'ARB_apellidoPat' => 'Arb Apellido Pat',
-			'ARB_apellidoMat' => 'Arb Apellido Mat',
-			'ARB_fechaNac' => 'Arb Fecha Nac',
-			'ARB_nacionalidad' => 'Arb Nacionalidad',
+			'ARB_correl' => 'Correl Arbitro ',
+			'ARB_nombre' => 'Nombre Árbitro ',
+			'ARB_apellidoPat' => 'Apellido Paterno ',
+			'ARB_apellidoMat' => 'Apellido Materno ',
+			'ARB_fechaNac' => 'Fecha Nacimiento ',
+			'ARB_nacionalidad' => 'País de Origen ',
 		);
 	}
 

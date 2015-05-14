@@ -68,17 +68,18 @@ class Contratojugador extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'CON_JUG_correl' => 'Con Jug Correl',
-			'CON_JUG_equCorrel' => 'Con Jug Equ Correl',
-			'CON_JUG_agno' => 'Con Jug Agno',
-			'CON_JUG_periodo' => 'Con Jug Periodo',
-			'CON_JUG_futCorrel' => 'Con Jug Fut Correl',
-			'CON_JUG_numero' => 'Con Jug Numero',
-			'CON_JUG_amarilla' => 'Con Jug Amarilla',
-			'CON_JUG_roja' => 'Con Jug Roja',
-			'CON_JUG_goles' => 'Con Jug Goles',
-			'CON_JUG_asistencia' => 'Con Jug Asistencia',
-			'CON_JUG_falta' => 'Con Jug Falta',
+			'CON_JUG_correl' => 'Contrato Correl',
+			'CON_JUG_equCorrel' => 'Equipo',
+			'CON_JUG_agno' => 'Año',
+			'CON_JUG_periodo' => 'Periodo',
+			'CON_JUG_futCorrel' => 'Futbolista',
+			'CON_JUG_numero' => 'Numero',
+			
+			'CON_JUG_amarilla' => 'Amarillas',
+			'CON_JUG_roja' => 'Rojas',
+			'CON_JUG_goles' => 'Goles',
+			'CON_JUG_asistencia' => 'Asistencia',
+			'CON_JUG_falta' => 'Falta',
 		);
 	}
 

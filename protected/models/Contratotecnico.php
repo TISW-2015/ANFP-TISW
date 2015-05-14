@@ -64,12 +64,12 @@ class Contratotecnico extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'CON_TEC_correl' => 'Con Tec Correl',
-			'CON_TEC_tecCorrel' => 'Con Tec Tec Correl',
-			'CON_TEC_equCorrel' => 'Con Tec Equ Correl',
-			'CON_TEC_agno' => 'Con Tec Agno',
-			'CON_TEC_periodo' => 'Con Tec Periodo',
-			'CON_TEC_cargo' => 'Con Tec Cargo',
+			'CON_TEC_correl' => 'Contrato Correl',
+			'CON_TEC_tecCorrel' => 'Tecnico Correl',
+			'CON_TEC_equCorrel' => 'Equipo Correl',
+			'CON_TEC_agno' => 'Año',
+			'CON_TEC_periodo' => 'Periodo',
+			'CON_TEC_cargo' => 'Cargo',
 		);
 	}
 

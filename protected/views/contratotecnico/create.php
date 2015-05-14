@@ -3,16 +3,16 @@
 /* @var $model Contratotecnico */
 
 $this->breadcrumbs=array(
-	'Contratotecnicos'=>array('index'),
-	'Create',
+	'Contratos Técnicos'=>array('index'),
+	'Registro',
 );
 
 $this->menu=array(
-	array('label'=>'List Contratotecnico', 'url'=>array('index')),
-	array('label'=>'Manage Contratotecnico', 'url'=>array('admin')),
+	//array('label'=>'List Contratotecnico', 'url'=>array('index')),
+	array('label'=>'Volver', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Contratotecnico</h1>
+<h1>Registrar Contrato de Técnico</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

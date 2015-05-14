@@ -4,15 +4,15 @@
 
 $this->breadcrumbs=array(
 	'Estadios'=>array('index'),
-	'Create',
+	'Registro',
 );
 
 $this->menu=array(
-	array('label'=>'List Estadio', 'url'=>array('index')),
-	array('label'=>'Manage Estadio', 'url'=>array('admin')),
+	//array('label'=>'List Estadio', 'url'=>array('index')),
+	array('label'=>'Volver', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Estadio</h1>
+<h1>Registrar Estadio</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -3,16 +3,16 @@
 /* @var $model Contratojugador */
 
 $this->breadcrumbs=array(
-	'Contratojugadors'=>array('index'),
-	'Create',
+	'Contratos Futbolistas'=>array('index'),
+	'Registro',
 );
 
 $this->menu=array(
-	array('label'=>'List Contratojugador', 'url'=>array('index')),
-	array('label'=>'Manage Contratojugador', 'url'=>array('admin')),
+	//array('label'=>'List Contratojugador', 'url'=>array('index')),
+	array('label'=>'Volver', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Contratojugador</h1>
+<h1>Registrar Contrato de Futbolista</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -12,11 +12,13 @@ class FutbolistaController extends Controller
 	 * @return array action filters
 	 */
 	public function filters()
-	{
-		return array(
+	{ 
+    	return array(array('CrugeAccessControlFilter'));
+   
+		/*return array(
 			'accessControl', // perform access control for CRUD operations
 			'postOnly + delete', // we only allow deletion via POST request
-		);
+		);*/
 	}
 
 	/**
@@ -73,7 +75,7 @@ class FutbolistaController extends Controller
 			$model->attributes=$_POST['Futbolista'];
 			
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->FUT_correl));
+				$this->redirect(array('admin','id'=>$model->FUT_correl));
 		}
 
 		$this->render('create',array(
@@ -97,7 +99,7 @@ class FutbolistaController extends Controller
 		{
 			$model->attributes=$_POST['Futbolista'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->FUT_correl));
+				$this->redirect(array('admin','id'=>$model->FUT_correl));
 		}
 
 		$this->render('update',array(
@@ -133,10 +135,12 @@ class FutbolistaController extends Controller
 	/**
 	 * Manages all models.
 	 */
-	public function actionAdmin()
+	public function actionAdmin($id=null)
 	{
 		$model=new Futbolista('search');
 		$model->unsetAttributes();  // clear any default values
+		if($id != null)
+			$model->FUT_correl=$id;
 		if(isset($_GET['Futbolista']))
 			$model->attributes=$_GET['Futbolista'];
 

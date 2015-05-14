@@ -71,7 +71,7 @@ class TecnicoController extends Controller
 		{
 			$model->attributes=$_POST['Tecnico'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->TEC_correl));
+				$this->redirect(array('admin','id'=>$model->TEC_correl));
 		}
 
 		$this->render('create',array(
@@ -95,7 +95,7 @@ class TecnicoController extends Controller
 		{
 			$model->attributes=$_POST['Tecnico'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->TEC_correl));
+				$this->redirect(array('admin','id'=>$model->TEC_correl));
 		}
 
 		$this->render('update',array(
@@ -131,10 +131,12 @@ class TecnicoController extends Controller
 	/**
 	 * Manages all models.
 	 */
-	public function actionAdmin()
+	public function actionAdmin($id=null)
 	{
 		$model=new Tecnico('search');
 		$model->unsetAttributes();  // clear any default values
+		if($id != null)
+			$model->TEC_correl=$id;
 		if(isset($_GET['Tecnico']))
 			$model->attributes=$_GET['Tecnico'];
 

@@ -4,15 +4,15 @@
 
 $this->breadcrumbs=array(
 	'Arbitros'=>array('index'),
-	'Create',
+	'Agregar',
 );
 
 $this->menu=array(
-	array('label'=>'List Arbitro', 'url'=>array('index')),
-	array('label'=>'Manage Arbitro', 'url'=>array('admin')),
+	//array('label'=>'List Arbitro', 'url'=>array('index')),
+	array('label'=>'Volver', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Arbitro</h1>
+<h3>Agregar Árbitro</h3>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

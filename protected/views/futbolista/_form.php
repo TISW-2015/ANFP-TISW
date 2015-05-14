@@ -14,7 +14,6 @@
 	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
 )); ?>
-	<p class="help-block">Campos con <span class="required">*</span> son obligatorios.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -91,7 +90,7 @@
         '220' => 'Uganda', '221' => 'Ucrania', '222' => 'Emiratos Árabes Unidos', '223' => 'Reino Unido', '224' => 'Estados Unidos',
         '225' => 'Uruguay', '226' => 'Uzbekistán', '227' => 'Vanuatu', '228' => 'Ciudad del Vaticano', '229' => 'Venezuela', 
         '230' => 'Vietnam', '231' => 'Islas Virgenes Británicas', '232' => 'Islas Virgenes Americanas', '233' => 'Wallis y Futuna', '234' => 'Sáhara Occidental ', 
-        '235' => 'Yemen', '236' => 'Zambia', '237' => 'Zimbabwe'), array('empty' => 'Seleccione Estado' ));  ?>
+        '235' => 'Yemen', '236' => 'Zambia', '237' => 'Zimbabwe'), array('empty' => 'Seleccione País de Origen' ));  ?>
 	</div>
 
 	<div class="row">
@@ -109,7 +108,7 @@
 	
 
 	<div class="row buttons">
-		 <?php echo BsHtml::submitButton('Aceptar', array('color' => BsHtml::BUTTON_COLOR_PRIMARY)); ?>
+		 <?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

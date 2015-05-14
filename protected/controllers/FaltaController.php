@@ -62,7 +62,7 @@ class FaltaController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Falta;
+		$model=new Falta;		
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
