@@ -11425,3 +11425,28 @@ REQUEST_URI=/yii/ANFP-TISW/index.php/Equipo/admin
 in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\EquipoController.php (262)
 in C:\xampp\htdocs\Yii\ANFP-TISW\protected\controllers\EquipoController.php (195)
 in C:\xampp\htdocs\Yii\ANFP-TISW\index.php (13)
+2015/05/14 23:07:48 [error] [system.db.CDbCommand] CDbCommand::fetchAll() falló: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'anfp.logo' doesn't exist. La sentencia SQL ejecutada fue: SHOW FULL COLUMNS FROM `logo`.
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\controllers\EquipoController.php (67)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\index.php (13)
+2015/05/14 23:07:48 [error] [exception.CDbException] exception 'CDbException' with message 'La tabla "logo" definida en la clase active record "Logo" no se ha podido encontrar en la base de datos.' in C:\xampp\htdocs\Yii2\framework\db\ar\CActiveRecord.php:2362
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Logo))
+#1 C:\xampp\htdocs\Yii2\framework\db\ar\CActiveRecord.php(79): CActiveRecord->getMetaData()
+#2 C:\xampp\htdocs\Yii2\ANFP-TISW\protected\controllers\EquipoController.php(67): CActiveRecord->__construct()
+#3 C:\xampp\htdocs\Yii2\framework\web\actions\CInlineAction.php(49): EquipoController->actionCreate()
+#4 C:\xampp\htdocs\Yii2\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('Equipo/create')
+#14 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/Equipo/create
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/partido/index
+---

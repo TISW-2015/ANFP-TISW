@@ -35,7 +35,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/style.css" />
 <!-- Le fav and touch icons -->
 </head>
-
+<?php echo Yii::app()->user->ui->displayErrorConsole(); ?>
 <body>
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="navbar-inner">
@@ -52,22 +52,18 @@
 						$hola=Yii::app()->createController('Torneo');
 						echo BsHtml::pills(array(
     						array('label' => 'Home','url'=>array('/site/index'),'active' => true),
-      						array('label'=>'About','url'=>array('/site/page', 'view'=>'about')),
-      						array('label'=>'Contact', 'url'=>array('/site/contact')),
-      						array('label' => 'Help','url' => '#'),
+      						//array('label'=>'About','url'=>array('/site/page', 'view'=>'about')),
+      						//array('label'=>'Contact', 'url'=>array('/site/contact')),
+      						//array('label' => 'Help','url' => '#'),
+      						array('label'=>'Futbolistas', 'url'=>array('/futbolista/admin')),
+      						array('label'=>'Técnicos', 'url'=>array('/tecnico/admin')),
       						array('label' => 'Partidos','items' => array(
             					array('label'=>'Fechas', 'url'=>array('/participa/index')),
             					array(
                 					'label' => 'Partidos',
                 					'url' => array('/partido/index')
                 					),
-            					BsHtml::menuDivider(),
-            					array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-            					array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
-            					array(
-                					'label' => 'Separate link',
-                					'url' => '#'
-            					)
+            					
         					)
     ),
       						array('label' => 'Equipos','items' => array(
@@ -106,21 +102,13 @@
         						)
     						),
     						array('label' => 'Mi cuenta','items' => array(
-            				array(
-                				'label' => 'Another action',
-                				'url' => '#'
-            				),
-            				array(
-                				'label' => 'Something else here',
-                				'url' => '#'
-            				),
-            				BsHtml::menuDivider(),
-            				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-            				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
-            				array(
-                				'label' => 'Separate link',
-                				'url' => '#'
-            				)
+            				array('label'=>'Administrar Usuarios',
+            				'url'=>Yii::app()->user->ui->userManagementAdminUrl, 
+            				'visible'=>!Yii::app()->user->isGuest),
+							array('label'=>'Login', 'url'=>Yii::app()->user->ui->loginUrl,
+							'visible'=>Yii::app()->user->isGuest),
+							array('label'=>'Logout ('.Yii::app()->user->name.')', 
+							'url'=>Yii::app()->user->ui->logoutUrl, 'visible'=>!Yii::app()->user->isGuest),
         				),
     				 'visible'=>!Yii::app()->user->isGuest),
     						array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest)

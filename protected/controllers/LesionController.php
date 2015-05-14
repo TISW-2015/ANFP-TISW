@@ -12,12 +12,9 @@ class LesionController extends Controller
 	 * @return array action filters
 	 */
 	public function filters()
-	{
-		return array(
-			'accessControl', // perform access control for CRUD operations
-			'postOnly + delete', // we only allow deletion via POST request
-		);
-	}
+   {
+      return array(array('CrugeAccessControlFilter'));
+   }
 
 	/**
 	 * Specifies the access control rules.
@@ -60,9 +57,12 @@ class LesionController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+	public function actionCreate($id)
 	{
+		
 		$model=new Lesion;
+		$jugador=Futbolista::model()->findByPk($id);
+		$this->performAjaxValidation($model);
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -71,7 +71,7 @@ class LesionController extends Controller
 		{
 			$model->attributes=$_POST['Lesion'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->LES_correl));
+				$this->redirect(array('admin','id'=>$model->LES_correl));
 		}
 
 		$this->render('create',array(
@@ -131,10 +131,11 @@ class LesionController extends Controller
 	/**
 	 * Manages all models.
 	 */
-	public function actionAdmin()
+	public function actionAdmin($id)
 	{
 		$model=new Lesion('search');
-		$model->unsetAttributes(); // clear any default values
+		$model->unsetAttributes();
+		$model->LES_futCorrel=$id; // clear any default values
 		if(isset($_GET['Lesion']))
 			$model->attributes=$_GET['Lesion'];
 
