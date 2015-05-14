@@ -7,8 +7,7 @@ $modelo->FUT_correl=$_GET['id'];
 $modelo=futbolista::model()->findByPk($modelo->FUT_correl);
 
 $this->breadcrumbs=array(
-	'Futbolista'=>array('//futbolista/admin'),
-	$modelo->FUT_nombre." ".$modelo->FUT_apellidoPat=>array('//futbolista/view','id'=>$modelo->FUT_correl),
+	'Futbolista'=>array('futbolista/admin'),
 	'Lesiones',
 );
 
@@ -17,13 +16,13 @@ $this->menu=array(
 	//array('label'=>'Lista de Lesiones', 'url'=>array('index')),
 	
 	array('label'=>'Agregar Lesión', 'url'=>array('create','id'=>$modelo->FUT_correl)),
-	array('label'=>'Volver', 'url'=>array('//futbolista/view','id'=>$modelo->FUT_correl)),
+	array('label'=>'Volver', 'url'=>array('futbolista/admin')),
 );
 
 
 ?>
 
-<h3>Administrar Lesiones</h3>
+<?php echo BsHtml::pageHeader('Lesiones '.$modelo->FUT_nombre." ".$modelo->FUT_apellidoPat) ?>
 
 
 <?php $this->widget('bootstrap.widgets.BsGridView', array(

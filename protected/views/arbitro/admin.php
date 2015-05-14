@@ -29,6 +29,7 @@ $this->menu=array(
 		'ARB_nacionalidad',
 		array(
 			'class'=>'CButtonColumn',
+			'template' => '{update} {delete}',
 		),
 	),
 )); ?>

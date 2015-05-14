@@ -47,7 +47,7 @@
 		if(Yii::app()->crugeconnector->hasEnabledClients){ 
 	?>
 	<div class='crugeconnector'>
-		<span><?php echo CrugeTranslator::t('logon', 'You also can login with');?>:</span>
+		<span><?php echo CrugeTranslator::t('logon', 'Tu también puedes entrar con ');?>:</span>
 		<ul>
 		<?php 
 			$cc = Yii::app()->crugeconnector;

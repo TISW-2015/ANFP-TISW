@@ -84,7 +84,7 @@
 </div>
 
 <div class="row form-group">
-	<h6><?php echo ucfirst(CrugeTranslator::t("datos de validacion"));?></h6>
+	<h6><?php echo ucfirst(CrugeTranslator::t("datos de validación"));?></h6>
 	
 	<div class='field-group'>
 		<div class='col'>

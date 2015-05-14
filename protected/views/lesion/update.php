@@ -8,10 +8,10 @@ $model=Lesion::model()->findByPk($model->LES_correl);
 $modelo=futbolista::model()->findByPk($model->LES_futCorrel);
 
 $this->breadcrumbs=array(
-	'Futbolista'=>array('//futbolista/admin'),
-	$modelo->FUT_nombre." ".$modelo->FUT_apellidoPat=>array('//futbolista/view','id'=>$modelo->FUT_correl),
+	'Futbolista'=>array('futbolista/admin'),
+	$modelo->FUT_nombre." ".$modelo->FUT_apellidoPat=>array('futbolista/admin','id'=>$modelo->FUT_correl),
 	'Lesiones'=>array('admin','id'=>$modelo->FUT_correl),
-	$model->LES_fecha=>array('view','id'=>$model->LES_correl),
+	$model->LES_fecha=>array('admin','id'=>$model->LES_correl),
 	'Actualizar',
 );
 
@@ -20,10 +20,10 @@ $this->menu=array(
 	//array('label'=>'Lista de Lesiones', 'url'=>array('index')),
 	//array('label'=>'Agregar Lesión', 'url'=>array('create')),
 	//array('label'=>'Detalle Lesión', 'url'=>array('view', 'id'=>$model->LES_correl)),
-	 array('label'=>'Cancelar', 'url'=>array('admin','id'=>$modelo->FUT_correl)),
+	 array('label'=>'Volver', 'url'=>array('admin','id'=>$modelo->FUT_correl)),
 );
 ?>
 
-<h3>Actualizar Lesión</h3>
+<h1>Actualizar Lesión</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

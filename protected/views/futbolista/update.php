@@ -3,8 +3,8 @@
 /* @var $model Futbolista */
 
 $this->breadcrumbs=array(
-	'Futbolistas'=>array('index'),
-	$model->FUT_nombre." ".$model->FUT_apellidoPat=>array('view','id'=>$model->FUT_correl),
+	'Futbolistas'=>array('admin'),
+	$model->FUT_nombre." ".$model->FUT_apellidoPat=>array('admin','id'=>$model->FUT_correl),
 	'Actualizar',
 );
 

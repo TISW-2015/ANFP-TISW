@@ -7109,3 +7109,794 @@ Stack trace:
 REQUEST_URI=/yii2/ANFP-TISW/index.php/lesion/create
 HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/lesion/index/1
 ---
+2015/04/30 00:49:49 [error] [exception.CrugeException.500] Por favor cambie las referencias a 'UserIdentity' por 'CrugeUser'<br/>500
+REQUEST_URI=/yii2/ANFP-TISW/index.php/site/login
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/site/login
+---
+2015/04/30 01:27:47 [error] [exception.CException] exception 'CException' with message 'La propiedad "BsGridView"."class" no se encuentra definida.' in C:\xampp\htdocs\Yii2\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\CWidgetFactory.php(161): CComponent->__set('class', 'CButtonColumn')
+#1 C:\xampp\htdocs\Yii2\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(UiController), 'bootstrap.widge...', Array)
+#2 C:\xampp\htdocs\Yii2\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\views\ui\usermanagementadmin.php(50): CBaseController->widget('bootstrap.widge...', Array)
+#4 C:\xampp\htdocs\Yii2\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\Yii2\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\Yii2\framework\web\CController.php(782): CController->renderPartial('usermanagementa...', Array, true)
+#8 C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php(213): CController->render('usermanagementa...', Array)
+#9 C:\xampp\htdocs\Yii2\framework\web\actions\CInlineAction.php(49): UiController->actionUserManagementAdmin()
+#10 C:\xampp\htdocs\Yii2\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#13 C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\components\CrugeUiAccessControlFilter.php(37): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#14 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CrugeUiAccessControlFilter->preFilter(Object(CFilterChain))
+#15 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('usermanagementa...')
+#23 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('cruge/ui/userma...')
+#24 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/cruge/ui/usermanagementadmin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/cruge/ui/login
+---
+2015/05/13 11:04:23 [warning] [application] Error al establecer unsafe al atributo "regdate" de "CrugeStoredUser".
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\models\data\CrugeStoredUser.php (134)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (240)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (222)
+2015/05/13 11:04:23 [warning] [application] Error al establecer unsafe al atributo "actdate" de "CrugeStoredUser".
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\models\data\CrugeStoredUser.php (134)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (240)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (222)
+2015/05/13 11:04:23 [warning] [application] Error al establecer unsafe al atributo "logondate" de "CrugeStoredUser".
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\models\data\CrugeStoredUser.php (134)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (240)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (222)
+2015/05/13 11:04:23 [warning] [application] Error al establecer unsafe al atributo "Nombre" de "CrugeStoredUser".
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\models\data\CrugeStoredUser.php (134)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (240)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (222)
+2015/05/13 11:04:30 [warning] [application] Error al establecer unsafe al atributo "regdate" de "CrugeStoredUser".
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\models\data\CrugeStoredUser.php (134)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (240)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (222)
+2015/05/13 11:04:30 [warning] [application] Error al establecer unsafe al atributo "actdate" de "CrugeStoredUser".
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\models\data\CrugeStoredUser.php (134)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (240)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (222)
+2015/05/13 11:04:30 [warning] [application] Error al establecer unsafe al atributo "logondate" de "CrugeStoredUser".
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\models\data\CrugeStoredUser.php (134)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (240)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (222)
+2015/05/13 11:04:30 [warning] [application] Error al establecer unsafe al atributo "Nombre" de "CrugeStoredUser".
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\models\data\CrugeStoredUser.php (134)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (240)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (222)
+2015/05/13 11:04:53 [warning] [application] Error al establecer unsafe al atributo "regdate" de "CrugeStoredUser".
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\models\data\CrugeStoredUser.php (134)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (240)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (222)
+2015/05/13 11:04:53 [warning] [application] Error al establecer unsafe al atributo "actdate" de "CrugeStoredUser".
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\models\data\CrugeStoredUser.php (134)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (240)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (222)
+2015/05/13 11:04:53 [warning] [application] Error al establecer unsafe al atributo "logondate" de "CrugeStoredUser".
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\models\data\CrugeStoredUser.php (134)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (240)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (222)
+2015/05/13 11:04:53 [warning] [application] Error al establecer unsafe al atributo "Nombre" de "CrugeStoredUser".
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\models\data\CrugeStoredUser.php (134)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (240)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (222)
+2015/05/13 11:04:56 [warning] [application] Error al establecer unsafe al atributo "regdate" de "CrugeStoredUser".
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\models\data\CrugeStoredUser.php (134)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (240)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (222)
+2015/05/13 11:04:56 [warning] [application] Error al establecer unsafe al atributo "actdate" de "CrugeStoredUser".
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\models\data\CrugeStoredUser.php (134)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (240)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (222)
+2015/05/13 11:04:56 [warning] [application] Error al establecer unsafe al atributo "logondate" de "CrugeStoredUser".
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\models\data\CrugeStoredUser.php (134)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (240)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (222)
+2015/05/13 11:04:56 [warning] [application] Error al establecer unsafe al atributo "Nombre" de "CrugeStoredUser".
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\models\data\CrugeStoredUser.php (134)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (240)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (222)
+2015/05/13 11:05:15 [warning] [application] Error al establecer unsafe al atributo "regdate" de "CrugeStoredUser".
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\models\data\CrugeStoredUser.php (134)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (240)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (222)
+2015/05/13 11:05:15 [warning] [application] Error al establecer unsafe al atributo "actdate" de "CrugeStoredUser".
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\models\data\CrugeStoredUser.php (134)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (240)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (222)
+2015/05/13 11:05:15 [warning] [application] Error al establecer unsafe al atributo "logondate" de "CrugeStoredUser".
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\models\data\CrugeStoredUser.php (134)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (240)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (222)
+2015/05/13 11:05:15 [warning] [application] Error al establecer unsafe al atributo "Nombre" de "CrugeStoredUser".
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\models\data\CrugeStoredUser.php (134)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (240)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (222)
+2015/05/14 20:08:24 [warning] [application] Error al establecer unsafe al atributo "Nombre" de "CrugeStoredUser".
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\models\data\CrugeStoredUser.php (134)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (358)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\index.php (13)
+2015/05/14 20:08:24 [warning] [application] Error al establecer unsafe al atributo "ApellidoPat" de "CrugeStoredUser".
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\models\data\CrugeStoredUser.php (134)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (358)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\index.php (13)
+2015/05/14 20:08:24 [warning] [application] Error al establecer unsafe al atributo "ApellidoMat" de "CrugeStoredUser".
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\models\data\CrugeStoredUser.php (134)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\protected\modules\Cruge\controllers\UiController.php (358)
+in C:\xampp\htdocs\Yii2\ANFP-TISW\index.php (13)
+2015/05/14 20:08:48 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('futbolista/admi...')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/futbolista/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php
+---
+2015/05/14 20:08:51 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('tecnico/admin')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/tecnico/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/futbolista/admin
+---
+2015/05/14 20:08:52 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('contratojugador...')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/contratojugador/admin/
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/tecnico/admin
+---
+2015/05/14 20:08:53 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('estadio/admin')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/estadio/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/contratojugador/admin/
+---
+2015/05/14 20:08:54 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('arbitro/admin')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/arbitro/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/estadio/admin
+---
+2015/05/14 20:09:07 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('integra/admin')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/integra/admin/4
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/participa/index
+---
+2015/05/14 20:09:09 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('integra/admin')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/integra/admin/3
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/integra/admin/4
+---
+2015/05/14 20:13:58 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('futbolista/admi...')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/futbolista/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php
+---
+2015/05/14 20:14:00 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('futbolista/admi...')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/futbolista/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/futbolista/admin
+---
+2015/05/14 20:14:03 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('futbolista/admi...')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/futbolista/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/futbolista/admin
+---
+2015/05/14 20:14:05 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('futbolista/admi...')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/futbolista/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/futbolista/admin
+---
+2015/05/14 20:14:06 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('futbolista/admi...')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/futbolista/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/futbolista/admin
+---
+2015/05/14 20:14:08 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('futbolista/admi...')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/futbolista/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/site/index
+---
+2015/05/14 20:14:08 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('tecnico/admin')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/tecnico/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/futbolista/admin
+---
+2015/05/14 20:14:10 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('integra/admin')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/integra/admin/4
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/tecnico/admin
+---
+2015/05/14 21:30:28 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('futbolista/admi...')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/futbolista/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php
+---
+2015/05/14 21:56:49 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('futbolista/admi...')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/futbolista/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php
+---
+2015/05/14 21:56:50 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('tecnico/admin')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/tecnico/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/futbolista/admin
+---
+2015/05/14 21:56:51 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('futbolista/admi...')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/futbolista/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/tecnico/admin
+---
+2015/05/14 21:56:53 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('futbolista/admi...')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/futbolista/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/site/index
+---
+2015/05/14 21:56:59 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('futbolista/admi...')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/futbolista/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/futbolista/admin
+---
+2015/05/14 21:57:00 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('tecnico/admin')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/tecnico/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/futbolista/admin
+---
+2015/05/14 21:57:01 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('estadio/admin')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/estadio/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/tecnico/admin
+---
+2015/05/14 21:57:02 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('arbitro/admin')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/arbitro/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/estadio/admin
+---
+2015/05/14 21:57:03 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('futbolista/admi...')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/futbolista/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/arbitro/admin
+---
+2015/05/14 21:57:30 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('futbolista/admi...')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/futbolista/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/cruge/ui/usermanagementadmin
+---
+2015/05/14 21:58:38 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('futbolista/admi...')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/futbolista/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/site/index
+---
+2015/05/14 21:58:39 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('tecnico/admin')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/tecnico/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/futbolista/admin
+---
+2015/05/14 21:58:41 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('estadio/admin')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/estadio/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/tecnico/admin
+---
+2015/05/14 21:58:41 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('estadio/admin')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/estadio/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/estadio/admin
+---
+2015/05/14 21:58:42 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('arbitro/admin')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/arbitro/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/estadio/admin
+---
+2015/05/14 21:58:49 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('tecnico/admin')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/tecnico/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/participa/index
+---
+2015/05/14 21:58:50 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('futbolista/admi...')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/futbolista/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/tecnico/admin
+---
+2015/05/14 21:58:51 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('estadio/admin')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/estadio/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/futbolista/admin
+---
+2015/05/14 21:58:52 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('arbitro/admin')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/arbitro/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/estadio/admin
+---
+2015/05/14 21:59:04 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('futbolista/admi...')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/futbolista/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/site/index
+---
+2015/05/14 21:59:16 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('futbolista/admi...')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/futbolista/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/participa/index
+---
+2015/05/14 21:59:40 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('futbolista/admi...')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/futbolista/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/cruge/ui/usermanagementadmin
+---
+2015/05/14 22:12:38 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\Yii2\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\Yii2\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\Yii2\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\Yii2\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\Yii2\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\Yii2\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\Yii2\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\Yii2\framework\web\CWebApplication.php(141): CWebApplication->runController('tecnico/admin')
+#9 C:\xampp\htdocs\Yii2\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Yii2\ANFP-TISW\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii2/ANFP-TISW/index.php/tecnico/admin
+HTTP_REFERER=http://localhost/yii2/ANFP-TISW/index.php/futbolista/admin
+---

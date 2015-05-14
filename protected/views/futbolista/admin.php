@@ -3,8 +3,7 @@
 /* @var $model Futbolista */
 
 $this->breadcrumbs=array(
-	'Futbolistas'=>array('index'),
-	'Administrar',
+	'Futbolistas'
 );
 
 $this->menu=array(
@@ -12,18 +11,7 @@ $this->menu=array(
 	array('label'=>'Agregar Futbolista', 'url'=>array('create')),
 );
 
-Yii::app()->clientScript->registerScript('search', "
-$('.search-button').click(function(){
-	$('.search-form').toggle();
-	return false;
-});
-$('.search-form form').submit(function(){
-	$('#futbolista-grid').yiiGridView('update', {
-		data: $(this).serialize()
-	});
-	return false;
-});
-");
+
 ?>
 
 <h1>Administrar Futbolistas</h1>
